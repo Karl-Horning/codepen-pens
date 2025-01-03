@@ -8,7 +8,7 @@ This repo contains all of my CodePen Pens. They have been moved to a single repo
 
 This repo contains the following projects:
 
-- [Random Password Generator](./src/random-password-generator/src/)
+- [Random Password Generator](./src/random-password-generator/)
 
 ## Getting Started
 
