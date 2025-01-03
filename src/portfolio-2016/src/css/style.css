@@ -1,0 +1,245 @@
+/*
+
+LINKS: d26e5e
+WHITE BACKGROUND: f2f2f2
+
+REDS:
+rust: b56357
+scarlet: e10013
+
+GREENS:
+sea foam: a7b385
+
+BLUES:
+electric: 4cdef5
+fresh water: 88bbd6
+stormy: 494e6b
+
+BLACKS & GRAYS
+charcole: 3c3c3c
+
+WHITES:
+eae3ea
+
+*/
+
+body {
+    position: relative;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 0.01em;
+}
+
+::selection {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+}
+
+/* navbar */
+
+.navbar {
+    background-color: #f2f2f2;
+    border: none;
+    /*box-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
+    font-family: "Economica", sans-serif;
+    opacity: 0.9;
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    font-family: "Dancing Script", cursive;
+    font-size: 2em;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .navbar-brand {
+    color: #3c3c3c;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-shadow: 0px 0px 2px rgba(265, 265, 265, 0.9);
+}
+
+.navbar .navbar-nav > li > a {
+    color: #3c3c3c;
+    font-size: 1.2em;
+    font-weight: medium;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.navbar-brand:hover,
+.navbar .navbar-nav > li > a:hover {
+    color: #d26e5e !important;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-nav > li > a,
+.navbar-brand:hover,
+.navbar .navbar-nav > li > a:hover {
+    transition: all 0.5s ease 0s;
+}
+/* end of navbar */
+
+/* hero */
+.hero {
+    background-color: #985e6d;
+    background: url(https://c2.staticflickr.com/9/8519/29692122161_3197f06724_k.jpg)
+        no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    font-family: "Economica", sans-serif;
+    padding: 310px 50px 250px 50px;
+}
+
+.hero h2 {
+    font-size: 5em;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.9);
+}
+
+.container .welcome-text {
+    color: #d26e5e;
+    font-weight: bold;
+    font-size: 7em;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+
+.container .intro-text {
+    padding-bottom: 30px;
+}
+
+.hero hr {
+    border-top: 1px solid #d26e5e;
+    width: 50%;
+}
+
+/* end of hero */
+
+.page-division {
+    padding: 50px 0 120px 0;
+}
+
+.page-division h2 {
+    font-family: "Economica", sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+.page-division img {
+    padding-top: 50px;
+}
+
+.page-division img:last-child {
+    padding-bottom: 50px;
+}
+
+#about img {
+    background-color: #d26e5e;
+    border: 1px solid #d26e5e;
+    border-radius: 100%;
+    margin-top: 48px;
+    padding: 10px;
+}
+
+#portfolio {
+    background-color: #d26e5e;
+    color: #fff;
+}
+
+form {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 0.01em;
+}
+
+.form-control:focus {
+    border: 1px solid #d26e5e;
+    box-shadow: 0 0 10px #d26e5e;
+    outline: none !important;
+}
+
+.btn {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9em;
+    letter-spacing: 0.01em;
+    margin-top: 20px;
+    width: 150px;
+}
+
+/* social */
+
+.social-links li {
+    display: inline;
+}
+
+i.fa.fa-codepen,
+i.fa.fa-facebook,
+i.fa.fa-fire,
+i.fa.fa-linkedin,
+i.fa.fa-twitter {
+    border: 3px solid #eae3ea;
+    border-radius: 100%;
+    color: #eae3ea;
+    font-size: 3em;
+    height: 1.9em;
+    line-height: 1.9em;
+    margin: 5px;
+    transition: all 0.5s ease 0s;
+    width: 1.9em;
+}
+
+i.fa.fa-codepen {
+    background-color: #000000;
+}
+
+i.fa.fa-facebook {
+    background-color: #3b5998;
+}
+
+i.fa.fa-fire {
+    background-color: #09630c;
+}
+
+i.fa.fa-linkedin {
+    background-color: #0077b5;
+}
+
+i.fa.fa-twitter {
+    background-color: #1da1f2;
+}
+
+i.fa.fa-codepen:hover,
+i.fa.fa-facebook:hover,
+i.fa.fa-fire:hover,
+i.fa.fa-linkedin:hover,
+i.fa.fa-twitter:hover {
+    background: #3c3c3c;
+}
+
+#social {
+    background: url(https://c4.staticflickr.com/9/8889/29692244411_cdc69e80ff_k.jpg)
+        no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    padding: 150px 0;
+}
+
+footer {
+    background-color: #d26e5e;
+    color: #eae3ea;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 0.01em;
+    padding: 30px 0;
+}
