@@ -1,0 +1,72 @@
+/* Default colours  */
+:root {
+    --body-bg: #0a0a0a;
+    --gradient-from: #22c1c3;
+    --gradient-to: #fdbb2d;
+}
+
+/* Defines the rotation angle for the gradient animation. */
+@property --gradient-rotation {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 45deg;
+}
+
+/*  Resets the default margin and padding for the page  */
+html,
+body {
+    background-color: var(--body-bg);
+    margin: 0;
+    padding: 0;
+}
+
+/* Centres the button on the page */
+.container {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.button {
+    background-color: #000;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.button-border {
+    background: linear-gradient(
+        var(--gradient-rotation),
+        var(--gradient-from),
+        var(--gradient-to)
+    );
+    border-radius: 3px;
+    padding: 2px;
+    transform: scale(1);
+    transition: background 0.5s ease, transform 0.3s ease;
+}
+
+.button-border:hover {
+    animation: rotate-gradient 2s cubic-bezier(0, 0, 1, 1) infinite;
+    transform: scale(1.1);
+}
+
+.button-border:active {
+    transform: scale(1);
+}
+
+/*
+Use the value defined with @property.
+More about @property can be found at: https://developer.mozilla.org/en-US/docs/Web/CSS/@property 
+*/
+@keyframes rotate-gradient {
+    0% {
+        --gradient-rotation: 0deg;
+    }
+    100% {
+        --gradient-rotation: 360deg;
+    }
+}
