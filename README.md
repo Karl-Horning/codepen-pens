@@ -8,6 +8,7 @@ This repo contains all of my CodePen Pens. They have been moved to a single repo
 
 This repo contains the following projects:
 
+- [freeCodeCamp: Build a Technical Documentation Page](./src/fcc-build-a-technical-documentation-page/)
 - [freeCodeCamp: Build a Wikipedia Viewer](./src/fcc-build-a-wikipedia-viewer/)
 - [Portfolio 2016](./src/portfolio-2016/)
 - [Portfolio 2019](./src/portfolio-2019/)
