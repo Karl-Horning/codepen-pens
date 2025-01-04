@@ -1,0 +1,88 @@
+/* Define the custom font Alfa Slab One using @font-face */
+@font-face {
+    font-family: "Alfa Slab One";
+    src: local("Alfa Slab One"),
+        url("../fonts/alfa-slab-one-latin-400-normal.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Apply box-sizing, margin, and padding to all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set height to 100% for html and body elements */
+html,
+body {
+    height: 100%;
+}
+
+/* Style for the body element */
+body {
+    /* Create a scrolling background animation */
+    animation: scrollBackground 10s ease-in-out infinite;
+    /* Set a linear gradient background */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    /* Set text color to white, height to 100vh, and width to 100% */
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Style for a container element */
+.container {
+    /* Set height to 100%, center text, and use flexbox for centering */
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for an element with the class "keycode" */
+.keycode {
+    /* Set text color to white, use custom font, set font size, letter spacing, and text shadow */
+    color: #fff;
+    font-family: "Alfa Slab One", sans-serif;
+    font-size: 8rem;
+    letter-spacing: 2px;
+    text-shadow: -2px -2px 0 #0d1214, 2px -2px 0 #0d1214, -2px 2px 0 #0d1214,
+        2px 2px 0 #0d1214;
+    text-transform: uppercase;
+}
+
+/* Define keyframes for the background scrolling animation */
+@keyframes scrollBackground {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+/* Media Queries */
+/* Apply styles for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+    .keycode {
+        /* Adjust font size for smaller screens */
+        font-size: 4rem;
+    }
+}
+
+/* Apply styles for screens with a width between 769px and 1200px */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .keycode {
+        /* Adjust font size for medium-sized screens */
+        font-size: 6rem;
+    }
+}
