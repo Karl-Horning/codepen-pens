@@ -30,6 +30,8 @@ A live demo of this project is available on CodePen: [Technical Documentation Pa
 
 ## Acknowledgments
 
+This project uses the following resource:
+
 - [CSS-only (dynamic) line numbers](https://codepen.io/elomatreb/pen/hbgxp): A reference used for implementing dynamic line numbers in the code sections.
 
 ## Author

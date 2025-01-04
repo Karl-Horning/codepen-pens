@@ -37,6 +37,8 @@ View the live demo on CodePen: [Karl Horning's Portfolio Webpage 2019](https://c
 
 ## Acknowledgments
 
+This project uses the following resources:
+
 - [Normalize.css](https://necolas.github.io/normalize.css/): A modern, HTML5-ready alternative to CSS resets.
 - [References](#references): Check out some useful resources that inspired or contributed to this project.
 

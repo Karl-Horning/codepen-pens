@@ -5,7 +5,6 @@
 - [Random Password Generator](#random-password-generator)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
-  - [Features](#features)
   - [Demo](#demo)
   - [Acknowledgments](#acknowledgments)
   - [Author](#author)
@@ -19,17 +18,13 @@ This project is a random password generator designed to create unique passwords 
 
 ![Preview Image](./src/img/preview.png)
 
-## Features
-
-- Generates random passwords with a mix of uppercase letters, lowercase letters, and numbers.
-- Clean and responsive user interface.
-- Supports password generation using the "Generate Password" button or by pressing the spacebar.
-
 ## Demo
 
 View the live demo on CodePen: [Karl Horning's Portfolio Webpage 2019](https://codepen.io/karlhorning/pen/XBNaWw)
 
 ## Acknowledgments
+
+This project uses the following resources:
 
 - [IBM Plex Mono](https://fonts.googleapis.com/css?family=IBM+Plex+Mono): Google Fonts IBM Plex® is the corporate typeface for IBM worldwide and an open-source project developed by the IBM Brand & Experience team (BX&D).
 

@@ -22,7 +22,7 @@ View the live demo on CodePen: [freeCodeCamp: Build a Wikipedia Viewer](https://
 
 ## Acknowledgments
 
-This project uses the following libraries:
+This project uses the following resources:
 
 - [jQuery](https://jquery.com/)
 - [FontAwesome](https://fontawesome.com/)

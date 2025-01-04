@@ -22,6 +22,8 @@ Check out the live demo on CodePen: [Dynamic Hero Search Demo](https://codepen.i
 
 ## Acknowledgments
 
+This project uses the following resources:
+
 - [Bootstrap](https://getbootstrap.com) - Front-end framework for developing responsive and mobile-first websites.
 - Special thanks to [CodePen](https://codepen.io) for providing a platform to showcase and share web development projects.
 
