@@ -12,6 +12,7 @@ This repo contains the following projects:
 - [Dynamic Hero Search](./src/dynamic-hero-search/)
 - [freeCodeCamp: Build a Technical Documentation Page](./src/fcc-build-a-technical-documentation-page/)
 - [freeCodeCamp: Build a Wikipedia Viewer](./src/fcc-build-a-wikipedia-viewer/)
+- [GSAP SVG Computer Animation](./src/gsap-svg-computer-animation/)
 - [JavaScript Key Codes Keyboard Event Handler](./src/javascript-key-codes-keyboard-event-handler/)
 - [Portfolio 2016](./src/portfolio-2016/)
 - [Portfolio 2019](./src/portfolio-2019/)
