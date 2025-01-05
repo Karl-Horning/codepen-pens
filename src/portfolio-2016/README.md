@@ -13,9 +13,9 @@
 
 This project showcases my skills and projects as a business English teacher and coder based in Portugal. The website features various sections including an about me page, portfolio, contact form, and social links.
 
-![Portfolio Preview](./src/img/portfolio_preview.gif)
-
 ## Demo
+
+![Portfolio Preview](./src/img/portfolio_preview.gif)
 
 View the live demo on CodePen: [Karl Horning's Portfolio Webpage](https://codepen.io/karlhorning/pen/GjoZzq).
 

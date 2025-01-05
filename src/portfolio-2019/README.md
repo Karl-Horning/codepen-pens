@@ -15,8 +15,6 @@
 
 This repository holds the source code for my 2019 portfolio website, designed to showcase my skills, projects, and experiences as a web developer. The portfolio is structured with a modern and responsive design, featuring CSS animations and media queries to ensure optimal viewing across various devices.
 
-![Preview Image](./src/img/portfolio-preview.gif)
-
 The project originated as part of the freeCodeCamp Responsive Web Design Projects, specifically the "Build a Personal Portfolio Webpage" challenge. It fulfils the following user stories:
 
 - [x] **User Story #1:** My portfolio should have a welcome section with an id of welcome-section.
@@ -32,6 +30,8 @@ The project originated as part of the freeCodeCamp Responsive Web Design Project
 - [x] **User Story #11:** The navbar should always be at the top of the viewport.
 
 ## Demo
+
+![Preview Image](./src/img/portfolio-preview.gif)
 
 View the live demo on CodePen: [Karl Horning's Portfolio Webpage 2019](https://codepen.io/karlhorning/pen/JjzdxbM)
 

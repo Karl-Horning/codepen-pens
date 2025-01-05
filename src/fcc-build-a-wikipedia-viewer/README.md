@@ -14,9 +14,9 @@
 
 This project is a Wikipedia Viewer created as part of the freeCodeCamp challenge, 'Build a Wikipedia Viewer'. It enables users to search for Wikipedia articles and view search results through a clean and intuitive interface. Users can easily browse relevant articles and access detailed information directly on Wikipedia with just a click.
 
-![Wikipedia Viewer](./src/img/wikipedia-viewer.gif "Wikipedia Viewer example")
-
 ## Demo
+
+![Wikipedia Viewer](./src/img/wikipedia-viewer.gif "Wikipedia Viewer example")
 
 View the live demo on CodePen: [freeCodeCamp: Build a Wikipedia Viewer](https://codepen.io/karlhorning/pen/NdWjOY).
 

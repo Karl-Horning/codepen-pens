@@ -14,8 +14,6 @@
 
 This project is a Technical Documentation Page developed for the Responsive Web Design Projects on freeCodeCamp. It features a structured layout with multiple sections dedicated to specific topics and a user-friendly navigation menu.
 
-![Preview Image](./src/img/preview.png)
-
 This project fulfils the following user stories:
 
 - [x] **User Story #1:** Display a main element with the ID "main-doc" containing technical documentation.
@@ -25,6 +23,8 @@ This project fulfils the following user stories:
 - [x] **User Story #5:** Clicking on a navbar link navigates to the corresponding section in the main documentation.
 
 ## Demo
+
+![Preview Image](./src/img/preview.png)
 
 A live demo of this project is available on CodePen: [Technical Documentation Page Demo](https://codepen.io/karlhorning/pen/pxgybR)
 

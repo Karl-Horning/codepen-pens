@@ -14,9 +14,9 @@
 
 Interactive computer animation using GSAP and an SVG. Features a button that triggers a sequence animating the computer's assembly, complete with scaling, bounce, and staggered effects. Button states include hover, active, and disabled.
 
-![Preview Image](./src/img/preview.png)
-
 ## Demo
+
+![Preview Image](./src/img/preview.png)
 
 Check out the live demo on CodePen: [GSAP SVG Computer Animation](https://codepen.io/karlhorning/pen/OJqNMVR)
 

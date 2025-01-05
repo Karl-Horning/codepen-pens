@@ -14,9 +14,9 @@
 
 A JavaScript event listener captures key presses, displaying the key and keycode in a responsive, text-shadowed display. Media queries ensure adaptable font sizing across devices. Includes an animated gradient background with a dynamic scrolling effect, styled with CSS and Alfa Slab One font.
 
-![JavaScript Key Codes Keyboard Event Handler Preview](./src/img/preview.gif)
-
 ## Demo
+
+![JavaScript Key Codes Keyboard Event Handler Preview](./src/img/preview.gif)
 
 View the demo on [CodePen](https://codepen.io/karlhorning/pen/MBjMrX).
 

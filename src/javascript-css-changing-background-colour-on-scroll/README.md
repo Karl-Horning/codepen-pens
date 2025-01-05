@@ -14,9 +14,9 @@
 
 Dynamic background colour transition on scroll using JavaScript and CSS. The page's background updates to match the "data-color" attribute of each section as the user scrolls.
 
-![JavaScript & CSS Changing Background Colour on Scroll Preview](./src/img/preview.gif)
-
 ## Demo
+
+![JavaScript & CSS Changing Background Colour on Scroll Preview](./src/img/preview.gif)
 
 See the demo on [CodePen](https://codepen.io/karlhorning/pen/QWojGpW).
 

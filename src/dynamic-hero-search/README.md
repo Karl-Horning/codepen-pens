@@ -14,9 +14,9 @@
 
 Dark-themed superhero search and filter application using CSS and JavaScript. Features real-time search, dynamic table updates, clear functionality, and alphabetised sorting. Includes accessibility enhancements and automatic copyright updates based on the current year.
 
-![Preview Image](./src/img/preview.png)
-
 ## Demo
+
+![Preview Image](./src/img/preview.png)
 
 Check out the live demo on CodePen: [Dynamic Hero Search Demo](https://codepen.io/karlhorning/pen/dyrMzWy)
 

@@ -16,9 +16,9 @@ This project is a random password generator designed to create unique passwords 
 
 **Note:** This project was an earlier project and does not employ the latest security practices. Generating passwords in this way is not as secure as using modern password hashing and salting techniques. If you are working on a production system, use established authentication libraries and frameworks.
 
-![Preview Image](./src/img/preview.png)
-
 ## Demo
+
+![Preview Image](./src/img/preview.png)
 
 View the live demo on CodePen: [Karl Horning's Portfolio Webpage 2019](https://codepen.io/karlhorning/pen/XBNaWw)
 
