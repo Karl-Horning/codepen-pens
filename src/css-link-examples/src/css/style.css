@@ -1,0 +1,147 @@
+/* Variables */
+:root {
+    --default-color: #333;
+    --hover-color: #fff;
+    --bg-color-highlight: #bee6f6;
+    --bg-color-underline: #000;
+    --hover-bg-highlight: #f6bebe;
+    --hover-bg-highlighted: #bee6f652;
+    --transition-default: all 0.4s cubic-bezier(0, 1, 0.3, 1);
+    --transition-hover: all 0.3s cubic-bezier(0, 1.5, 0.5, 1);
+    --border-width-small: 0.14em;
+    --border-width-large: 1.3em;
+}
+
+/* Default styles */
+body {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Default column height  */
+.default-height {
+    min-height: 150px;
+}
+
+/* Base link styles */
+.link {
+    color: var(--default-color);
+    display: inline-block;
+    padding-bottom: 0.3em;
+    position: relative;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: none;
+}
+
+/* Shared Before Pseudo-Element */
+.link::before {
+    content: "";
+    position: absolute;
+    bottom: 0.14em;
+    left: -0.05em;
+    right: -0.05em;
+    z-index: -1;
+    border-top: var(--border-width-small) solid transparent;
+    transition: var(--transition-default);
+}
+
+/* Highlight Background */
+.link-highlight::before {
+    border-top-color: var(--bg-color-highlight);
+}
+
+.link-highlight:hover::before {
+    border-width: 1.1em;
+    bottom: 0.25em;
+    transition: var(--transition-hover);
+}
+
+/* Underline Expand */
+.link-underline-expand::before {
+    border-top-color: var(--bg-color-underline);
+}
+
+.link-underline-expand:hover {
+    color: var(--hover-color);
+}
+
+.link-underline-expand:hover::before {
+    border-width: var(--border-width-large);
+    transition: var(--transition-hover);
+}
+
+/* Highlight Colour Change */
+.link-highlight-change::before {
+    border-top-color: var(--bg-color-highlight);
+}
+
+.link-highlight-change:hover::before {
+    border-top-color: var(--hover-bg-highlight);
+    border-width: 1.1em;
+    bottom: 0.25em;
+    transition: var(--transition-hover);
+}
+
+/* Underline Thicken */
+.link-underline-thicken::before {
+    border-top-color: var(--bg-color-underline);
+    transform: scaleY(1);
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.3, 1);
+}
+
+.link-underline-thicken:hover::before {
+    transform: scaleY(2);
+}
+
+/* Highlight Colour Wipe */
+.link-highlight-wipe::before {
+    border-top-color: var(--bg-color-highlight);
+    transition: bottom 0.3s ease-in-out;
+}
+
+.link-highlight-wipe:hover::before {
+    bottom: 1.4em;
+}
+
+/* Underline Colour Change */
+.link-underline-change::before {
+    border-top-color: var(--bg-color-underline);
+    transition: border-top 0.4s ease-in-out, all 0.4s ease-in-out;
+}
+
+.link-underline-change:hover::before {
+    border-top-color: var(--hover-bg-highlight);
+}
+
+/* Highlight Colour Wipe Background */
+.link-highlight-wipe-background::before {
+    border-top: var(--border-width-small) solid var(--bg-color-highlight);
+    transition: bottom 0.3s ease-in-out;
+    z-index: -1; /* Border on top of background */
+}
+
+.link-highlight-wipe-background::after {
+    background-color: var(--hover-bg-highlighted);
+    bottom: 0.14em;
+    content: "";
+    height: var(--border-width-small);
+    left: -0.05em;
+    position: absolute;
+    right: -0.05em;
+    transition: bottom 0.3s ease-in-out, height 0.3s ease-in-out;
+    z-index: -2; /* Background under the border */
+}
+
+.link-highlight-wipe-background:hover::before {
+    bottom: 1.4em; /* Border moves up */
+}
+
+.link-highlight-wipe-background:hover::after {
+    bottom: 0.14em; /* Background stays aligned with the border */
+    height: 1.4em; /* Background expands to fill the space */
+}
