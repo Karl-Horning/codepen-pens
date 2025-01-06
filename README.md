@@ -14,6 +14,7 @@ This repo contains the following projects:
 - [freeCodeCamp: Build a Wikipedia Viewer](./src/fcc-build-a-wikipedia-viewer/)
 - [GSAP SVG Computer Animation](./src/gsap-svg-computer-animation/)
 - [JavaScript & CSS Changing Background Colour on Scroll](./src/javascript-css-changing-background-colour-on-scroll/)
+- [JavaScript Change String Case](./src/javascript-change-string-case/)
 - [JavaScript Key Codes Keyboard Event Handler](./src/javascript-key-codes-keyboard-event-handler/)
 - [Portfolio 2016](./src/portfolio-2016/)
 - [Portfolio 2019](./src/portfolio-2019/)

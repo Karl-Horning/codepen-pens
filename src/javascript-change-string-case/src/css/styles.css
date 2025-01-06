@@ -1,0 +1,118 @@
+/* General Styles */
+.min-h-screen {
+    /* Create a scrolling background animation */
+    animation: scrollBackground 10s ease-in-out infinite;
+    /* Set a linear gradient background */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    /* Set text color to white, height to 100vh, and width to 100% */
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+}
+
+@keyframes scrollBackground {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+/* Input Styles */
+#string-to-format,
+#case-select,
+#search-button {
+    border-bottom: 5px solid #0d6efd;
+    border-top: 5px solid #0d6efd;
+}
+
+#string-to-format {
+    border-left: 5px solid #0d6efd;
+    border-right: none;
+}
+
+#case-select {
+    border-left: 5px solid #0d6efd;
+}
+
+#search-button {
+    border-left: none;
+    border-right: 5px solid #0d6efd;
+}
+
+/* Default styles for all screen sizes */
+
+/* Media query for phones */
+@media only screen and (max-width: 767px) {
+    /* Phones: 0px - 767px */
+    #string-to-format,
+    #case-select,
+    #search-button {
+        border: 1px solid #0d6efd;
+        border-radius: 0.25rem;
+        margin: 10px;
+        width: 100%;
+    }
+
+    .input-group
+        > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+            .valid-feedback
+        ):not(.invalid-tooltip):not(.invalid-feedback) {
+        margin-left: 0;
+    }
+}
+
+/* Media query for tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Tablets: 768px - 991px */
+    #string-to-format {
+        width: 55%;
+    }
+
+    #case-select {
+        width: 25%;
+    }
+
+    #search-button {
+        width: 20%;
+    }
+}
+
+/* Media query for small desktops */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* Small Desktops: 992px - 1199px */
+    #string-to-format {
+        width: 65%;
+    }
+
+    #case-select {
+        width: 25%;
+    }
+
+    #search-button {
+        width: 10%;
+    }
+}
+
+/* Media query for large desktops */
+@media only screen and (min-width: 1200px) {
+    /* Large Desktops: 1200px and above */
+    #string-to-format {
+        width: 75%;
+    }
+
+    #case-select {
+        width: 15%;
+    }
+
+    #search-button {
+        width: 10%;
+    }
+}
