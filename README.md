@@ -13,6 +13,7 @@ This repo contains the following projects:
 - [Dynamic Hero Search](./src/dynamic-hero-search/)
 - [freeCodeCamp: Build a Technical Documentation Page](./src/fcc-build-a-technical-documentation-page/)
 - [freeCodeCamp: Build a Wikipedia Viewer](./src/fcc-build-a-wikipedia-viewer/)
+- [freeCodeCamp: Random Quote Machine](./src/fcc-random-quote-machine/)
 - [GSAP SVG Computer Animation](./src/gsap-svg-computer-animation/)
 - [HTML & CSS Binary Clock](./src/html-css-binary-clock/)
 - [JavaScript & CSS Animated Download Button with an SVG Icon](./src/javascript-css-animated-download-button-with-an-svg-icon/)

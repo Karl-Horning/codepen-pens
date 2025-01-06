@@ -1,0 +1,80 @@
+html,
+body {
+    background: #3949ab;
+    font-family: Montserrat, sans-serif;
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+
+::selection {
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+}
+.flex-container {
+    align-items: center;
+    box-sizing: border-box;
+    height: 100%;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.main-content {
+    color: #fff;
+    max-width: 960px;
+    text-align: center;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.32), 0 2px 2px rgba(0, 0, 0, 0.32);
+}
+
+.quote-text {
+    font-size: 2.5em;
+}
+
+.source {
+    text-align: right;
+}
+
+.source::before {
+    content: "- ";
+}
+
+.btn {
+    background-color: rgb(40, 40, 40);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.8em;
+    margin: 15px 10px;
+    min-width: 250px;
+    padding: 15px;
+    text-transform: uppercase;
+    transition: all 0.8s ease;
+}
+
+.btn:hover {
+    background-color: #333;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.8s ease;
+}
+
+.btn:active {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+
+.buttons {
+    background-color: rgba(30, 30, 30, 0.75);
+    color: white;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
