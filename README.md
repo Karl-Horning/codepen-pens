@@ -14,6 +14,7 @@ This repo contains the following projects:
 - [freeCodeCamp: Build a Wikipedia Viewer](./src/fcc-build-a-wikipedia-viewer/)
 - [GSAP SVG Computer Animation](./src/gsap-svg-computer-animation/)
 - [HTML & CSS Binary Clock](./src/html-css-binary-clock/)
+- [JavaScript & CSS Animated Download Button with an SVG Icon](./src/javascript-css-animated-download-button-with-an-svg-icon/)
 - [JavaScript & CSS Changing Background Colour on Scroll](./src/javascript-css-changing-background-colour-on-scroll/)
 - [JavaScript Change String Case](./src/javascript-change-string-case/)
 - [JavaScript Key Codes Keyboard Event Handler](./src/javascript-key-codes-keyboard-event-handler/)

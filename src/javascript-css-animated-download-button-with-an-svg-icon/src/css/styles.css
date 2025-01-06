@@ -1,0 +1,44 @@
+/* Container for the ripple effect */
+.ripple-container {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Ripple effect styling */
+.ripple {
+    animation: ripple-animation 0.6s linear;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    transform: scale(0);
+    transform-origin: 50% 50%; /* Center the ripple effect */
+}
+
+/* Keyframes for the ripple animation */
+@keyframes ripple-animation {
+    to {
+        opacity: 0;
+        transform: scale(5);
+    }
+}
+
+/* Arrow animation on button hover */
+button:hover #arrow {
+    animation: down-animation 0.9s ease-in-out infinite;
+}
+
+/* Keyframes for the downward arrow animation */
+@keyframes down-animation {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(350px);
+    }
+}
+
+/* Arrow animation on button hover (consistent selector syntax) */
+button:hover #arrow {
+    animation: down-animation 0.9s ease-in-out infinite;
+}
