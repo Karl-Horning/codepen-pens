@@ -9,7 +9,7 @@ This repo contains all of my CodePen Pens. They have been moved to a single repo
 This repo contains the following projects:
 
 - [CSS Button Gradient Animation](./src/css-button-gradient-animation/)
-- [CSS Link Examples](./src/css-link-examples/)
+- [CSS Animated Link Examples](./src/css-animated-link-examples/)
 - [Dynamic Hero Search](./src/dynamic-hero-search/)
 - [freeCodeCamp: Build a Technical Documentation Page](./src/fcc-build-a-technical-documentation-page/)
 - [freeCodeCamp: Build a Wikipedia Viewer](./src/fcc-build-a-wikipedia-viewer/)
