@@ -1,0 +1,57 @@
+/* Set the background color for the entire page */
+html,
+body {
+    background-color: rgb(13, 53, 13);
+
+    /* Create a repeating linear gradient background for a textured effect */
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(13, 53, 13, 1),
+        rgba(38, 34, 40, 1) 10px,
+        rgba(13, 53, 13, 1) 10px,
+        rgba(38, 34, 40, 1) 20px
+    );
+}
+
+/* Style for the main container */
+.container {
+    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+    display: flex; /* Use flexbox for centering content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+
+/* Style for the binary clock digits */
+h2 {
+    color: rgba(
+        43,
+        211,
+        105,
+        0.5
+    ); /* Set the text color with some transparency */
+    font-family: "Share Tech Mono", monospace; /* Use a monospaced font */
+    font-size: 7em; /* Set the font size for large screens */
+    font-weight: lighter; /* Use a lighter font weight */
+    line-height: 0.1em; /* Adjust the line height for better spacing */
+}
+
+/* Media query for screens with a height less than 400px */
+@media screen and (max-height: 400px) {
+    h2 {
+        font-size: 5em; /* Adjust the font size for smaller screens */
+    }
+}
+
+/* Media query for screens with a height less than 250px */
+@media screen and (max-height: 250px) {
+    h2 {
+        font-size: 3em; /* Adjust the font size for smaller screens */
+    }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 5em; /* Adjust the font size for smaller screens */
+    }
+}
