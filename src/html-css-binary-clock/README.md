@@ -18,13 +18,13 @@ This project is a binary clock implemented using HTML, CSS, and JavaScript. It d
 
 See the demo on CodePen: [HTML & CSS Binary Clock](https://codepen.io/karlhorning/pen/PBGLXj).
 
-![Binary Clock Preview](./src/img/binary-clock-preview.gif)
+![Binary Clock Preview](./src/img/preview.gif)
 
 ## Acknowledgments
 
 This project uses the following resource:
 
-- [Share Tech Mono (Google Fonts)](https://fonts.googleapis.com/css?family=Share+Tech+Mono)
+- [Monofett (Google Fonts)](https://fonts.googleapis.com/css?family=Monofett)
 
 ## Author
 
