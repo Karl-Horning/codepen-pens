@@ -24,6 +24,7 @@ This repo contains the following projects:
 - [Portfolio 2019](./src/portfolio-2019/)
 - [Random Password Generator](./src/random-password-generator/)
 - [SVG & CSS Animated UFO](./src/svg-css-animated-ufo/)
+- [SVG Vivus Animation](./src/svg-vivus-animation/)
 
 ## Getting Started
 
