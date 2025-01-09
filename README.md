@@ -20,6 +20,7 @@ This repo contains the following projects:
 - [JavaScript & CSS Changing Background Colour on Scroll](./src/javascript-css-changing-background-colour-on-scroll/)
 - [JavaScript Change String Case](./src/javascript-change-string-case/)
 - [JavaScript Key Codes Keyboard Event Handler](./src/javascript-key-codes-keyboard-event-handler/)
+- [JavaScript Word Count](./src/javascript-word-count/)
 - [Portfolio 2016](./src/portfolio-2016/)
 - [Portfolio 2019](./src/portfolio-2019/)
 - [Random Password Generator](./src/random-password-generator/)
