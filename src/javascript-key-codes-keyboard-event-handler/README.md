@@ -18,14 +18,14 @@ A JavaScript event listener captures key presses, displaying the key and keycode
 
 ![JavaScript Key Codes Keyboard Event Handler Preview](./src/img/preview.gif)
 
-View the demo on [CodePen](https://codepen.io/karlhorning/pen/MBjMrX).
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/MBjMrX).
 
 ## Acknowledgments
 
 This project uses the following resources:
 
-- **Font:** [Alfa Slab One](https://fonts.google.com/specimen/Alfa+Slab+One).
-- **Background Animation:** Manuel Pinto's [Pure CSS Gradient Background Animation](https://codepen.io/P1N2O/pen/pyBNzX).
+- ["Alfa Slab One" from Google Fonts](https://fonts.google.com/specimen/Alfa+Slab+One)
+- [Manuel Pinto's Pure CSS Gradient Background Animation](https://codepen.io/P1N2O/pen/pyBNzX)
 
 ## Author
 

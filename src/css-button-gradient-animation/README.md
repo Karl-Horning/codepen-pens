@@ -17,7 +17,7 @@ A button with a dynamic, rotating gradient border that animates on hover. It's c
 
 ![Preview Image](./src/img/preview.png)
 
-View the live demo on CodePen: [CSS Button Gradient Animation](https://codepen.io/karlhorning/pen/qEWPgGq)
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/qEWPgGq).
 
 ## Author
 

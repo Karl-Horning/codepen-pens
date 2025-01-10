@@ -18,15 +18,15 @@ The Random Quote Machine is a web application developed as part of the freeCodeC
 
 ![Preview Image](./src/img/preview.png)
 
-View the live demo on CodePen: [Random Quote Machine](https://codepen.io/karlhorning/pen/zKewaN)
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/zKewaN).
 
 ## Acknowledgments
 
 This project uses the following resources:
 
-- Font Awesome icons.
-- Montserrat font from Google Fonts.
-- BootstrapCDN.
+- [Font Awesome icons](https://fontawesome.com/icons)
+- ["Montserrat" from Google Fonts](https://fonts.google.com/specimen/Montserrat)
+- [BootstrapCDN](https://www.bootstrapcdn.com/)
 
 ## Author
 

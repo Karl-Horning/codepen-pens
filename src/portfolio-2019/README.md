@@ -7,7 +7,6 @@
   - [Description](#description)
   - [Demo](#demo)
   - [Acknowledgments](#acknowledgments)
-  - [References](#references)
   - [Author](#author)
   - [License](#license)
 
@@ -33,17 +32,13 @@ The project originated as part of the freeCodeCamp Responsive Web Design Project
 
 ![Preview Image](./src/img/portfolio-preview.gif)
 
-View the live demo on CodePen: [Karl Horning's Portfolio Webpage 2019](https://codepen.io/karlhorning/pen/JjzdxbM)
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/JjzdxbM).
 
 ## Acknowledgments
 
 This project uses the following resources:
 
-- [Normalize.css](https://necolas.github.io/normalize.css/): A modern, HTML5-ready alternative to CSS resets.
-- [References](#references): Check out some useful resources that inspired or contributed to this project.
-
-## References
-
+- [Normalize.css](https://necolas.github.io/normalize.css/)
 - [How TO - CSS Arrows](https://www.w3schools.com/howto/howto_css_arrows.asp)
 - [iHover](http://gudh.github.io/ihover/dist/)
 - [Smooth Scrolling](https://css-tricks.com/snippets/jquery/smooth-scrolling/)

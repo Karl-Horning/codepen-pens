@@ -18,14 +18,14 @@ Dynamic background colour transition on scroll using JavaScript and CSS. The pag
 
 ![JavaScript & CSS Changing Background Colour on Scroll Preview](./src/img/preview.gif)
 
-See the demo on [CodePen](https://codepen.io/karlhorning/pen/QWojGpW).
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/QWojGpW).
 
 ## Acknowledgments
 
 This project uses the following resources:
 
-- Special thanks to [Jack Harner](https://codepen.io/jackharner/) for the original project available at [https://codepen.io/jackharner/pen/bdPmQM](https://codepen.io/jackharner/pen/bdPmQM).
-- Special thanks to [Google Fonts](https://fonts.googleapis.com/css?family=Share+Tech+Mono) for providing the "Share Tech Mono" font used in this project.
+- [Jack Harner's](https://codepen.io/jackharner/) original project on [CodePen](https://codepen.io/jackharner/pen/bdPmQM)
+- ["Share Tech Mono" from Google Fonts](https://fonts.googleapis.com/css?family=Share+Tech+Mono)
 
 ## Author
 

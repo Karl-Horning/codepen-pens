@@ -18,7 +18,7 @@ This project is a Wikipedia Viewer created as part of the freeCodeCamp challenge
 
 ![Wikipedia Viewer](./src/img/wikipedia-viewer.gif "Wikipedia Viewer example")
 
-View the live demo on CodePen: [freeCodeCamp: Build a Wikipedia Viewer](https://codepen.io/karlhorning/pen/NdWjOY).
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/NdWjOY).
 
 ## Acknowledgments
 

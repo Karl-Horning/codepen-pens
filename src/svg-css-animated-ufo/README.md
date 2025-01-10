@@ -15,9 +15,9 @@ A CSS animation of an SVG UFO. A grid layout centres the content, while the UFO 
 
 ## Demo
 
-Check out the live demo on CodePen: [SVG & CSS Animated UFO](https://codepen.io/karlhorning/pen/EBzYrL)
-
 ![Preview Image](./src/img/preview.png)
+
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/EBzYrL).
 
 ## Author
 

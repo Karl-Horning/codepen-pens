@@ -18,14 +18,13 @@ Dark-themed superhero search and filter application using CSS and JavaScript. Fe
 
 ![Preview Image](./src/img/preview.png)
 
-Check out the live demo on CodePen: [Dynamic Hero Search Demo](https://codepen.io/karlhorning/pen/dyrMzWy)
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/dyrMzWy).
 
 ## Acknowledgments
 
-This project uses the following resources:
+This project uses the following resource:
 
-- [Bootstrap](https://getbootstrap.com) - Front-end framework for developing responsive and mobile-first websites.
-- Special thanks to [CodePen](https://codepen.io) for providing a platform to showcase and share web development projects.
+- [Bootstrap](https://getbootstrap.com)
 
 ## Author
 

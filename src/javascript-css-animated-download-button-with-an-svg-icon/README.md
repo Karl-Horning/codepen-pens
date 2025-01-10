@@ -16,16 +16,15 @@ A button with a ripple effect on click and a downward arrow animation on hover. 
 
 ## Demo
 
-Check out the live demo on CodePen: [Animated Download Button](https://codepen.io/karlhorning/pen/gOErPxg)
-
 ![Preview Image](./src/img/preview.png)
+
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/gOErPxg).
 
 ## Acknowledgments
 
-This project uses the following resources:
+This project uses the following resource:
 
-- [Tailwind CSS](https://tailwindcss.com/) - Used for styling
-- [CodePen](https://codepen.io/) - Hosting the live demo
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Author
 

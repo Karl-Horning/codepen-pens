@@ -17,7 +17,7 @@ A collection of pure CSS animated link styles featuring various visual effects s
 
 ![Preview Image](./src/img/preview.png)
 
-See the demo on CodePen: [CSS Animated Link Examples](https://codepen.io/karlhorning/pen/mybMqXg)
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/mybMqXg).
 
 ## Author
 

@@ -18,13 +18,13 @@ A simple web application to count the number of words in a textarea, built using
 
 ![Preview Image](./src/img/preview.png)
 
-View the demo on [CodePen](https://codepen.io/karlhorning/pen/NPKyEYB).
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/NPKyEYB).
 
 ## Acknowledgments
 
 This project uses the following resource:
 
-- [Bootstrap](https://getbootstrap.com) - Front-end framework used for styling.
+- [Bootstrap](https://getbootstrap.com)
 
 ## Author
 

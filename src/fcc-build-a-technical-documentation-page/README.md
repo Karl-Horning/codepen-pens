@@ -26,7 +26,7 @@ This project fulfils the following user stories:
 
 ![Preview Image](./src/img/preview.png)
 
-A live demo of this project is available on CodePen: [Technical Documentation Page Demo](https://codepen.io/karlhorning/pen/pxgybR)
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/pxgybR).
 
 ## Acknowledgments
 

@@ -17,7 +17,7 @@ A string formatting tool with multiple options. Users can input and convert a st
 
 ![Preview Image](./src/img/preview.png)
 
-See the demo on CodePen: [Change String Case Demo](https://codepen.io/karlhorning/pen/ZEPWMPw)
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/ZEPWMPw).
 
 ## Author
 

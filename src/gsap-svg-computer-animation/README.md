@@ -18,7 +18,7 @@ Interactive computer animation using GSAP and an SVG. Features a button that tri
 
 ![Preview Image](./src/img/preview.png)
 
-Check out the live demo on CodePen: [GSAP SVG Computer Animation](https://codepen.io/karlhorning/pen/OJqNMVR)
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/OJqNMVR).
 
 ## Acknowledgments
 
@@ -26,7 +26,7 @@ This project uses the following resources:
 
 - Original SVG and animation from [Lewis Menelaws](https://medium.com/@LewisMenelaws/how-to-create-beautiful-svg-animations-easily-610eb2690ac3)
 - [Monitor SVG Animation](https://codepen.io/lewismenelaws/pen/ypKjpd) CodePen by Lewis Menelaws
-- [GSAP (GreenSock Animation Platform)](https://greensock.com/) for providing animation tools
+- [GSAP (GreenSock Animation Platform)](https://greensock.com/)
 
 ## Author
 

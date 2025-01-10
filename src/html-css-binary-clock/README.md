@@ -16,15 +16,15 @@ This project is a binary clock implemented using HTML, CSS, and JavaScript. It d
 
 ## Demo
 
-See the demo on CodePen: [HTML & CSS Binary Clock](https://codepen.io/karlhorning/pen/PBGLXj).
-
 ![Binary Clock Preview](./src/img/preview.gif)
+
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/PBGLXj).
 
 ## Acknowledgments
 
 This project uses the following resource:
 
-- [Monofett (Google Fonts)](https://fonts.googleapis.com/css?family=Monofett)
+- ["Monofett" from Google Fonts](https://fonts.googleapis.com/css?family=Monofett)
 
 ## Author
 

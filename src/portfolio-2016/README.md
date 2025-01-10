@@ -17,7 +17,7 @@ This project showcases my skills and projects as a business English teacher and 
 
 ![Portfolio Preview](./src/img/portfolio_preview.gif)
 
-View the live demo on CodePen: [Karl Horning's Portfolio Webpage](https://codepen.io/karlhorning/pen/GjoZzq).
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/GjoZzq).
 
 ## Author
 

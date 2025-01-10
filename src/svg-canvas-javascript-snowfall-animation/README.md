@@ -12,19 +12,19 @@
 
 ## Description
 
-A snowfall animation made using an SVG image, HTML5 canvas, and JavaScript. The animation is responsive and adjust with the size of the viewport.
+A snowfall animation made using an SVG image, HTML5 canvas, and JavaScript. The animation is responsive and adjusts with the size of the viewport.
 
 ## Demo
 
 ![Preview Image](./src/img/snowfall.gif)
 
-View the demo on [CodePen](https://codepen.io/karlhorning/pen/JjzodgQ).
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/JjzodgQ).
 
 ## Acknowledgments
 
 This project uses the following resources:
 
-- The trial version of the [Hello Christmas](https://www.dafont.com/hello-christmas.font) font from [Zetafonts](https://www.zetafonts.com)
+- [Hello Christmas](https://www.dafont.com/hello-christmas.font) from [Zetafonts](https://www.zetafonts.com)
 - [Tailwind CSS](https://tailwindcss.com/)
 
 ## Author

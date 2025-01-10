@@ -18,14 +18,14 @@ An SVG animation of "Hello World" created using the Vivus library, featuring a "
 
 ![Preview Image](./src/img/preview.gif)
 
-Check out the live demo on [CodePen](https://codepen.io/karlhorning/pen/OJqoKoO).
+[View the live demo on CodePen](https://codepen.io/karlhorning/pen/OJqoKoO).
 
 ## Acknowledgments
 
 This project uses the following resources:
 
+- ["Don Graffiti font"](https://www.dafont.com/don-graffiti.font) from [Don Marciano](https://hellodonmarciano.com/)
 - [Bootstrap](https://getbootstrap.com)
-- [Don Graffiti font](https://www.dafont.com/don-graffiti.font)
 - [Vivus](https://github.com/maxwellito/vivus)
 
 ## Author
