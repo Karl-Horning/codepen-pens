@@ -1,53 +1,109 @@
-# CodePen Pens
+# 🎨 CodePen Pens
 
-## Description
+---
 
-This repo contains all of my CodePen Pens. They have been moved to a single repo as they are all quite small projects, making them easier to manage in one place.
+## 📋 Table of Contents
 
-## Contents
+- [🎨 CodePen Pens](#-codepen-pens)
+  - [📋 Table of Contents](#-table-of-contents)
+  - [🤓 Overview](#-overview)
+  - [📁 Contents](#-contents)
+  - [📦 Installation](#-installation)
+  - [🚀 Usage](#-usage)
+  - [📐 Code Style](#-code-style)
+  - [📌 To Do](#-to-do)
+  - [🙋 FAQ](#-faq)
+  - [📄 Licence](#-licence)
+  - [👤 Author](#-author)
 
-This repo contains the following projects:
+---
 
-- [CSS Animated Link Examples](./src/css-animated-link-examples/)
-- [CSS Button Gradient Animation](./src/css-button-gradient-animation/)
-- [Dynamic Hero Search](./src/dynamic-hero-search/)
-- [freeCodeCamp: Build a Technical Documentation Page](./src/fcc-build-a-technical-documentation-page/)
-- [freeCodeCamp: Build a Wikipedia Viewer](./src/fcc-build-a-wikipedia-viewer/)
-- [freeCodeCamp: Random Quote Machine](./src/fcc-random-quote-machine/)
-- [GSAP SVG Computer Animation](./src/gsap-svg-computer-animation/)
-- [HTML & CSS Binary Clock](./src/html-css-binary-clock/)
-- [JavaScript & CSS Animated Download Button with an SVG Icon](./src/javascript-css-animated-download-button-with-an-svg-icon/)
-- [JavaScript & CSS Changing Background Colour on Scroll](./src/javascript-css-changing-background-colour-on-scroll/)
-- [JavaScript Change String Case](./src/javascript-change-string-case/)
-- [JavaScript Key Codes Keyboard Event Handler](./src/javascript-key-codes-keyboard-event-handler/)
-- [JavaScript Word Count](./src/javascript-word-count/)
-- [Portfolio 2016](./src/portfolio-2016/)
-- [Portfolio 2019](./src/portfolio-2019/)
-- [Random Password Generator](./src/random-password-generator/)
-- [SVG & CSS Animated UFO](./src/svg-css-animated-ufo/)
-- [SVG, Canvas, & JavaScript Snowfall Animation](./src/svg-canvas-javascript-snowfall-animation/)
-- [SVG Vivus Animation](./src/svg-vivus-animation/)
+## 🤓 Overview
 
-## Getting Started
+A collection of small HTML, CSS, and JavaScript projects originally created on CodePen. This repo groups them into a single place for easier maintenance, version control, and local editing.
 
-To view or edit these projects locally:
+---
 
-Step 1. Clone this repository:
+## 📁 Contents
 
-   ```bash
-   git clone https://github.com/Karl-Horning/codepen-pens.git
-   ```
+This repository contains the following projects:
 
-Step 2. Open the individual ```index.html``` files in your browser.
+- [`css-animated-link-examples`](./src/css-animated-link-examples/)
+- [`css-button-gradient-animation`](./src/css-button-gradient-animation/)
+- [`dynamic-hero-search`](./src/dynamic-hero-search/)
+- [`fcc-build-a-technical-documentation-page`](./src/fcc-build-a-technical-documentation-page/)
+- [`fcc-build-a-wikipedia-viewer`](./src/fcc-build-a-wikipedia-viewer/)
+- [`fcc-random-quote-machine`](./src/fcc-random-quote-machine/)
+- [`gsap-svg-computer-animation`](./src/gsap-svg-computer-animation/)
+- [`html-css-binary-clock`](./src/html-css-binary-clock/)
+- [`javascript-css-animated-download-button-with-an-svg-icon`](./src/javascript-css-animated-download-button-with-an-svg-icon/)
+- [`javascript-css-changing-background-colour-on-scroll`](./src/javascript-css-changing-background-colour-on-scroll/)
+- [`javascript-change-string-case`](./src/javascript-change-string-case/)
+- [`javascript-key-codes-keyboard-event-handler`](./src/javascript-key-codes-keyboard-event-handler/)
+- [`javascript-word-count`](./src/javascript-word-count/)
+- [`portfolio-2016`](./src/portfolio-2016/)
+- [`portfolio-2019`](./src/portfolio-2019/)
+- [`random-password-generator`](./src/random-password-generator/)
+- [`svg-css-animated-ufo`](./src/svg-css-animated-ufo/)
+- [`svg-canvas-javascript-snowfall-animation`](./src/svg-canvas-javascript-snowfall-animation/)
+- [`svg-vivus-animation`](./src/svg-vivus-animation/)
 
-## Author
+---
 
-Karl Horning
+## 📦 Installation
 
-- [GitHub](https://github.com/Karl-Horning/)
-- [LinkedIn](https://www.linkedin.com/in/karl-horning/)
-- [CodePen](https://codepen.io/karlhorning)
+Clone the repo to your machine:
 
-## License
+```bash
+git clone https://github.com/Karl-Horning/codepen-pens.git
+cd codepen-pens
+```
 
-This repository is licensed under the [MIT License](LICENSE).
+---
+
+## 🚀 Usage
+
+Each project is self-contained and can be opened directly in your browser:
+
+```bash
+open ./src/project-folder/index.html
+```
+
+Alternatively, right-click and open the desired `index.html` file using your code editor or browser of choice.
+
+---
+
+## 📐 Code Style
+
+Most of these pens use plain HTML, CSS, and JavaScript. A few include small frameworks like GSAP or jQuery. File organisation and naming conventions reflect the original CodePen structure.
+
+---
+
+## 📌 To Do
+
+- [x] Add a screenshot or demo for each project
+- [ ] Update `README.md` file in each folder
+- [ ] Organise projects by year or type
+- [ ] Host previews using GitHub Pages
+
+---
+
+## 🙋 FAQ
+
+**Q: Can I reuse these projects in my own work?**
+A: Yes — feel free to use or remix them. A link back is appreciated but not required.
+
+**Q: Will more pens be added?**
+A: Occasionally, especially if older pens are worth preserving or get updated.
+
+---
+
+## 📄 Licence
+
+MIT © [Karl Horning](https://github.com/Karl-Horning)
+
+---
+
+## 👤 Author
+
+Made with ❤️ by [Karl Horning](https://github.com/Karl-Horning)
