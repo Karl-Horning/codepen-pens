@@ -1,0 +1,126 @@
+/* What we ain't afraid of (CSS SVG animation) */
+body {
+    align-items: center;
+    background-color: #322f32;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+}
+
+#ghostbusters_logo {
+    height: 80vh;
+    justify-content: center;
+}
+
+@keyframes logo-glow {
+    0%,
+    95% {
+        filter: none;
+    }
+    100% {
+        filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.9)) blur(1px);
+    }
+}
+
+#circle {
+    transform-origin: center;
+    animation: circle-in 900ms cubic-bezier(0, 0, 0.2, 1) both;
+}
+
+@keyframes circle-in {
+    from {
+        transform: scale(5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#ghost {
+    transform-origin: center;
+    filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.9)) blur(1px);
+    animation: ghost-in 700ms 1100ms cubic-bezier(0.22, 1, 0.36, 1) both,
+        ghost-glow 1400ms 1100ms ease-out forwards;
+
+    mask: url(#ghostVaporMask);
+    -webkit-mask: url(#ghostVaporMask);
+
+    /* Fade + glow shrink */
+    animation: ghost-in 700ms 1100ms cubic-bezier(0.22, 1, 0.36, 1) both,
+        ghost-glow 1400ms 1100ms ease-out forwards;
+
+    /* Initial glow */
+    filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.9)) blur(1px);
+}
+
+@keyframes ghost-glow {
+    0% {
+        filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.9)) blur(1px);
+    }
+    100% {
+        filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0)) blur(0);
+    }
+}
+
+@keyframes ghost-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#cross_colour {
+    transform-box: fill-box;
+    transform-origin: top right;
+    animation: cross-colour-in 900ms 1900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes cross-colour-in {
+    0% {
+        transform: scale(0);
+    }
+    82% {
+        transform: scale(1.06);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#cross_outline {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: cross-outline-in 500ms 2450ms cubic-bezier(0.4, 0, 1, 1) both; /* ease-in */
+}
+
+@keyframes cross-outline-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#circle,
+#ghost,
+#cross_colour,
+#cross_outline {
+    will-change: transform, opacity;
+}
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+    }
+}
+
+#ghostbusters_logo {
+    animation-play-state: paused;
+}
+
+#ghostbusters_logo:hover {
+    animation-play-state: running;
+}
