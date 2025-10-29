@@ -40,6 +40,14 @@
     "description": "This project is a Wikipedia Viewer created as part of the freeCodeCamp challenge,"
   },
   {
+    "title": "freeCodeCamp: Build a Survey Form",
+    "category": "fcc-projects",
+    "path": "pens/fcc-projects/build-a-survey-form/",
+    "url": "/codepen-pens/pens/fcc-projects/build-a-survey-form/",
+    "preview": "assets/previews/build-a-survey-form.png",
+    "description": "A responsive survey form built for freeCodeCamp's Responsive Web Design certification, collecting user details, preferences and feedback with accessible HTML."
+  },
+  {
     "title": "freeCodeCamp: Random Quote Machine",
     "category": "fcc-projects",
     "path": "pens/fcc-projects/random-quote-machine/",

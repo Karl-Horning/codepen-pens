@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="A responsive survey form built for freeCodeCamp's Responsive Web Design certification, collecting user details, preferences and feedback with accessible HTML."
+        />
+        <meta name="keywords" content="HTML, CSS, freeCodeCamp" />
+        <meta name="author" content="Karl Horning" />
+        <title>freeCodeCamp: Build a Survey Form</title>
+        <link rel="stylesheet" href="./normalize.css" />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <form id="survey-form" action="">
+                <header class="row text-center border-bottom">
+                    <h1 id="title">freeCodeCamp Survey Form</h1>
+                    <p id="description">
+                        Let us know what freeCodeCamp improvements
+                        <em>you'd</em> like to see
+                    </p>
+                </header>
+                <div class="row">
+                    <div class="col">
+                        <label for="name" id="name-label"
+                            >What's your name, camper?
+                            <span>(required)</span></label
+                        >
+                    </div>
+                    <div class="col">
+                        <input
+                            type="text"
+                            name="name"
+                            class="input"
+                            id="name"
+                            placeholder="You can use your first name or full name"
+                            required
+                        />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="email" id="email-label"
+                            >What's the best email address to contact you on?
+                            <span>(required)</span></label
+                        >
+                    </div>
+                    <div class="col">
+                        <input
+                            type="email"
+                            name="email"
+                            class="input"
+                            id="email"
+                            placeholder="It won't be shared with any third parties"
+                            required
+                        />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="number" id="number-label"
+                            >How old are you? <span>(required)</span></label
+                        >
+                    </div>
+                    <div class="col">
+                        <input
+                            type="number"
+                            name="number"
+                            class="input"
+                            id="number"
+                            placeholder="For statistical purposes: we won't tell!"
+                            pattern="/^[0-9]*$/"
+                            min="1"
+                            max="125"
+                        />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="dropdown">What's your current role?</label>
+                    </div>
+                    <div class="col">
+                        <select name="dropdown" class="input" id="dropdown">
+                            <optgroup label="Select an option"></optgroup>
+                            <option value="1">Student</option>
+                            <option value="2">Employed Full Time</option>
+                            <option value="3">Employed Part Time</option>
+                            <option value="4">Self-Employed</option>
+                            <option value="5">Seeking Work</option>
+                            <option value="6">Other</option>
+                            <option value="7">Prefer not to say</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="options"
+                            >Would you recommend freeCodeCamp to a friend who
+                            wanted to learn to code?
+                            <span>(required)</span></label
+                        >
+                    </div>
+                    <div class="col">
+                        <ul>
+                            <li>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="options"
+                                        value="1"
+                                        required
+                                    />
+                                    Absolutely!
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="options"
+                                        value="2"
+                                    />
+                                    Maybe
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="options"
+                                        value="3"
+                                    />
+                                    Nope!
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="options"
+                                        value="4"
+                                    />
+                                    I'm not sure yet...
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="checkbox">
+                            What should we improve to make freeCodeCamp more
+                            useful for you? (Select as many as you'd like)
+                        </label>
+                    </div>
+                    <div class="col">
+                        <ul>
+                            <li>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="checkbox"
+                                        id=""
+                                        value="1"
+                                    />
+                                    Front-end Projects
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="checkbox"
+                                        id=""
+                                        value="2"
+                                    />
+                                    Back-end Projects
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="checkbox"
+                                        id=""
+                                        value="3"
+                                    />
+                                    Data Visualization
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="checkbox"
+                                        id=""
+                                        value="4"
+                                    />
+                                    Challenges
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="checkbox"
+                                        id=""
+                                        value="5"
+                                    />
+                                    Open Source Community
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="checkbox"
+                                        id=""
+                                        value="6"
+                                    />
+                                    Gitter help rooms
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="checkbox"
+                                        id=""
+                                        value="7"
+                                    />
+                                    Videos
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="checkbox"
+                                        id=""
+                                        value="8"
+                                    />
+                                    City Meetups
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="checkbox"
+                                        id=""
+                                        value="9"
+                                    />
+                                    Wiki
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="checkbox"
+                                        id=""
+                                        value="10"
+                                    />
+                                    Forum
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="checkbox"
+                                        id=""
+                                        value="11"
+                                    />
+                                    Additional Courses
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="comments"
+                            >Do you have any comments or suggestions?</label
+                        >
+                    </div>
+                    <div class="col">
+                        <textarea
+                            name="comments"
+                            class="input textarea"
+                            id="comments"
+                            cols="30"
+                            rows="10"
+                            placeholder="You guys rock! Keep up the good work."
+                        ></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <input
+                        type="submit"
+                        value="Submit"
+                        class="btn blue"
+                        id="submit"
+                    />
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
