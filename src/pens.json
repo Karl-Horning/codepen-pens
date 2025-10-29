@@ -112,6 +112,14 @@
     "description": "A JavaScript event listener captures key presses, displaying the key and keycode in a responsive, text-shadowed display."
   },
   {
+    "title": "JavaScript Particle Effect Button",
+    "category": "javascript",
+    "path": "pens/javascript/particle-effect-button/",
+    "url": "/codepen-pens/pens/javascript/particle-effect-button/",
+    "preview": "assets/previews/particle-effect-button.webp",
+    "description": "An HTML5 canvas and JavaScript button with an explosion effect on click. Particles explode from the button's surface, using its colour data, and the animation is rendered using a custom particle class and canvas."
+  },
+  {
     "title": "JavaScript Word Count Tracker",
     "category": "javascript",
     "path": "pens/javascript/word-count-tracker/",
