@@ -16,6 +16,14 @@
     "description": "A button with a dynamic, rotating gradient border that animates on hover. It's centred on the page using Flexbox and includes smooth transitions for hover and active states, featuring a scaling effect."
   },
   {
+    "title": "CSS Responsive Form",
+    "category": "css",
+    "path": "pens/css/responsive-form/",
+    "url": "/codepen-pens/pens/css/responsive-form/",
+    "preview": "assets/previews/responsive-form.webp",
+    "description": "Responsive contact form built with HTML and CSS. Includes inline validation hints, required field indicators, and smooth focus states — no JavaScript needed."
+  },
+  {
     "title": "Ghostbusters Logo",
     "category": "css",
     "path": "pens/css/ghostbusters-logo-css-animation/",
