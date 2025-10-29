@@ -168,6 +168,14 @@
     "description": "My portfolio site from 2019. CSS manages layout, typography, and transitions, while JavaScript controls scroll-triggered visibility and smooth scrolling. The site also includes a contact form with anti-bot measures."
   },
   {
+    "title": "404 Error",
+    "category": "svg",
+    "path": "pens/svg/404-page/",
+    "url": "/codepen-pens/pens/svg/404-page/",
+    "preview": "assets/previews/404-page.webp",
+    "description": "Animated SVG elements with dynamic colour cycling and scaling effects using CSS keyframes. Each element alternates its scale slightly with a grow animation, while unique cycle-colors animations create colour transitions."
+  },
+  {
     "title": "GSAP SVG Computer Animation",
     "category": "svg",
     "path": "pens/svg/gsap-computer-animation/",
