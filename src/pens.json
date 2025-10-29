@@ -8,6 +8,14 @@
     "description": "Pure CSS animation that creates a heartbeat effect. The emoji scales up and down while its opacity fluctuates, simulating a pulsing motion. The animation runs continuously with a 2-second cycle."
   },
   {
+    "title": "CSS Animated Gradient Background",
+    "category": "css",
+    "path": "pens/css/animated-gradient-background/",
+    "url": "/codepen-pens/pens/css/animated-gradient-background/",
+    "preview": "assets/previews/animated-gradient-background.webp",
+    "description": "Responsive webpage featuring an animated gradient background and styled heading. The gradient background shifts colours using a CSS animation, while the heading uses the 'Alfa Slab One' font and adjusts its size and padding based on the viewport width."
+  },
+  {
     "title": "CSS Animated Link Examples",
     "category": "css",
     "path": "pens/css/animated-link-examples/",
