@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Download Button</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="preload"
+            href="./styles.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+        />
+        <noscript
+            ><link rel="stylesheet" href="./styles.css"
+        /></noscript>
+    </head>
+
+    <body>
+        <main class="flex items-center justify-center min-h-screen bg-gray-100">
+            <section
+                class="group inline-block relative ripple-container"
+                id="downloadButton"
+            >
+                <button
+                    class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-3 px-8 rounded transition-transform duration-300 ease-in-out group-hover:transform group-hover:translate-y-1 relative"
+                >
+                    <svg
+                        height="18"
+                        width="18"
+                        viewBox="0 0 80 80"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xml:space="preserve"
+                        style="
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 2;
+                        "
+                        class="inline-block mr-1"
+                    >
+                        <g
+                            id="download"
+                            transform="translate(-191.197 -6.539) scale(.24572)"
+                        >
+                            <path
+                                d="M790.556 271.2h30v50.981h240.654v-50.988h30v80.988H790.556V271.2Z"
+                                style="fill: #fff"
+                                id="bottom_section"
+                            />
+                            <path
+                                d="m955.886 224.256 79.534-69.534 19.75 22.585-114.284 99.911-114.281-99.911 19.745-22.585 11.293 9.873 68.243 59.661V26.611h30v197.645Z"
+                                style="fill: #fff"
+                                id="arrow"
+                            />
+                        </g>
+                    </svg>
+                    Download
+                    <span class="ripple"></span>
+                </button>
+            </section>
+        </main>
+
+        <script src="./script.js" defer></script>
+    </body>
+</html>
