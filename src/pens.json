@@ -1,5 +1,13 @@
 [
   {
+    "title": "Animated Avengers ID Card | Karl Horning",
+    "category": "css",
+    "path": "pens/css/animated-avengers-id-card/",
+    "url": "/codepen-pens/pens/css/animated-avengers-id-card/",
+    "preview": "assets/previews/animated-avengers-id-card.webp",
+    "description": "A responsive, animated Avengers ID card inspired by Tony Stark's futuristic design. Built with pure CSS, featuring glowing arcs, subtle motion, and a clean sci-fi aesthetic. Adapted from Kunal Sarkar's 2018 tutorial."
+  },
+  {
     "title": "CSS Animated Emoji Heartbeat",
     "category": "css",
     "path": "pens/css/animated-emoji-heartbeat/",
