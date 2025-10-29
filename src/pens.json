@@ -88,11 +88,19 @@
     "description": "A responsive survey form built for freeCodeCamp's Responsive Web Design certification, collecting user details, preferences and feedback with accessible HTML."
   },
   {
-    "title": "freeCodeCamp: Random Quote Machine",
+    "title": "freeCodeCamp: Random Quote Machine 2016",
     "category": "fcc-projects",
-    "path": "pens/fcc-projects/random-quote-machine/",
-    "url": "/codepen-pens/pens/fcc-projects/random-quote-machine/",
-    "preview": "assets/previews/random-quote-machine.png",
+    "path": "pens/fcc-projects/random-quote-machine-2016/",
+    "url": "/codepen-pens/pens/fcc-projects/random-quote-machine-2016/",
+    "preview": "assets/previews/random-quote-machine-2016.webp",
+    "description": "Dynamic quote generator using JavaScript with a random selection from a predefined list. The page background colour changes randomly with each new quote. This is my original random quote machine from 2016 and is presented as-is."
+  },
+  {
+    "title": "freeCodeCamp: Random Quote Machine 2019",
+    "category": "fcc-projects",
+    "path": "pens/fcc-projects/random-quote-machine-2019/",
+    "url": "/codepen-pens/pens/fcc-projects/random-quote-machine-2019/",
+    "preview": "assets/previews/random-quote-machine-2019.png",
     "description": "The Random Quote Machine is a web application developed as part of the freeCodeCamp curriculum. The main goal of this project is to create a simple and interactive page that displays random quotes along with their sources. Users can also tweet their favourite quotes directly from the application."
   },
   {
