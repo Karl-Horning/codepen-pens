@@ -1,0 +1,177 @@
+/* --------------------------------------------------------------------------
+ * Footer utilities (Tailwind-like subset for this footer only)
+ *
+ * Purpose
+ * - Provide the exact classes used in the footer without Tailwind.
+ *
+ * Notes
+ * - Supports auto dark mode and manual [data-theme="dark"] override.
+ * - Implements a simple ring (focus-visible) with offset + colour.
+ * -------------------------------------------------------------------------- */
+
+/* Palette (Tailwind slate approx) */
+:root {
+    --slate-200: #e2e8f0;
+    --slate-400: #94a3b8;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1f2937;
+    --slate-900: #0f172a;
+
+    --ring-color: var(--slate-500);
+    --ring-offset: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --ring-offset: #0b0b0b;
+    }
+}
+[data-theme="dark"] {
+    --ring-offset: #0b0b0b;
+}
+
+/* Layout / spacing */
+.mt-12 {
+    margin-top: 3rem;
+}
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.max-w-3xl {
+    max-width: 48rem;
+}
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.space-y-3 > * + * {
+    margin-top: 0.75rem;
+}
+
+/* Display / flex */
+.flex {
+    display: flex;
+}
+.justify-center {
+    justify-content: center;
+}
+.gap-4 {
+    gap: 1rem;
+}
+
+/* Borders */
+.border-t {
+    border-top: 1px solid currentColor;
+}
+.border-slate-200 {
+    border-color: var(--slate-200);
+}
+@media (prefers-color-scheme: dark) {
+    .dark\:border-slate-700 {
+        border-color: var(--slate-700);
+    }
+}
+[data-theme="dark"] .dark\:border-slate-700 {
+    border-color: var(--slate-700);
+}
+
+/* Typography */
+.text-center {
+    text-align: center;
+}
+.text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+.text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+.text-slate-800 {
+    color: var(--slate-800);
+}
+.text-slate-600 {
+    color: var(--slate-600);
+}
+.hover\:text-slate-900:hover {
+    color: var(--slate-900);
+}
+
+/* Dark-mode text variants */
+@media (prefers-color-scheme: dark) {
+    .dark\:text-slate-200 {
+        color: var(--slate-200);
+    }
+    .dark\:text-slate-400 {
+        color: var(--slate-400);
+    }
+    .dark\:hover\:text-slate-200:hover {
+        color: var(--slate-200);
+    }
+}
+[data-theme="dark"] .dark\:text-slate-200 {
+    color: var(--slate-200);
+}
+[data-theme="dark"] .dark\:text-slate-400 {
+    color: var(--slate-400);
+}
+[data-theme="dark"] .dark\:hover\:text-slate-200:hover {
+    color: var(--slate-200);
+}
+
+/* Focus ring (offset + colour), matches ring-offset and ring colour */
+.ring-offset-white {
+    --ring-offset: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+    .dark\:ring-offset-slate-900 {
+        --ring-offset: #0b0b0b;
+    }
+}
+[data-theme="dark"] .dark\:ring-offset-slate-900 {
+    --ring-offset: #0b0b0b;
+}
+.focus\:outline-none:focus {
+    outline: none;
+}
+.focus-visible\:ring-2:focus-visible {
+    /* offset ring + main ring */
+    box-shadow: 0 0 0 2px var(--ring-offset), 0 0 0 4px var(--ring-color);
+}
+.focus-visible\:ring-slate-500 {
+    --ring-color: var(--slate-500);
+}
+
+/* Transitions */
+.transition-colors {
+    transition-property: color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 150ms;
+}
+
+/* Visually hidden but accessible (matches Tailwind's .sr-only) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .motion-safe\:duration-150 {
+        transition-duration: 150ms;
+    }
+}
+
+/* Dark-mode aware link colour inheritance is handled by the text-* classes */
