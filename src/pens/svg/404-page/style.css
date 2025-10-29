@@ -1,0 +1,196 @@
+/* === Theme variables ===================================
+   Define colours once, theme via [data-theme] on <html> or a wrapper.
+   c1..c4 are cycled in the keyframes.
+========================================================== */
+:root {
+    /* Default (light) */
+    --c1: rgb(67, 72, 102);
+    --c2: rgb(213, 94, 74);
+    --c3: rgb(221, 189, 142);
+    --c4: rgb(148, 171, 163);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --c1: rgb(32, 36, 54);
+        --c2: rgb(180, 72, 60);
+        --c3: rgb(180, 150, 110);
+        --c4: rgb(110, 135, 128);
+    }
+}
+
+/* Explicit themes override (light/dark/seasonal) */
+[data-theme="light"] {
+    --c1: rgb(67, 72, 102);
+    --c2: rgb(213, 94, 74);
+    --c3: rgb(221, 189, 142);
+    --c4: rgb(148, 171, 163);
+}
+
+[data-theme="dark"] {
+    --c1: rgb(24, 28, 44);
+    --c2: rgb(164, 60, 52);
+    --c3: rgb(170, 138, 94);
+    --c4: rgb(92, 116, 110);
+}
+
+/* Example seasonal palettes */
+[data-theme="spring"] {
+    --c1: rgb(90, 110, 150);
+    --c2: rgb(240, 120, 120);
+    --c3: rgb(240, 210, 170);
+    --c4: rgb(160, 200, 185);
+}
+
+[data-theme="autumn"] {
+    --c1: rgb(60, 55, 45);
+    --c2: rgb(182, 89, 41);
+    --c3: rgb(214, 175, 110);
+    --c4: rgb(139, 107, 74);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#text path {
+    animation: grow 2.1s infinite alternate;
+    transform-origin: center;
+}
+
+#outline-1 path {
+    animation: cycle-colors-1 8s infinite linear, grow 2s infinite alternate;
+    transform-origin: center;
+}
+
+#outline-2 path {
+    animation: cycle-colors-2 8s infinite linear, grow 2.2s infinite alternate;
+    transform-origin: center;
+}
+
+#outline-3 {
+    animation: cycle-colors-3 8s infinite linear, grow 1.5s infinite alternate;
+    transform-origin: center;
+}
+
+#outline-4 {
+    animation: cycle-colors-4 8s infinite linear, grow 1.8s infinite alternate;
+    transform-origin: center;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes skew {
+    from {
+        transform: skew(30deg);
+    }
+    to {
+        transform: skew(-10deg);
+    }
+}
+
+@keyframes cycle-colors-1 {
+    0% {
+        fill: var(--c1);
+    }
+    25% {
+        fill: var(--c2);
+    }
+    50% {
+        fill: var(--c3);
+    }
+    75% {
+        fill: var(--c4);
+    }
+    100% {
+        fill: var(--c1);
+    }
+}
+
+@keyframes cycle-colors-2 {
+    0% {
+        fill: var(--c2);
+    }
+    25% {
+        fill: var(--c3);
+    }
+    50% {
+        fill: var(--c4);
+    }
+    75% {
+        fill: var(--c1);
+    }
+    100% {
+        fill: var(--c2);
+    }
+}
+
+@keyframes cycle-colors-3 {
+    0% {
+        fill: var(--c3);
+    }
+    25% {
+        fill: var(--c4);
+    }
+    50% {
+        fill: var(--c1);
+    }
+    75% {
+        fill: var(--c2);
+    }
+    100% {
+        fill: var(--c3);
+    }
+}
+
+@keyframes cycle-colors-4 {
+    0% {
+        fill: var(--c4);
+    }
+    25% {
+        fill: var(--c1);
+    }
+    50% {
+        fill: var(--c2);
+    }
+    75% {
+        fill: var(--c3);
+    }
+    100% {
+        fill: var(--c4);
+    }
+}
+
+/* === Desktop-only gentle parallax on hover ===============================
+   Applies small, layered translations when hovering the SVG container.
+   No JS; effect is subtle to avoid motion sickness.
+============================================================================ */
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
+    .svg-image {
+        perspective: 1000px;
+    }
+    .svg-image:hover #outline-1 path {
+        transform: translate3d(-2px, -2px, 0) scale(1.02);
+    }
+    .svg-image:hover #outline-2 path {
+        transform: translate3d(2px, -1px, 0) scale(1.02);
+    }
+    .svg-image:hover #outline-3 {
+        transform: translate3d(-1px, 2px, 0) scale(1.015);
+    }
+    .svg-image:hover #outline-4 {
+        transform: translate3d(1px, 1px, 0) scale(1.01);
+    }
+    .svg-image:hover #text path {
+        transform: translate3d(0, 0, 0) scale(1.06) rotate(-0.2deg);
+    }
+}
