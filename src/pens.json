@@ -1,0 +1,162 @@
+[
+  {
+    "title": "CSS Animated Link Examples",
+    "category": "css",
+    "path": "pens/css/animated-link-examples/",
+    "url": "/codepen-pens/pens/css/animated-link-examples/",
+    "preview": "assets/previews/animated-link-examples.png",
+    "description": ""
+  },
+  {
+    "title": "CSS Button Gradient Animation",
+    "category": "css",
+    "path": "pens/css/button-gradient-animation/",
+    "url": "/codepen-pens/pens/css/button-gradient-animation/",
+    "preview": "assets/previews/button-gradient-animation.png",
+    "description": ""
+  },
+  {
+    "title": "Ghostbusters Logo",
+    "category": "css",
+    "path": "pens/css/ghostbusters-logo-css-animation/",
+    "url": "/codepen-pens/pens/css/ghostbusters-logo-css-animation/",
+    "preview": null,
+    "description": ""
+  },
+  {
+    "title": "Build a Technical Documentation Page",
+    "category": "fcc-projects",
+    "path": "pens/fcc-projects/technical-documentation-page/",
+    "url": "/codepen-pens/pens/fcc-projects/technical-documentation-page/",
+    "preview": "assets/previews/technical-documentation-page.png",
+    "description": ""
+  },
+  {
+    "title": "Build a Wikipedia Viewer",
+    "category": "fcc-projects",
+    "path": "pens/fcc-projects/build-a-wikipedia-viewer/",
+    "url": "/codepen-pens/pens/fcc-projects/build-a-wikipedia-viewer/",
+    "preview": "assets/previews/build-a-wikipedia-viewer.png",
+    "description": ""
+  },
+  {
+    "title": "Random Quote Machine",
+    "category": "fcc-projects",
+    "path": "pens/fcc-projects/random-quote-machine/",
+    "url": "/codepen-pens/pens/fcc-projects/random-quote-machine/",
+    "preview": "assets/previews/random-quote-machine.png",
+    "description": ""
+  },
+  {
+    "title": "Binary Clock",
+    "category": "javascript",
+    "path": "pens/javascript/binary-clock/",
+    "url": "/codepen-pens/pens/javascript/binary-clock/",
+    "preview": "assets/previews/binary-clock.gif",
+    "description": ""
+  },
+  {
+    "title": "Changing Background Colour on Scroll",
+    "category": "javascript",
+    "path": "pens/javascript/changing-background-on-scroll/",
+    "url": "/codepen-pens/pens/javascript/changing-background-on-scroll/",
+    "preview": "assets/previews/changing-background-on-scroll.gif",
+    "description": ""
+  },
+  {
+    "title": "Display Keycodes",
+    "category": "javascript",
+    "path": "pens/javascript/key-codes-keyboard-event-handler/",
+    "url": "/codepen-pens/pens/javascript/key-codes-keyboard-event-handler/",
+    "preview": "assets/previews/key-codes-keyboard-event-handler.gif",
+    "description": ""
+  },
+  {
+    "title": "Document",
+    "category": "javascript",
+    "path": "pens/javascript/random-password-generator/",
+    "url": "/codepen-pens/pens/javascript/random-password-generator/",
+    "preview": "assets/previews/random-password-generator.png",
+    "description": ""
+  },
+  {
+    "title": "Download Button",
+    "category": "javascript",
+    "path": "pens/javascript/animated-download-button-svg/",
+    "url": "/codepen-pens/pens/javascript/animated-download-button-svg/",
+    "preview": "assets/previews/animated-download-button-svg.png",
+    "description": ""
+  },
+  {
+    "title": "Dynamic Hero Search",
+    "category": "javascript",
+    "path": "pens/javascript/dynamic-hero-search/",
+    "url": "/codepen-pens/pens/javascript/dynamic-hero-search/",
+    "preview": "assets/previews/dynamic-hero-search.png",
+    "description": ""
+  },
+  {
+    "title": "JavaScript Change String Case",
+    "category": "javascript",
+    "path": "pens/javascript/change-string-case/",
+    "url": "/codepen-pens/pens/javascript/change-string-case/",
+    "preview": "assets/previews/change-string-case.png",
+    "description": ""
+  },
+  {
+    "title": "JavaScript Word Count",
+    "category": "javascript",
+    "path": "pens/javascript/word-count-tracker/",
+    "url": "/codepen-pens/pens/javascript/word-count-tracker/",
+    "preview": "assets/previews/word-count-tracker.png",
+    "description": ""
+  },
+  {
+    "title": "Karl Horning",
+    "category": "portfolio",
+    "path": "pens/portfolio/portfolio-2019/",
+    "url": "/codepen-pens/pens/portfolio/portfolio-2019/",
+    "preview": "assets/previews/portfolio-2019.gif",
+    "description": ""
+  },
+  {
+    "title": "Karl Horning | Portfolio",
+    "category": "portfolio",
+    "path": "pens/portfolio/portfolio-2016/",
+    "url": "/codepen-pens/pens/portfolio/portfolio-2016/",
+    "preview": "assets/previews/portfolio-2016.gif",
+    "description": ""
+  },
+  {
+    "title": "GSAP SVG Computer Animation",
+    "category": "svg",
+    "path": "pens/svg/gsap-computer-animation/",
+    "url": "/codepen-pens/pens/svg/gsap-computer-animation/",
+    "preview": "assets/previews/gsap-computer-animation.png",
+    "description": ""
+  },
+  {
+    "title": "Merry Christmas!",
+    "category": "svg",
+    "path": "pens/svg/canvas-snowfall-animation/",
+    "url": "/codepen-pens/pens/svg/canvas-snowfall-animation/",
+    "preview": "assets/previews/canvas-snowfall-animation.png",
+    "description": ""
+  },
+  {
+    "title": "SVG & CSS Animated UFO",
+    "category": "svg",
+    "path": "pens/svg/css-animated-ufo/",
+    "url": "/codepen-pens/pens/svg/css-animated-ufo/",
+    "preview": "assets/previews/css-animated-ufo.png",
+    "description": ""
+  },
+  {
+    "title": "Vivus Animated Hello World!",
+    "category": "svg",
+    "path": "pens/svg/vivus-line-drawing/",
+    "url": "/codepen-pens/pens/svg/vivus-line-drawing/",
+    "preview": "assets/previews/vivus-line-drawing.gif",
+    "description": ""
+  }
+]

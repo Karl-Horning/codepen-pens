@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>CodePen Pens</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <div class="wrap">
+            <h1>CodePen Pens</h1>
+            <div class="controls">
+                <input
+                    id="q"
+                    type="search"
+                    placeholder="Filter (title/desc/category)…"
+                    aria-label="Filter pens"
+                />
+                <span class="desc">Press <kbd>/</kbd> to focus</span>
+            </div>
+            <div id="list" role="list" aria-live="polite"></div>
+        </div>
+
+        <script type="module" src="./js/script.js"></script>
+    </body>
+</html>
