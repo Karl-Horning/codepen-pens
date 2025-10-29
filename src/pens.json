@@ -32,6 +32,14 @@
     "description": "A button with a dynamic, rotating gradient border that animates on hover. It's centred on the page using Flexbox and includes smooth transitions for hover and active states, featuring a scaling effect."
   },
   {
+    "title": "CSS Reddit Loader",
+    "category": "css",
+    "path": "pens/css/reddit-loader/",
+    "url": "/codepen-pens/pens/css/reddit-loader/",
+    "preview": "assets/previews/reddit-loader.webp",
+    "description": "CSS animation inspired by the Reddit loader, creating a pulsating circle effect using HTML and CSS."
+  },
+  {
     "title": "CSS Responsive Form",
     "category": "css",
     "path": "pens/css/responsive-form/",

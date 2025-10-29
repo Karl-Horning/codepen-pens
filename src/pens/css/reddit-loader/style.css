@@ -1,0 +1,98 @@
+:root {
+    --loader-size: 100px;
+    --dot-colour: #c14b4b;
+    --bg-colour: #e0d8d6;
+    --ripple-duration: 1.2s;
+    --pop-duration: 0.55s;
+    --ripple-delay: 0.25s; /* starts after the dot appears */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg-colour);
+}
+
+.loader-wrapper {
+    display: grid;
+    place-items: center;
+    min-height: 100svh; /* better mobile behaviour than 100vh */
+}
+
+.loader {
+    position: relative;
+    width: var(--loader-size);
+    height: var(--loader-size);
+}
+
+.circle {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--dot-colour);
+    transform-origin: center;
+}
+
+/* Dot: quick pop then hold (no flickery opacity loop) */
+.circle-front {
+    opacity: 0;
+    transform: scale(0);
+    animation: pop-in var(--pop-duration) cubic-bezier(0.2, 0.7, 0.3, 1)
+        forwards;
+}
+
+/* Ripple: single keyframe handles scale + fade, loops forever.
+   Delay lines the first wave up just after the pop finishes. */
+.circle-rear {
+    will-change: transform, opacity;
+    animation: ripple var(--ripple-duration) ease-out var(--ripple-delay)
+        infinite;
+}
+
+/* If you want a second ripple for a fuller effect, duplicate the rear circle
+   in the HTML or add another element and use a staggered delay. */
+
+/* Keyframes */
+@keyframes pop-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+        opacity: 0.45;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* Reduced motion: show static dot with a faint halo */
+@media (prefers-reduced-motion: reduce) {
+    .circle-front {
+        opacity: 1;
+        transform: scale(1);
+        animation: none;
+    }
+    .circle-rear {
+        animation: none;
+        opacity: 0.18;
+        transform: scale(1.4);
+    }
+}
