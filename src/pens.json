@@ -32,6 +32,14 @@
     "description": "A hand-traced recreation of the Ghostbusters logo — drawn by me in Affinity Designer and animated using pure CSS and SVG only (no GSAP, no JavaScript)."
   },
   {
+    "title": "Pure CSS X-Men: Cyclops",
+    "category": "css",
+    "path": "pens/css/xmen-cyclops/",
+    "url": "/codepen-pens/pens/css/xmen-cyclops/",
+    "preview": "assets/previews/xmen-cyclops.webp",
+    "description": "A pure CSS image of Cyclops from the X-Men. This image was inspired by Jag Nagra's Cyclops."
+  },
+  {
     "title": "Build a Technical Documentation Page",
     "category": "fcc-projects",
     "path": "pens/fcc-projects/technical-documentation-page/",
