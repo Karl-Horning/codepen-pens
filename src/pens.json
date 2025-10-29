@@ -64,7 +64,15 @@
     "description": "A pure CSS image of Cyclops from the X-Men. This image was inspired by Jag Nagra's Cyclops."
   },
   {
-    "title": "Build a Technical Documentation Page",
+    "title": "freeCodeCamp: Build a Survey Form",
+    "category": "fcc-projects",
+    "path": "pens/fcc-projects/build-a-survey-form/",
+    "url": "/codepen-pens/pens/fcc-projects/build-a-survey-form/",
+    "preview": "assets/previews/build-a-survey-form.png",
+    "description": "A responsive survey form built for freeCodeCamp's Responsive Web Design certification, collecting user details, preferences and feedback with accessible HTML."
+  },
+  {
+    "title": "freeCodeCamp: Build a Technical Documentation Page",
     "category": "fcc-projects",
     "path": "pens/fcc-projects/technical-documentation-page/",
     "url": "/codepen-pens/pens/fcc-projects/technical-documentation-page/",
@@ -72,20 +80,12 @@
     "description": "This project is a Technical Documentation Page developed for the Responsive Web Design Projects on freeCodeCamp. It features a structured layout with multiple sections dedicated to specific topics and a user-friendly navigation menu."
   },
   {
-    "title": "Build a Wikipedia Viewer",
+    "title": "freeCodeCamp: Build a Wikipedia Viewer",
     "category": "fcc-projects",
     "path": "pens/fcc-projects/build-a-wikipedia-viewer/",
     "url": "/codepen-pens/pens/fcc-projects/build-a-wikipedia-viewer/",
     "preview": "assets/previews/build-a-wikipedia-viewer.png",
     "description": "This project is a Wikipedia Viewer created as part of the freeCodeCamp challenge, 'Build a Wikipedia Viewer'. It enables users to search for Wikipedia articles and view search results through the interface."
-  },
-  {
-    "title": "freeCodeCamp: Build a Survey Form",
-    "category": "fcc-projects",
-    "path": "pens/fcc-projects/build-a-survey-form/",
-    "url": "/codepen-pens/pens/fcc-projects/build-a-survey-form/",
-    "preview": "assets/previews/build-a-survey-form.png",
-    "description": "A responsive survey form built for freeCodeCamp's Responsive Web Design certification, collecting user details, preferences and feedback with accessible HTML."
   },
   {
     "title": "freeCodeCamp: Random Quote Machine 2016",
