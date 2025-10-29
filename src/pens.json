@@ -5,7 +5,7 @@
     "path": "pens/css/animated-link-examples/",
     "url": "/codepen-pens/pens/css/animated-link-examples/",
     "preview": "assets/previews/animated-link-examples.png",
-    "description": ""
+    "description": "A collection of pure CSS animated link styles featuring various visual effects such as colour changes, underline thickness, background wipes, and highlights, all with smooth transitions."
   },
   {
     "title": "CSS Button Gradient Animation",
@@ -13,7 +13,7 @@
     "path": "pens/css/button-gradient-animation/",
     "url": "/codepen-pens/pens/css/button-gradient-animation/",
     "preview": "assets/previews/button-gradient-animation.png",
-    "description": ""
+    "description": "A button with a dynamic, rotating gradient border that animates on hover. It"
   },
   {
     "title": "Ghostbusters Logo",
@@ -21,7 +21,7 @@
     "path": "pens/css/ghostbusters-logo-css-animation/",
     "url": "/codepen-pens/pens/css/ghostbusters-logo-css-animation/",
     "preview": null,
-    "description": ""
+    "description": "A hand-traced recreation of the Ghostbusters logo — drawn by me in Affinity Designer and animated using pure CSS and SVG only (no GSAP, no JavaScript)."
   },
   {
     "title": "Build a Technical Documentation Page",
@@ -29,7 +29,7 @@
     "path": "pens/fcc-projects/technical-documentation-page/",
     "url": "/codepen-pens/pens/fcc-projects/technical-documentation-page/",
     "preview": "assets/previews/technical-documentation-page.png",
-    "description": ""
+    "description": "This project is a Technical Documentation Page developed for the Responsive Web Design Projects on freeCodeCamp. It features a structured layout with multiple sections dedicated to specific topics and a user-friendly navigation menu."
   },
   {
     "title": "Build a Wikipedia Viewer",
@@ -37,63 +37,39 @@
     "path": "pens/fcc-projects/build-a-wikipedia-viewer/",
     "url": "/codepen-pens/pens/fcc-projects/build-a-wikipedia-viewer/",
     "preview": "assets/previews/build-a-wikipedia-viewer.png",
-    "description": ""
+    "description": "This project is a Wikipedia Viewer created as part of the freeCodeCamp challenge,"
   },
   {
-    "title": "Random Quote Machine",
+    "title": "freeCodeCamp: Random Quote Machine",
     "category": "fcc-projects",
     "path": "pens/fcc-projects/random-quote-machine/",
     "url": "/codepen-pens/pens/fcc-projects/random-quote-machine/",
     "preview": "assets/previews/random-quote-machine.png",
-    "description": ""
+    "description": "The Random Quote Machine is a web application developed as part of the freeCodeCamp curriculum. The main goal of this project is to create a simple and interactive page that displays random quotes along with their sources. Users can also tweet their favourite quotes directly from the application."
   },
   {
-    "title": "Binary Clock",
-    "category": "javascript",
-    "path": "pens/javascript/binary-clock/",
-    "url": "/codepen-pens/pens/javascript/binary-clock/",
-    "preview": "assets/previews/binary-clock.gif",
-    "description": ""
-  },
-  {
-    "title": "Changing Background Colour on Scroll",
+    "title": "Changing Background on Scroll",
     "category": "javascript",
     "path": "pens/javascript/changing-background-on-scroll/",
     "url": "/codepen-pens/pens/javascript/changing-background-on-scroll/",
     "preview": "assets/previews/changing-background-on-scroll.gif",
-    "description": ""
+    "description": "Dynamic background colour transition on scroll using JavaScript and CSS. The page"
   },
   {
-    "title": "Display Keycodes",
-    "category": "javascript",
-    "path": "pens/javascript/key-codes-keyboard-event-handler/",
-    "url": "/codepen-pens/pens/javascript/key-codes-keyboard-event-handler/",
-    "preview": "assets/previews/key-codes-keyboard-event-handler.gif",
-    "description": ""
-  },
-  {
-    "title": "Document",
-    "category": "javascript",
-    "path": "pens/javascript/random-password-generator/",
-    "url": "/codepen-pens/pens/javascript/random-password-generator/",
-    "preview": "assets/previews/random-password-generator.png",
-    "description": ""
-  },
-  {
-    "title": "Download Button",
+    "title": "JavaScript Animated Download Button",
     "category": "javascript",
     "path": "pens/javascript/animated-download-button-svg/",
     "url": "/codepen-pens/pens/javascript/animated-download-button-svg/",
     "preview": "assets/previews/animated-download-button-svg.png",
-    "description": ""
+    "description": "A button with a ripple effect on click and a downward arrow animation on hover. The ripple is animated with CSS keyframes, and the effect disappears after the animation, while JavaScript handles the ripple creation and cleanup."
   },
   {
-    "title": "Dynamic Hero Search",
+    "title": "JavaScript Binary Clock",
     "category": "javascript",
-    "path": "pens/javascript/dynamic-hero-search/",
-    "url": "/codepen-pens/pens/javascript/dynamic-hero-search/",
-    "preview": "assets/previews/dynamic-hero-search.png",
-    "description": ""
+    "path": "pens/javascript/binary-clock/",
+    "url": "/codepen-pens/pens/javascript/binary-clock/",
+    "preview": "assets/previews/binary-clock.gif",
+    "description": "This project is a binary clock implemented using HTML, CSS, and JavaScript. It displays the current time in a binary format."
   },
   {
     "title": "JavaScript Change String Case",
@@ -101,31 +77,55 @@
     "path": "pens/javascript/change-string-case/",
     "url": "/codepen-pens/pens/javascript/change-string-case/",
     "preview": "assets/previews/change-string-case.png",
-    "description": ""
+    "description": "A string formatting tool with multiple options. Users can input and convert a string into various formats, such as snake_case, kebab-case, camelCase, or PascalCase. The selected format is applied, and the formatted string is automatically copied to the clipboard."
   },
   {
-    "title": "JavaScript Word Count",
+    "title": "JavaScript Dynamic Hero Search",
+    "category": "javascript",
+    "path": "pens/javascript/dynamic-hero-search/",
+    "url": "/codepen-pens/pens/javascript/dynamic-hero-search/",
+    "preview": "assets/previews/dynamic-hero-search.png",
+    "description": "Dark-themed superhero search and filter application using JavaScript. Features real-time search with dynamic table updates."
+  },
+  {
+    "title": "JavaScript Key Codes Keyboard Event Handler",
+    "category": "javascript",
+    "path": "pens/javascript/key-codes-keyboard-event-handler/",
+    "url": "/codepen-pens/pens/javascript/key-codes-keyboard-event-handler/",
+    "preview": "assets/previews/key-codes-keyboard-event-handler.gif",
+    "description": "A JavaScript event listener captures key presses, displaying the key and keycode in a responsive, text-shadowed display."
+  },
+  {
+    "title": "JavaScript Word Count Tracker",
     "category": "javascript",
     "path": "pens/javascript/word-count-tracker/",
     "url": "/codepen-pens/pens/javascript/word-count-tracker/",
     "preview": "assets/previews/word-count-tracker.png",
-    "description": ""
+    "description": "A simple web application to count the number of words in a textarea, built using HTML, Bootstrap (for the front end), and JavaScript."
   },
   {
-    "title": "Karl Horning",
-    "category": "portfolio",
-    "path": "pens/portfolio/portfolio-2019/",
-    "url": "/codepen-pens/pens/portfolio/portfolio-2019/",
-    "preview": "assets/previews/portfolio-2019.gif",
-    "description": ""
+    "title": "Random Password Generator",
+    "category": "javascript",
+    "path": "pens/javascript/random-password-generator/",
+    "url": "/codepen-pens/pens/javascript/random-password-generator/",
+    "preview": "assets/previews/random-password-generator.png",
+    "description": "This project is a random password generator designed to create unique passwords for users. It provides a user-friendly interface with a"
   },
   {
-    "title": "Karl Horning | Portfolio",
+    "title": "Portfolio 2016",
     "category": "portfolio",
     "path": "pens/portfolio/portfolio-2016/",
     "url": "/codepen-pens/pens/portfolio/portfolio-2016/",
     "preview": "assets/previews/portfolio-2016.gif",
-    "description": ""
+    "description": "This project showcases my skills and projects as a business English teacher and coder based in Portugal. The website features various sections including an about me page, portfolio, contact form, and social links."
+  },
+  {
+    "title": "Portfolio 2019",
+    "category": "portfolio",
+    "path": "pens/portfolio/portfolio-2019/",
+    "url": "/codepen-pens/pens/portfolio/portfolio-2019/",
+    "preview": "assets/previews/portfolio-2019.gif",
+    "description": "My portfolio site from 2019. CSS manages layout, typography, and transitions, while JavaScript controls scroll-triggered visibility and smooth scrolling. The site also includes a contact form with anti-bot measures."
   },
   {
     "title": "GSAP SVG Computer Animation",
@@ -133,30 +133,30 @@
     "path": "pens/svg/gsap-computer-animation/",
     "url": "/codepen-pens/pens/svg/gsap-computer-animation/",
     "preview": "assets/previews/gsap-computer-animation.png",
-    "description": ""
+    "description": "Interactive computer animation using GSAP and an SVG. Features a button that triggers a sequence animating the computer"
   },
   {
-    "title": "Merry Christmas!",
+    "title": "SVG Canvas Snowfall Animation",
     "category": "svg",
     "path": "pens/svg/canvas-snowfall-animation/",
     "url": "/codepen-pens/pens/svg/canvas-snowfall-animation/",
     "preview": "assets/previews/canvas-snowfall-animation.png",
-    "description": ""
+    "description": "Holiday-themed site with animated Christmas lights and snowfall effects. CSS handles the festive background colour change and layout, while JavaScript manages the snowfall animation and canvas resizing. A canvas element displays falling snowflakes, with snowflake properties and speeds dynamically controlled. ❄️⛄️✨"
   },
   {
-    "title": "SVG & CSS Animated UFO",
+    "title": "SVG CSS Animated UFO",
     "category": "svg",
     "path": "pens/svg/css-animated-ufo/",
     "url": "/codepen-pens/pens/svg/css-animated-ufo/",
     "preview": "assets/previews/css-animated-ufo.png",
-    "description": ""
+    "description": "A CSS animation of an SVG UFO. A grid layout centres the content, while the UFO and stars are animated with keyframes. 🛸"
   },
   {
-    "title": "Vivus Animated Hello World!",
+    "title": "SVG Vivus Line Drawing",
     "category": "svg",
     "path": "pens/svg/vivus-line-drawing/",
     "url": "/codepen-pens/pens/svg/vivus-line-drawing/",
     "preview": "assets/previews/vivus-line-drawing.gif",
-    "description": ""
+    "description": "An SVG animation of"
   }
 ]
