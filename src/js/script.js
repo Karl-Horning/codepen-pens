@@ -58,16 +58,22 @@ function render() {
         .map(
             (p) => `
         <div class="row" role="listitem">
-          ${
-              p.preview
-                  ? `<img class="thumb" src="${p.preview}" alt="${p.title} preview">`
-                  : `<div class="thumb" role="img" aria-label="${p.title} placeholder"></div>`
-          }
-          <div class="cat">${p.category}</div>
-          <div>
-            <div class="title"><a href="${p.url}">${p.title}</a></div>
-            ${p.description ? `<div class="desc">${p.description}</div>` : ""}
-          </div>
+            <div class="info">  
+                ${
+                    p.preview
+                        ? `<img class="thumb" src="${p.preview}" alt="${p.title} preview">`
+                        : `<div class="thumb" role="img" aria-label="${p.title} placeholder"></div>`
+                }
+                <div class="cat">${p.category}</div>
+            </div>
+            <div>
+                <div class="title"><a href="${p.url}">${p.title}</a></div>
+                ${
+                    p.description
+                        ? `<div class="desc">${p.description}</div>`
+                        : ""
+                }
+            </div>
         </div>
       `
         )
