@@ -1,5 +1,13 @@
 [
   {
+    "title": "CSS Animated Emoji Heartbeat",
+    "category": "css",
+    "path": "pens/css/animated-emoji-heartbeat/",
+    "url": "/codepen-pens/pens/css/animated-emoji-heartbeat/",
+    "preview": "assets/previews/animated-emoji-heartbeat.webp",
+    "description": "Pure CSS animation that creates a heartbeat effect. The emoji scales up and down while its opacity fluctuates, simulating a pulsing motion. The animation runs continuously with a 2-second cycle."
+  },
+  {
     "title": "CSS Animated Link Examples",
     "category": "css",
     "path": "pens/css/animated-link-examples/",

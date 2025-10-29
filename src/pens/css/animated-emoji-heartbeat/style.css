@@ -1,0 +1,98 @@
+/* --------------------------------------------------------------------------
+ * CSS Animated Emoji Heartbeat
+ *
+ * Summary
+ * - Pure CSS heartbeat with a double‑pulse (lub‑dub) cadence.
+ * - Uses transform + drop‑shadow for emphasis (no opacity pumping).
+ * - Respects prefers-reduced-motion.
+ *
+ * Usage
+ * 1) Include <div class="heart animate-heartbeat" role="img" aria-label="Heartbeat">❤️</div>
+ * 2) Adjust variables below to tune duration, scale, and glow.
+ *
+ * Tuning
+ * - --beat-duration: total cycle time.
+ * - --scale-peak / --scale-mini: strength of the first/second beats.
+ * - --glow: colour and intensity of the soft glow.
+ *
+ * Accessibility
+ * - Motion is subtle and disabled when prefers-reduced-motion is set.
+ * - Role/aria gives the emoji a programmatic name.
+ * -------------------------------------------------------------------------- */
+
+/* Variables --------------------------------------------------------------- */
+:root {
+    --beat-duration: 1.8s; /* total cycle */
+    --scale-peak: 1.22; /* 1st (strong) beat max scale */
+    --scale-mini: 1.12; /* 2nd (smaller) beat max scale */
+    --glow: rgba(255, 0, 64, 0.5); /* soft pinkish glow */
+}
+
+/* Layout ----------------------------------------------------------------- */
+html,
+body {
+    height: 100%;
+}
+body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+        Noto Sans, Arial, sans-serif;
+    background: #fff; /* keep neutral; inheritable if embedded */
+}
+
+/* Heart ------------------------------------------------------------------ */
+.heart {
+    font-size: clamp(4rem, 10vw, 10rem);
+    line-height: 1;
+    transform-origin: center;
+    will-change: transform, filter; /* performance hint */
+    backface-visibility: hidden; /* crisper scaling on some GPUs */
+    filter: drop-shadow(0 0 0.25rem var(--glow)); /* base glow */
+    user-select: none;
+}
+
+/* Keyframes: lifelike rhythm (quick strong beat, quick smaller beat, rest) */
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0.25rem var(--glow));
+        animation-timing-function: cubic-bezier(0.2, 0.7, 0.3, 1);
+    }
+    12% {
+        transform: scale(var(--scale-peak));
+        filter: drop-shadow(0 0 0.6rem var(--glow));
+        animation-timing-function: cubic-bezier(0.3, 0.2, 0.1, 1);
+    }
+    22% {
+        transform: scale(1.02);
+        filter: drop-shadow(0 0 0.35rem var(--glow));
+        animation-timing-function: cubic-bezier(0.2, 0.7, 0.3, 1);
+    }
+    32% {
+        transform: scale(var(--scale-mini));
+        filter: drop-shadow(0 0 0.5rem var(--glow));
+        animation-timing-function: cubic-bezier(0.3, 0.2, 0.1, 1);
+    }
+    45% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0.25rem var(--glow));
+    }
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0.25rem var(--glow));
+    }
+}
+
+/* Hook: apply the animation */
+.animate-heartbeat {
+    animation: heartbeat var(--beat-duration) infinite;
+}
+
+/* Reduced motion: opt out entirely */
+@media (prefers-reduced-motion: reduce) {
+    .animate-heartbeat {
+        animation: none;
+    }
+}
