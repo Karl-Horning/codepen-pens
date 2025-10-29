@@ -1,11 +1,78 @@
+/* Terminal list UI — light & dark themes (responsive, accessible)
+ *
+ * Goal:
+ * - Compact, keyboard-friendly list of pens.
+ * - Meta block (thumbnail + category) and details block (title + description).
+ * - Stack meta above details on small screens.
+ *
+ * Notes:
+ * - Uses CSS custom properties for theming.
+ * - Grid layout avoids HTML reordering.
+ * - Auto-detects system theme; manual override via [data-theme].
+ */
+
+/* ── Light (default) ─────────────────────────────────────────────────────── */
 :root {
+    --bg: #ffffff;
+    --fg: #0b0b0b;
+    --mut: #666666;
+    --accent: #2563eb;
+    --border: #e5e7eb;
+    --link: #1d4ed8;
+    --chip: #f3f4f6;
+    --input-bg: #ffffff;
+    --thumb-bg: #f3f4f6;
+    --kbd-bg: #f3f4f6;
+    --kbd-border: #d1d5db;
+}
+
+/* ── Dark (auto) ────────────────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #020618;
+        --fg: #e7e7e7;
+        --mut: #a9a9a9;
+        --accent: #10b981;
+        --border: #2a2a2a;
+        --link: #7dd3fc;
+        --chip: #111827;
+        --input-bg: #121212;
+        --thumb-bg: #111111;
+        --kbd-bg: #222222;
+        --kbd-border: #333333;
+    }
+}
+
+/* ── Manual overrides ───────────────────────────────────────────────────── */
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #0b0b0b;
+    --mut: #666666;
+    --accent: #2563eb;
+    --border: #e5e7eb;
+    --link: #1d4ed8;
+    --chip: #f3f4f6;
+    --input-bg: #ffffff;
+    --thumb-bg: #f3f4f6;
+    --kbd-bg: #f3f4f6;
+    --kbd-border: #d1d5db;
+}
+
+[data-theme="dark"] {
     --bg: #0b0b0b;
     --fg: #e7e7e7;
     --mut: #a9a9a9;
     --accent: #10b981;
     --border: #2a2a2a;
+    --link: #7dd3fc;
+    --chip: #111827;
+    --input-bg: #121212;
+    --thumb-bg: #111111;
+    --kbd-bg: #222222;
+    --kbd-border: #333333;
 }
 
+/* ── Base ───────────────────────────────────────────────────────────────── */
 body {
     margin: 0;
     background: var(--bg);
@@ -19,46 +86,61 @@ body {
     padding: 0 16px;
 }
 
+/* ── Rows ───────────────────────────────────────────────────────────────── */
 .row {
     display: grid;
-    grid-template-columns: 52px 120px 1fr;
+    grid-template-columns: 172px 1fr; /* 52px thumb + gap + ~120px cat */
+    grid-template-areas: "meta details";
     align-items: center;
     gap: 12px;
     padding: 10px 0;
     border-bottom: 1px dashed var(--border);
 }
 
+/* Meta block: thumbnail + category */
+.row > .info {
+    grid-area: meta;
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    align-items: center;
+    column-gap: 12px;
+}
+
+/* Details block: title + description */
+.row > .details {
+    grid-area: details;
+}
+
+/* ── Content ────────────────────────────────────────────────────────────── */
 .thumb {
     width: 48px;
     height: 48px;
     object-fit: cover;
     border-radius: 6px;
-    background: #111;
+    background: var(--thumb-bg);
     border: 1px solid var(--border);
 }
 
 .cat {
     color: var(--accent);
 }
-
 .title {
     font-weight: 700;
 }
-
 .desc {
     color: var(--mut);
 }
 
 a {
-    color: #7dd3fc;
+    color: var(--link);
     text-decoration: none;
 }
-
 a:focus-visible {
-    outline: 2px solid #7dd3fc;
+    outline: 2px solid var(--link);
     outline-offset: 2px;
 }
 
+/* ── Controls ───────────────────────────────────────────────────────────── */
 .controls {
     display: flex;
     gap: 8px;
@@ -68,7 +150,7 @@ a:focus-visible {
 }
 
 input {
-    background: #121212;
+    background: var(--input-bg);
     border: 1px solid var(--border);
     color: var(--fg);
     padding: 6px 8px;
@@ -76,8 +158,35 @@ input {
 }
 
 kbd {
-    background: #222;
+    background: var(--kbd-bg);
     padding: 2px 6px;
     border-radius: 4px;
-    border: 1px solid #333;
+    border: 1px solid var(--kbd-border);
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 540px) {
+    .row {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "meta"
+            "details";
+        align-items: start;
+        gap: 8px 12px;
+    }
+
+    .row > .info {
+        grid-template-columns: 56px 1fr;
+    }
+
+    .thumb {
+        width: 56px;
+        height: 56px;
+    }
+    .title {
+        margin: 2px 0 4px;
+    }
+    .desc {
+        margin: 0;
+    }
 }
