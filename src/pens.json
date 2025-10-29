@@ -13,14 +13,14 @@
     "path": "pens/css/button-gradient-animation/",
     "url": "/codepen-pens/pens/css/button-gradient-animation/",
     "preview": "assets/previews/button-gradient-animation.png",
-    "description": "A button with a dynamic, rotating gradient border that animates on hover. It"
+    "description": "A button with a dynamic, rotating gradient border that animates on hover. It's centred on the page using Flexbox and includes smooth transitions for hover and active states, featuring a scaling effect."
   },
   {
     "title": "Ghostbusters Logo",
     "category": "css",
     "path": "pens/css/ghostbusters-logo-css-animation/",
     "url": "/codepen-pens/pens/css/ghostbusters-logo-css-animation/",
-    "preview": null,
+    "preview": "assets/previews/ghostbusters-logo-css-animation.webp",
     "description": "A hand-traced recreation of the Ghostbusters logo — drawn by me in Affinity Designer and animated using pure CSS and SVG only (no GSAP, no JavaScript)."
   },
   {
@@ -37,7 +37,7 @@
     "path": "pens/fcc-projects/build-a-wikipedia-viewer/",
     "url": "/codepen-pens/pens/fcc-projects/build-a-wikipedia-viewer/",
     "preview": "assets/previews/build-a-wikipedia-viewer.png",
-    "description": "This project is a Wikipedia Viewer created as part of the freeCodeCamp challenge,"
+    "description": "This project is a Wikipedia Viewer created as part of the freeCodeCamp challenge, 'Build a Wikipedia Viewer'. It enables users to search for Wikipedia articles and view search results through the interface."
   },
   {
     "title": "freeCodeCamp: Build a Survey Form",
@@ -69,7 +69,7 @@
     "path": "pens/javascript/changing-background-on-scroll/",
     "url": "/codepen-pens/pens/javascript/changing-background-on-scroll/",
     "preview": "assets/previews/changing-background-on-scroll.gif",
-    "description": "Dynamic background colour transition on scroll using JavaScript and CSS. The page"
+    "description": "Dynamic background colour transition on scroll using JavaScript and CSS. The page's background updates to match the data-color attribute of each section as the user scrolls."
   },
   {
     "title": "JavaScript Animated Download Button",
@@ -125,7 +125,7 @@
     "path": "pens/javascript/random-password-generator/",
     "url": "/codepen-pens/pens/javascript/random-password-generator/",
     "preview": "assets/previews/random-password-generator.png",
-    "description": "This project is a random password generator designed to create unique passwords for users. It provides a user-friendly interface with a"
+    "description": "This project is a random password generator designed to create unique passwords for users. It provides a user-friendly interface with a 'Generate Password' button, allowing users to easily obtain passwords."
   },
   {
     "title": "Portfolio 2016",
@@ -149,7 +149,7 @@
     "path": "pens/svg/gsap-computer-animation/",
     "url": "/codepen-pens/pens/svg/gsap-computer-animation/",
     "preview": "assets/previews/gsap-computer-animation.png",
-    "description": "Interactive computer animation using GSAP and an SVG. Features a button that triggers a sequence animating the computer"
+    "description": "Interactive computer animation using GSAP and an SVG. Features a button that triggers a sequence animating the computer's assembly, complete with scaling, bounce, and staggered effects. Button states include hover, active, and disabled."
   },
   {
     "title": "SVG Canvas Snowfall Animation",
@@ -173,6 +173,6 @@
     "path": "pens/svg/vivus-line-drawing/",
     "url": "/codepen-pens/pens/svg/vivus-line-drawing/",
     "preview": "assets/previews/vivus-line-drawing.gif",
-    "description": "An SVG animation of"
+    "description": "An SVG animation of 'Hello World' created using the Vivus library, featuring a 'Restart Animation' button that allows users to replay the animation after it has completed."
   }
 ]
