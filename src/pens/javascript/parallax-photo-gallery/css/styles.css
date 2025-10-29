@@ -1,0 +1,111 @@
+/* --------------------------------------------------------------------------
+ * Parallax Photo Gallery
+ *
+ * Purpose
+ * - Full-viewport photo gallery with performant parallax and metadata bar.
+ *
+ * Structure
+ * - Each section: parallax background (pseudo) + bottom bar (.caption).
+ * - Bar displays title, photographer, and copyright.
+ *
+ * Accessibility
+ * - Disables motion for prefers-reduced-motion.
+ * - High-contrast, translucent bar for readability.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --bar-bg: rgba(0, 0, 0, 0.5); /* translucent black */
+    --bar-color: #fff;
+    --bar-blur: blur(6px);
+    --bar-pad: clamp(0.75rem, 2vw, 1.25rem);
+    --bar-font: 0.9rem/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial,
+        sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font: 16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+/* Full-viewport parallax section */
+.parallax {
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+}
+
+/* Moving background layer */
+.parallax::before {
+    content: "";
+    position: absolute;
+    inset: -50vh 0;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translate3d(0, var(--ty, 0), 0);
+    will-change: transform;
+    z-index: 0;
+}
+
+/* Bottom metadata bar */
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--bar-pad);
+    background: var(--bar-bg);
+    backdrop-filter: var(--bar-blur);
+    color: var(--bar-color);
+    font: var(--bar-font);
+    z-index: 1;
+}
+
+/* Text layout inside the bar */
+.caption .title {
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+}
+
+.caption .meta {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.caption .meta span::before {
+    content: "|";
+    margin: 0 0.3rem;
+    opacity: 0.6;
+}
+
+.caption .meta span:first-child::before {
+    content: "";
+    margin: 0;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    .parallax::before {
+        transform: none !important;
+        will-change: auto;
+    }
+}

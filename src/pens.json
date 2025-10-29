@@ -184,6 +184,14 @@
     "description": "A simple web application to count the number of words in a textarea, built using HTML, Bootstrap (for the front end), and JavaScript."
   },
   {
+    "title": "Parallax Photo Gallery",
+    "category": "javascript",
+    "path": "pens/javascript/parallax-photo-gallery/",
+    "url": "/codepen-pens/pens/javascript/parallax-photo-gallery/",
+    "preview": "assets/previews/parallax-photo-gallery.webp",
+    "description": "A responsive parallax photo gallery that combines smooth, GPU-accelerated scrolling with elegant image captions. Built with HTML, CSS, and JavaScript, this project demonstrates efficient visual motion and accessibility considerations."
+  },
+  {
     "title": "Random Password Generator",
     "category": "javascript",
     "path": "pens/javascript/random-password-generator/",
