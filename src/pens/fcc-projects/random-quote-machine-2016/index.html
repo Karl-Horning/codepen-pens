@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Dynamic quote generator using JavaScript with a random selection from a predefined list. The page background colour changes randomly with each new quote. This is my original random quote machine from 2016 and is presented as-is."
+        />
+        <meta name="keywords" content="HTML, CSS, freeCodeCamp" />
+        <meta name="author" content="Karl Horning" />
+        <title>freeCodeCamp: Random Quote Machine 2016</title>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+        />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container quote">
+            <div class="row text-left">
+                <blockquote id="quote"></blockquote>
+            </div>
+            <!-- row -->
+
+            <div class="row text-right">
+                <p class="reference">
+                    <span id="speaker"></span>,
+                    <cite>
+                        <span id="title"></span>
+                    </cite>
+                    (<span id="year"></span>)
+                </p>
+            </div>
+            <!-- row -->
+
+            <div class="row">
+                <div class="col-sm-12 text-right">
+                    <button onclick="tweet()" class="btn">
+                        <i class="fa fa-twitter"></i> Tweet
+                    </button>
+
+                    <button onclick="randomQuote()" class="btn">
+                        <i class="fa fa-random"></i> New Quote
+                    </button>
+                </div>
+                <!-- col-sm-12 -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+
+        <!-- footer -->
+        <footer>
+            <div class="container text-center">
+                <small
+                    >&copy; 2016
+                    <a href="https://codepen.io/karlhorning" target="_blank"
+                        >Karl Horning</a
+                    >, All Rights Reserved</small
+                >
+            </div>
+            <!-- container -->
+        </footer>
+        <!-- end of footer -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>

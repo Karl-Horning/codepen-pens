@@ -1,0 +1,89 @@
+/* --------------------------------------------------------------------------
+ * Animated Gradient Background
+ *
+ * Purpose
+ * - Full-page CSS gradient animation for hero sections.
+ *
+ * Tuning
+ * - --gradient-anim-duration: animation speed.
+ * - --gradient-anim-easing: timing function.
+ * - --gradient-angle: gradient direction.
+ * - --gradient-stop-1..4: colour stops in order of appearance.
+ *
+ * Accessibility
+ * - Respects prefers-reduced-motion.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --gradient-anim-duration: 14s;
+    --gradient-anim-easing: cubic-bezier(0.4, 0, 0.2, 1);
+    --gradient-angle: -45deg;
+
+    --gradient-stop-1: #ee7752;
+    --gradient-stop-2: #e73c7e;
+    --gradient-stop-3: #23a6d5;
+    --gradient-stop-4: #23d5ab;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    animation: scrollBackground var(--gradient-anim-duration)
+        var(--gradient-anim-easing) infinite;
+    background: linear-gradient(
+        var(--gradient-angle),
+        var(--gradient-stop-1),
+        var(--gradient-stop-2),
+        var(--gradient-stop-3),
+        var(--gradient-stop-4)
+    );
+    background-size: 400% 400%;
+    overflow: hidden;
+    will-change: background-position;
+}
+
+.hero {
+    display: grid;
+    place-items: center;
+    min-height: 100svh;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    color: #fff;
+    font-family: "Alfa Slab One", system-ui, -apple-system, Segoe UI, Roboto,
+        Arial, sans-serif;
+    font-size: clamp(1.4rem, 5vw, 5rem);
+    letter-spacing: 0.06em;
+    line-height: 1.1;
+    max-width: min(56rem, 22ch);
+    padding: clamp(0.75rem, 2vw, 1.75rem) clamp(1rem, 3vw, 3rem);
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+    text-wrap: balance;
+}
+
+@keyframes scrollBackground {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body {
+        animation: none;
+        background-position: 50% 50%;
+    }
+}

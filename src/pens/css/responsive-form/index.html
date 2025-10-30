@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Responsive contact form built with HTML and CSS. Includes inline validation hints, required field indicators, and smooth focus states — no JavaScript needed." />
+        <meta name="keywords" content="HTML, CSS, Responsive" />
+        <meta name="author" content="Karl Horning" />
+        <title>CSS Responsive Form</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <form class="contact-form" action="" method="POST" name="contact-form">
+            <ul>
+                <li>
+                    <h2>Contact Us</h2>
+                    <span class="required-notification"
+                        >* Denotes Required Field</span
+                    >
+                </li>
+                <li>
+                    <label for="name">Name*</label>
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="John Doe"
+                        required
+                    />
+                </li>
+                <li>
+                    <label for="email">Email*</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="john_doe@example.com"
+                        required
+                    />
+                    <span class="form-hint"
+                        >Proper format: name@something.com</span
+                    >
+                </li>
+                <li>
+                    <label for="website">Website*</label>
+                    <input
+                        type="url"
+                        name="website"
+                        id="website"
+                        placeholder="https://www.johndoe.com"
+                        required
+                        pattern="(http|https)://.+"
+                    />
+                    <span class="form-hint"
+                        >Proper format: https://www.someaddress.com</span
+                    >
+                </li>
+                <li>
+                    <label for="message">Message*</label>
+                    <textarea
+                        name="message"
+                        id="message"
+                        cols="40"
+                        rows="6"
+                        required
+                    ></textarea>
+                </li>
+                <li>
+                    <button class="submit" type="submit">Submit Form</button>
+                </li>
+            </ul>
+        </form>
+    </body>
+</html>

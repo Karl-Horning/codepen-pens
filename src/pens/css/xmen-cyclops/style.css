@@ -1,0 +1,355 @@
+/* Inspired by Jag Nagra's Cyclops */
+
+:root {
+    --blue: #364fa3;
+    --yellow: #daa40e;
+    --pastel-pink: #daac99;
+    --pale-taupe: #c99b83;
+    --deer: #ab8466;
+    --red: #551c00;
+    --black: #2d2a2b;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    align-items: center;
+    background: #355c7d;
+    background-image: linear-gradient(
+        to right top,
+        #355c7d,
+        #58618d,
+        #7e6494,
+        #a36790,
+        #c06c84
+    );
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+}
+
+.box {
+    background: #eee;
+    background: radial-gradient(#fff, #ccc);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 6px solid var(--black);
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.head {
+    background: var(--blue);
+    border-radius: 50%;
+    position: absolute;
+    height: 46%;
+    left: 26.5%;
+    top: 17.2%;
+    width: 47%;
+    z-index: 6;
+}
+
+.temples {
+    background: var(--blue);
+    height: 20%;
+    left: 26.5%;
+    position: absolute;
+    top: 40%;
+    width: 47%;
+    z-index: 5;
+}
+
+.left-ear-top {
+    background: var(--blue);
+    border-top-left-radius: 8px;
+    height: 12%;
+    left: 25%;
+    position: absolute;
+    top: 51%;
+    width: 3%;
+    z-index: 4;
+    -webkit-clip-path: polygon(0 0, 75% 0, 100% 100%, 48% 100%);
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 48% 100%);
+}
+
+.left-ear-bottom {
+    background: var(--blue);
+    height: 5%;
+    left: 26.4%;
+    position: absolute;
+    top: 62.5%;
+    width: 3.2%;
+    z-index: 3;
+    -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 70%);
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 70%);
+}
+
+.right-ear-top {
+    background: var(--blue);
+    border-top-right-radius: 8px;
+    height: 12%;
+    position: absolute;
+    right: 25%;
+    top: 51%;
+    width: 3%;
+    z-index: 2;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 52% 100%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 52% 100%, 0% 100%);
+}
+
+.right-ear-bottom {
+    background: var(--blue);
+    height: 5%;
+    right: 26.4%;
+    position: absolute;
+    top: 62.5%;
+    width: 3.2%;
+    z-index: 1;
+    -webkit-clip-path: polygon(50% 0, 100% 0, 100% 70%, 50% 100%);
+    clip-path: polygon(50% 0, 100% 0, 100% 70%, 50% 100%);
+}
+
+.neck {
+    background: var(--blue);
+    bottom: 3%;
+    height: 40%;
+    left: 27.75%;
+    position: absolute;
+    width: 44.5%;
+    z-index: 7;
+}
+
+.chin-middle {
+    background: var(--pastel-pink);
+    bottom: 10.5%;
+    height: 71%;
+    left: 4%;
+    position: absolute;
+    width: 92%;
+    z-index: 10;
+    -webkit-clip-path: polygon(0 0, 100% 0, 71% 100%, 29% 100%);
+    clip-path: polygon(0 0, 100% 0, 71% 100%, 29% 100%);
+}
+
+.chin-left {
+    background: var(--pale-taupe);
+    bottom: 10.5%;
+    height: 71%;
+    left: 4%;
+    position: absolute;
+    width: 92%;
+    z-index: 9;
+    -webkit-clip-path: polygon(0 0, 0 40%, 29% 100%);
+    clip-path: polygon(0 0, 0 40%, 29% 100%);
+}
+
+.chin-right {
+    background: var(--pale-taupe);
+    bottom: 10.5%;
+    height: 71%;
+    right: 4%;
+    position: absolute;
+    width: 92%;
+    z-index: 8;
+    -webkit-clip-path: polygon(100% 0, 100% 40%, 71% 100%);
+    clip-path: polygon(100% 0, 100% 40%, 71% 100%);
+}
+
+.nose-left {
+    background: var(--deer);
+    height: 20%;
+    left: 35%;
+    position: absolute;
+    top: 12%;
+    width: 10%;
+    -webkit-clip-path: polygon(35% 55%, 100% 100%, 0% 80%);
+    clip-path: polygon(35% 55%, 100% 100%, 0% 80%);
+}
+
+.nose-right {
+    background: var(--deer);
+    height: 20%;
+    right: 35%;
+    position: absolute;
+    top: 12%;
+    width: 10%;
+    -webkit-clip-path: polygon(65% 55%, 0% 100%, 95% 80%);
+    clip-path: polygon(65% 55%, 0% 100%, 95% 80%);
+}
+
+.mouth {
+    background: var(--deer);
+    bottom: 49%;
+    height: 2%;
+    left: 37.5%;
+    position: absolute;
+    width: 25%;
+}
+
+.mouth-left {
+    background: var(--deer);
+    bottom: 43%;
+    height: 8%;
+    left: 10%;
+    position: absolute;
+    width: 30%;
+    -webkit-clip-path: polygon(90% 0, 100% 0%, 66% 100%, 66% 100%);
+    clip-path: polygon(90% 0, 100% 0%, 66% 100%, 66% 100%);
+}
+
+.mouth-right {
+    background: var(--deer);
+    bottom: 43%;
+    height: 8%;
+    right: 10%;
+    position: absolute;
+    width: 30%;
+    -webkit-clip-path: polygon(0 0, 10% 0, 34% 100%, 34% 100%);
+    clip-path: polygon(0 0, 10% 0, 34% 100%, 34% 100%);
+}
+
+.bottom-lip {
+    background: var(--deer);
+    bottom: 41%;
+    height: 3%;
+    left: 42.5%;
+    position: absolute;
+    width: 15%;
+    -webkit-clip-path: polygon(
+        35% 60%,
+        65% 60%,
+        100% 30%,
+        100% 65%,
+        65% 95%,
+        35% 95%,
+        0 65%,
+        0 30%
+    );
+    clip-path: polygon(
+        35% 60%,
+        65% 60%,
+        100% 30%,
+        100% 65%,
+        65% 95%,
+        35% 95%,
+        0 65%,
+        0 30%
+    );
+}
+
+.top-lip-left {
+    background: var(--deer);
+    bottom: 51%;
+    height: 10%;
+    left: 37%;
+    position: absolute;
+    width: 15%;
+    -webkit-clip-path: polygon(25% 80%, 0% 100%, 100% 100%);
+    clip-path: polygon(25% 80%, 0% 100%, 100% 100%);
+}
+
+.top-lip-right {
+    background: var(--deer);
+    bottom: 51%;
+    height: 10%;
+    right: 37%;
+    position: absolute;
+    width: 15%;
+    -webkit-clip-path: polygon(75% 80%, 0% 100%, 100% 100%);
+    clip-path: polygon(75% 80%, 0% 100%, 100% 100%);
+}
+
+.visor-outer {
+    background: var(--yellow);
+    border: 3px solid var(--black);
+    height: 16%;
+    left: 28.5%;
+    position: absolute;
+    top: 48.6%;
+    width: 42%;
+    z-index: 11;
+}
+
+.visor-inner {
+    background: #ff3930;
+    border: 3px solid var(--black);
+    height: 36%;
+    left: 11%;
+    position: absolute;
+    top: 31.5%;
+    width: 76%;
+    z-index: 12;
+}
+
+.chest {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--blue);
+    bottom: -97%;
+}
+
+.shoulder-left {
+    background: var(--yellow);
+    bottom: -15%;
+    height: 30%;
+    left: -72.1%;
+    position: absolute;
+    width: 100%;
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+.shoulder-right {
+    background: var(--yellow);
+    bottom: -15%;
+    height: 30%;
+    right: -72.1%;
+    position: absolute;
+    width: 100%;
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+@media (max-width: 575px) {
+    .box {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .box {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .box {
+        height: 500px;
+        width: 500px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .box {
+        height: 600px;
+        width: 600px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .box {
+        height: 700px;
+        width: 700px;
+    }
+}

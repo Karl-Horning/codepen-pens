@@ -1,0 +1,211 @@
+/* CSS Reset */
+:root {
+    font: 20px/1.2 "Open Sans", sans-serif;
+} /* or html */
+
+body,
+body * {
+    margin: unset;
+    box-sizing: unset;
+    padding: unset;
+    font-size: unset;
+    color: unset;
+    text-decoration: unset;
+}
+
+figure * {
+    display: block;
+}
+
+/* ROOT COLOURS */
+:root {
+    --black: #2d2a2b;
+    --blue: #00a8f2;
+    --blue-grey: #d3e1e7;
+    --dark-green: #344a53;
+    --darker-blue: #00a5e3;
+    --light-blue: #7eb3c7;
+    --light-pink: #edd8ef;
+    --light-shadow-black: rgba(0, 0, 0, 0.19);
+    --lighter-shadow-black: rgba(0, 0, 0, 0.23);
+    --pink: #b5a1b7;
+    --red: rgb(212, 27, 27);
+    --white: #ffffff;
+}
+
+/* TEMPLATES */
+.container {
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 960px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 15px 0;
+}
+
+.col {
+    margin-bottom: 0.5rem;
+}
+.border-bottom {
+    border-bottom: 5px solid var(--dark-green);
+    margin-bottom: 1rem;
+}
+.text-center {
+    text-align: center;
+}
+
+/* FORM CLASSES */
+form {
+    background: var(--blue-grey);
+    border: 5px solid var(--dark-green);
+    box-shadow: 0 10px 20px var(--light-shadow-black),
+        0 6px 6px var(--lighter-shadow-black);
+    margin: 30px -15px;
+    padding: 30px 50px;
+}
+
+select {
+    background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-512.png")
+        no-repeat right center;
+    background-color: var(--white);
+    background-position: 98.5% 50%;
+    background-size: 30px;
+    overflow: hidden;
+    right: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border: 5px solid pink;
+    outline: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.input {
+    border: 5px solid var(--dark-green);
+    box-sizing: border-box;
+    min-height: 30px;
+    padding: 15px;
+    width: 100%;
+}
+
+.btn {
+    background: none;
+    border: 3px solid var(--dark-green);
+    border-radius: 4px;
+    box-shadow: 0 10px 20px var(--light-shadow-black),
+        0 6px 6px var(--lighter-shadow-black);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 300;
+    height: 48px;
+    line-height: 38px;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: 0 5px 10px var(--light-shadow-black),
+        0 6px 6px var(--lighter-shadow-black);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* FONTS */
+body {
+    font-family: "Roboto", serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Roboto Slab", sans-serif;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+h4 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+h5 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+li {
+    margin-bottom: 0.5rem;
+    list-style: none;
+}
+
+.btn {
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+}
+
+/* COLOUR OVERRIDES */
+::selection {
+    background: rgba(0, 0, 0, 0.75);
+    color: var(--white);
+}
+body {
+    background: linear-gradient(
+        var(--light-blue),
+        var(--light-pink),
+        var(--pink)
+    );
+}
+body,
+body * {
+    color: var(--black);
+}
+label > span {
+    color: var(--red);
+}
+.blue {
+    background: var(--blue);
+    color: var(--white);
+}
+.blue:hover {
+    background: var(--darker-blue);
+}

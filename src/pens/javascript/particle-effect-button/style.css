@@ -1,0 +1,24 @@
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+button {
+    background: #ee0979;
+    background: linear-gradient(to right, #ee0979, #ff6a00);
+    border: 0;
+    color: #fff;
+    font-size: 1em;
+    max-width: 200px;
+    min-height: 50px;
+    min-width: 135px;
+    outline: 0;
+    vertical-align: top;
+}
+
+.container {
+    text-align: center;
+}

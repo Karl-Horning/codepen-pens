@@ -57,17 +57,29 @@ const extractTitle = (html) => {
 const extractMetaDescription = (html) => {
     if (!html) return null;
 
-    // Try standard meta description first
-    let m = html.match(
-        /<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)["']/i
-    );
-    if (m) return normaliseWS(m[1]);
+    const getMetaContent = (attr, value) => {
+        // Case 1: attr appears before content
+        let re = new RegExp(
+            `<meta\\b[^>]*\\b${attr}\\s*=\\s*(["'])${value}\\1[^>]*\\bcontent\\s*=\\s*(["'])([\\s\\S]*?)\\2`,
+            "i"
+        );
+        let m = html.match(re);
+        if (m) return normaliseWS(m[3]);
 
-    // Fallback to Open Graph description
-    m = html.match(
-        /<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']+)["']/i
+        // Case 2: content appears before attr
+        re = new RegExp(
+            `<meta\\b[^>]*\\bcontent\\s*=\\s*(["'])([\\s\\S]*?)\\1[^>]*\\b${attr}\\s*=\\s*(["'])${value}\\3`,
+            "i"
+        );
+        m = html.match(re);
+        return m ? normaliseWS(m[2]) : null;
+    };
+
+    // Try standard meta description first, then Open Graph
+    return (
+        getMetaContent("name", "description") ||
+        getMetaContent("property", "og:description")
     );
-    return m ? normaliseWS(m[1]) : null;
 };
 
 /** Finds a preview image for a pen.
