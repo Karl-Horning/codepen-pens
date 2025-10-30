@@ -96,6 +96,14 @@
     "description": "This project is a Wikipedia Viewer created as part of the freeCodeCamp challenge, 'Build a Wikipedia Viewer'. It enables users to search for Wikipedia articles and view search results through the interface."
   },
   {
+    "title": "freeCodeCamp: Product Landing Page",
+    "category": "fcc-projects",
+    "path": "pens/fcc-projects/product-landing-page/",
+    "url": "/codepen-pens/pens/fcc-projects/product-landing-page/",
+    "preview": "assets/previews/product-landing-page.webp",
+    "description": "Geezer is a responsive music streaming product landing page built for freeCodeCamp's Responsive Web Design certification. Discover playlists, stations, and tracks — your music everywhere."
+  },
+  {
     "title": "freeCodeCamp: Random Quote Machine 2016",
     "category": "fcc-projects",
     "path": "pens/fcc-projects/random-quote-machine-2016/",
