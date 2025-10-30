@@ -112,12 +112,20 @@
     "description": "The Random Quote Machine is a web application developed as part of the freeCodeCamp curriculum. The main goal of this project is to create a simple and interactive page that displays random quotes along with their sources. Users can also tweet their favourite quotes directly from the application."
   },
   {
-    "title": "freeCodeCamp: Tribute Page",
+    "title": "freeCodeCamp: Tribute Page 2017",
     "category": "fcc-projects",
-    "path": "pens/fcc-projects/tribute-page/",
-    "url": "/codepen-pens/pens/fcc-projects/tribute-page/",
-    "preview": "assets/previews/tribute-page.webp",
+    "path": "pens/fcc-projects/tribute-page-2017/",
+    "url": "/codepen-pens/pens/fcc-projects/tribute-page-2017/",
+    "preview": "assets/previews/tribute-page-2017.webp",
     "description": "This project was created as part of the 2017 freeCodeCamp curriculum. It uses standard HTML elements and Bootstrap styling."
+  },
+  {
+    "title": "freeCodeCamp: Tribute Page 2018",
+    "category": "fcc-projects",
+    "path": "pens/fcc-projects/tribute-page-2018/",
+    "url": "/codepen-pens/pens/fcc-projects/tribute-page-2018/",
+    "preview": "assets/previews/tribute-page-2018.webp",
+    "description": "A Homer Simpson tribute page originally built for the freeCodeCamp 'Build a Tribute Page' challenge. Updated in 2018 to practice Bootstrap further."
   },
   {
     "title": "Changing Background on Scroll",
