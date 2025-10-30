@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>freeCodeCamp: Product Landing Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- SEO -->
+        <meta
+            name="description"
+            content="Geezer is a responsive music streaming product landing page built for freeCodeCamp's Responsive Web Design certification. Discover playlists, stations, and tracks — your music everywhere."
+        />
+        <meta
+            name="keywords"
+            content="Geezer, music app, product landing page, freeCodeCamp, HTML, CSS, Bootstrap, responsive web design, playlists, streaming"
+        />
+        <meta name="author" content="Karl Horning" />
+        <link
+            rel="canonical"
+            href="https://www.karlhorning.dev/codepen-pens/"
+        />
+
+        <!-- Social / Open Graph -->
+        <meta property="og:title" content="Geezer | Your Music Everywhere" />
+        <meta
+            property="og:description"
+            content="A 2018 freeCodeCamp project by Karl Horning: Geezer — a product landing page for a music streaming service, built with HTML, CSS, and Bootstrap."
+        />
+        <meta
+            property="og:image"
+            content="https://www.karlhorning.dev/src/assets/previews/geezer-landing-page.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://www.karlhorning.dev/codepen-pens/"
+        />
+
+        <!-- Fonts and Styles -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="./libs/bootstrap/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="./css/styles.css"
+        />
+    </head>
+    <body data-spy="scroll" data-target="#nav-bar" data-offset="50">
+        <header id="header">
+            <nav id="nav-bar" class="navbar sticky-top navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img
+                            id="header-img"
+                            class="d-inline-block align-top"
+                            src="./img/geezer-logo.svg"
+                            width="30"
+                            height="30"
+                            alt="Geezer logo"
+                        />EEZER
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse justify-content-end"
+                        id="navbarNav"
+                    >
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#header">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#get-started"
+                                    >Get Started</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#buy">Buy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#newsletter"
+                                    >Newsletter</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#new">What's New</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="jumbotron text-center">
+                <h1 class="display-4">Your music everywhere</h1>
+                <p class="lead">Try our Premium plan free for 30 days*</p>
+                <hr class="my-4" />
+                <form action="#buy">
+                    <input
+                        class="btn btn-warning btn-lg"
+                        type="submit"
+                        value="Try it for free"
+                    />
+                </form>
+            </div>
+        </header>
+
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>What do we offer?</h2>
+
+                        <h3>Music</h3>
+                        <p>
+                            Play all of your favourite tracks or discover new
+                            songs. All are available to download for offline
+                            play.
+                        </p>
+
+                        <h3>Playlists</h3>
+                        <p>
+                            Create your own playlists or download the playlists
+                            created by other users.
+                        </p>
+
+                        <h3>Stations</h3>
+                        <p>
+                            Listen to tracks cultivated and introduced by the
+                            music industry's biggest names.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img
+                            class="img-fluid"
+                            src="./img/earphones-earpods-justifyyourlove-802958-th.webp"
+                            alt="Light Earbuds shown against a dark background"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-started" class="gradient-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <img
+                            class="mg-50"
+                            src="./img/iphone-x-mockup.svg"
+                            alt="iPhone X showing the Geezer site"
+                            height="540px"
+                        />
+                    </div>
+                    <div class="col-md-6">
+                        <h2>It's easy!</h2>
+
+                        <h3>Download the app</h3>
+                        <p>
+                            Download the Geezer app from the
+                            <a href="https://www.apple.com/uk/ios/app-store/"
+                                >Apple App Store</a
+                            >
+                            or from
+                            <a href="https://play.google.com/store/"
+                                >Google Play</a
+                            >
+                            on your mobile or tablet.
+                        </p>
+
+                        <h3>Search for songs</h3>
+                        <p>
+                            Search for the songs that you love, select from our
+                            charts, or browse the latest releases.
+                        </p>
+
+                        <h3>Create playlists</h3>
+                        <p>
+                            It's easy to create playlists: either choose your
+                            favourite tracks or select a single track and let
+                            our smart playlist function build a playlist for
+                            you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="buy">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md">
+                        <h2>Listen to Geezer</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="row-md">
+                        <div class="card-deck mb-3">
+                            <div class="card mb-4 shadow-lg">
+                                <div class="card-header">
+                                    <h4 class="my-4 font-weight-normal">
+                                        Free Geezer
+                                    </h4>
+                                </div>
+                                <div class="card-body">
+                                    <h1 class="card-title pricing-card-title">
+                                        £0<small class="text-muted">/mo</small>
+                                    </h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Supported by ads</li>
+                                        <li>Shuffle Play</li>
+                                        <li>Online listening</li>
+                                    </ul>
+                                    <button
+                                        class="btn btn-lg btn-block btn-warning"
+                                    >
+                                        Get Free
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card mb-4 shadow-lg">
+                                <div class="card-header">
+                                    <h4 class="my-4 font-weight-normal">
+                                        Premium Geezer
+                                    </h4>
+                                </div>
+                                <div class="card-body">
+                                    <h1 class="card-title pricing-card-title">
+                                        £9.99<small class="text-muted"
+                                            >/mo</small
+                                        >
+                                    </h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>No ads</li>
+                                        <li>Free Play</li>
+                                        <li>Offline listening</li>
+                                    </ul>
+                                    <button
+                                        class="btn btn-lg btn-block btn-warning"
+                                    >
+                                        Get Premium
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card mb-4 shadow-lg">
+                                <div class="card-header">
+                                    <h4 class="my-4 font-weight-normal">
+                                        Family Geezer
+                                    </h4>
+                                </div>
+                                <div class="card-body">
+                                    <h1 class="card-title pricing-card-title">
+                                        £14.99<small class="text-muted"
+                                            >/mo</small
+                                        >
+                                    </h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Access for up to six people</li>
+                                        <li>Individual accounts</li>
+                                        <li>Family sharing</li>
+                                    </ul>
+                                    <button
+                                        class="btn btn-lg btn-block btn-warning"
+                                    >
+                                        Get Family
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            <small>
+                                *New subscribers only. Plan automatically renews
+                                after trial.
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="gradient-bg">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md">
+                        <h2>Newsletter</h2>
+                        <p class="lead">
+                            Do you want to know when new tracks from your
+                            favourite artists are added or would you like to
+                            receive exclusive offers? Enter your email below to
+                            keep up-to-date with Geezer.
+                        </p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <form
+                            id="form"
+                            action="https://www.freecodecamp.com/email-submit"
+                            method="GET"
+                        >
+                            <div class="input-group mb-3">
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="form-control form-control-lg"
+                                    placeholder="Enter your email"
+                                    required
+                                />
+                                <div class="input-group-append">
+                                    <input
+                                        id="submit"
+                                        class="btn btn-warning btn-lg"
+                                        type="submit"
+                                        value="Subscribe now"
+                                    />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="new">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <h2>New and noteworthy</h2>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe
+                                width="560"
+                                height="315"
+                                src="https://www.youtube.com/embed/PNodyijdG_E?si=PC2wZXE3ojCRDa-l"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="footer-links">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md">
+                            <h4>About Geezer</h4>
+                            <p>
+                                <a
+                                    href="https://www.youtube.com/watch?v=1vShteIpmDk"
+                                >
+                                    <em
+                                        >geezer [ noun ] (British English,
+                                        informal)</em
+                                    >: a confident, often extroverted man who is
+                                    held in high esteem amongst his peers. A
+                                    geezer is often someone who 'knows the
+                                    streets' and celebrates laddish culture.
+                                </a>
+                            </p>
+                            <p>
+                                <a href="https://www.freecodecamp.org">
+                                    Geezer was created by Karl Horning as a part
+                                    of freeCodeCamp's Responsive Web Design
+                                    Certification.
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Influenced By</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a
+                                        href="https://www.apple.com/uk/apple-music/"
+                                        >Apple Music</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="https://www.last.fm/">last.fm</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.deezer.com/">Deezer</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.spotify.com/"
+                                        >Spotify</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Sitemap</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#header">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#about">About</a>
+                                </li>
+                                <li>
+                                    <a href="#get-started">Get Started</a>
+                                </li>
+                                <li>
+                                    <a href="#buy">Buy</a>
+                                </li>
+                                <li>
+                                    <a href="#newsletter">Newsletter</a>
+                                </li>
+                                <li>
+                                    <a href="#new">What's New</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Follow Us</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a
+                                        href="https://www.linkedin.com/in/karlhorning/"
+                                        >Linkedin</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="https://github.com/Karl-Horning"
+                                        >Github</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="https://codepen.io/karlhorning/"
+                                        >CodePen</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/karlhorning"
+                                        >Twitter</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright text-center">
+                <p>
+                    <small
+                        >&copy;2018
+                        <a href="https://www.linkedin.com/in/karlhorning/"
+                            >Karl Horning</a
+                        ></small
+                    >
+                </p>
+            </div>
+        </footer>
+
+        <script src="./libs/jquery/jquery-3.3.1.min.js"></script>
+        <script src="./libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
