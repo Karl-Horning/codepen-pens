@@ -1,0 +1,321 @@
+/*
+ * Animated SVG dots – CSS (cascade layers)
+ *
+ * Overview
+ * - Uses CSS cascade layers to separate theme, base layout, and components.
+ * - Animates <circle> cx/cy via CSS keyframes; works in modern browsers.
+ * - Global speed control with --speed (larger = slower).
+ * - Respects prefers-reduced-motion.
+ * - Blob animation inspired by and heavily modified from:
+ *   https://codepen.io/leimapapa/pen/XWEJbVp (by leimapapa).
+ *
+ * How to customise
+ * - Change --speed (e.g. 2 = ~2× slower).
+ * - Tweak theme colours in :root.
+ * - Add/adjust .dN pairs to vary dot radius, durations, and delays.
+ *
+ * Structure
+ * - @layer theme: tokens and colours.
+ * - @layer base: page layout and SVG layer sizing/order.
+ * - @layer components: filter, dot animation, and instance vars.
+ */
+
+@layer base, theme, components, utilities;
+
+/* =====================
+   Theme (tokens/colours)
+   ===================== */
+@layer theme {
+    :root {
+        /* Animation speed scale (1 = default, 3 = 3× slower) */
+        --speed: 3;
+
+        /* Colour tokens */
+        --col-skin: rgb(245, 225, 190);
+        --col-shadow: rgb(205, 184, 163);
+        --col-bg: rgb(196, 74, 87);
+        --col-hat: rgb(172, 111, 92);
+        --col-band: rgb(158, 103, 143);
+        --col-ink: rgb(54, 54, 57);
+    }
+
+    /* Static fills for illustration layers */
+    #mask {
+        fill: var(--col-skin);
+    }
+    #mask-shadows,
+    #scarf {
+        fill: var(--col-shadow);
+    }
+    #panel-background {
+        fill: var(--col-bg);
+    }
+    #hat {
+        fill: var(--col-hat);
+    }
+    #hat-band {
+        fill: var(--col-band);
+    }
+    #outline,
+    #panel-border,
+    #hat-band-shadow,
+    #hat-underside,
+    .circles,
+    .dot {
+        fill: var(--col-ink);
+    }
+}
+
+/* =============================
+   Base (layout and SVG scaffolding)
+   ============================= */
+@layer base {
+    /* Centre stage and match the 1101×812 viewBox */
+    body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-content: center;
+        background: #fff;
+    }
+
+    /* Responsive stage box matching the SVG aspect ratio */
+    .stage {
+        position: relative;
+        aspect-ratio: 1101 / 812;
+        width: min(100vw, 100vh * (1101 / 812));
+    }
+
+    /* Stack SVG layers to fill the stage */
+    .stage > svg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    /* Visual stacking order */
+    #background-layer {
+        z-index: 1;
+    }
+    #effect-layer {
+        z-index: 2;
+    }
+    #cutout-layer {
+        z-index: 3;
+    }
+}
+
+/* =============================
+   Components (effects and animation)
+   ============================= */
+@layer components {
+    /* Gooey merge effect for moving circles */
+    .circles {
+        filter: url(#goo);
+    }
+
+    /* Base dot: radius and two-axis animations */
+    .circles .dot {
+        r: calc(var(--r, 16) * 1px);
+        /* Start centred so dots are visible without animation */
+        cx: 50%;
+        cy: 50%;
+        animation: moveX calc(var(--dx, 30s) * var(--speed, 1)) linear
+                var(--delay-x, 0s) infinite,
+            moveY calc(var(--dy, 30s) * var(--speed, 1)) linear
+                var(--delay-y, 0s) infinite;
+    }
+
+    /* Optional: mirror X path for the second dot in a pair */
+    .circles .dot.mirrorX {
+        animation-name: moveXRev, moveY;
+    }
+
+    /*
+   * Instance variables
+   * - Each pair (.d1/.d2, .d3/.d4, …) shares r/dx/dy/delay values.
+   * - Apply .mirrorX to the second element if you want mirrored X motion.
+   * - Scoped with `.circles` to avoid leaking .dN class vars globally.
+   */
+    .circles .d1,
+    .circles .d2 {
+        --r: 15.9;
+        --dx: 37.28s;
+        --dy: 39.91s;
+        --delay-x: -27.4s;
+        --delay-y: -19.95s;
+    }
+    .circles .d3,
+    .circles .d4 {
+        --r: 13.7;
+        --dx: 35.05s;
+        --dy: 38.28s;
+        --delay-x: -19.99s;
+        --delay-y: -11.95s;
+    }
+    .circles .d5,
+    .circles .d6 {
+        --r: 17.4;
+        --dx: 38.39s;
+        --dy: 37.62s;
+        --delay-x: -16s;
+        --delay-y: -2.31s;
+    }
+    .circles .d7,
+    .circles .d8 {
+        --r: 24.6;
+        --dx: 39.18s;
+        --dy: 33.08s;
+        --delay-x: -21.97s;
+        --delay-y: -24.79s;
+    }
+    .circles .d9,
+    .circles .d10 {
+        --r: 15;
+        --dx: 31.12s;
+        --dy: 38.65s;
+        --delay-x: -23.9s;
+        --delay-y: -0.13s;
+    }
+    .circles .d11,
+    .circles .d12 {
+        --r: 27.4;
+        --dx: 36.82s;
+        --dy: 36.85s;
+        --delay-x: -8.29s;
+        --delay-y: -31.42s;
+    }
+    .circles .d13,
+    .circles .d14 {
+        --r: 28;
+        --dx: 30.67s;
+        --dy: 38.89s;
+        --delay-x: -27.92s;
+        --delay-y: -28.43s;
+    }
+    .circles .d15,
+    .circles .d16 {
+        --r: 14.1;
+        --dx: 32.35s;
+        --dy: 31.3s;
+        --delay-x: -39.58s;
+        --delay-y: -23.02s;
+    }
+    .circles .d17,
+    .circles .d18 {
+        --r: 20.6;
+        --dx: 33.72s;
+        --dy: 37.97s;
+        --delay-x: -37.19s;
+        --delay-y: -10.86s;
+    }
+    .circles .d19,
+    .circles .d20 {
+        --r: 27;
+        --dx: 38.13s;
+        --dy: 34.63s;
+        --delay-x: -39.04s;
+        --delay-y: -0.29s;
+    }
+    .circles .d21,
+    .circles .d22 {
+        --r: 23.9;
+        --dx: 31.01s;
+        --dy: 39.39s;
+        --delay-x: -12.49s;
+        --delay-y: -3.84s;
+    }
+    .circles .d23,
+    .circles .d24 {
+        --r: 28.5;
+        --dx: 39.58s;
+        --dy: 35.43s;
+        --delay-x: -13.72s;
+        --delay-y: -8.86s;
+    }
+    .circles .d25,
+    .circles .d26 {
+        --r: 17.3;
+        --dx: 36.54s;
+        --dy: 30.92s;
+        --delay-x: -33.78s;
+        --delay-y: -23.75s;
+    }
+    .circles .d27,
+    .circles .d28 {
+        --r: 18.5;
+        --dx: 37.45s;
+        --dy: 30.93s;
+        --delay-x: -2.97s;
+        --delay-y: -32.91s;
+    }
+    .circles .d29,
+    .circles .d30 {
+        --r: 13.2;
+        --dx: 31.81s;
+        --dy: 34.34s;
+        --delay-x: -0.53s;
+        --delay-y: -7.25s;
+    }
+    .circles .d31,
+    .circles .d32 {
+        --r: 24.2;
+        --dx: 38.03s;
+        --dy: 34.63s;
+        --delay-x: -3.89s;
+        --delay-y: -17.16s;
+    }
+    .circles .d33,
+    .circles .d34 {
+        --r: 16.5;
+        --dx: 35.96s;
+        --dy: 35.79s;
+        --delay-x: -38.86s;
+        --delay-y: -34.64s;
+    }
+}
+
+/* =============================
+   Keyframes (global)
+   - Animate SVG cx/cy. Supported in Chromium/Firefox; modern Safari also supports
+     CSS geometry properties on <circle>/<ellipse>.
+   ============================= */
+@keyframes moveX {
+    0%,
+    100% {
+        cx: 10%;
+    }
+    50% {
+        cx: 90%;
+    }
+}
+@keyframes moveXRev {
+    0%,
+    100% {
+        cx: 90%;
+    }
+    50% {
+        cx: 10%;
+    }
+}
+@keyframes moveY {
+    0%,
+    100% {
+        cy: 10%;
+    }
+    50% {
+        cy: 90%;
+    }
+}
+
+/* =============================
+   Accessibility
+   - Honour reduced motion preference by disabling animations.
+   ============================= */
+@media (prefers-reduced-motion: reduce) {
+    .circles .dot {
+        animation: none;
+    }
+}
