@@ -40,11 +40,11 @@
     }
 
     /* Static fills for illustration layers */
-    #mask,
-    #scarf {
+    #mask {
         fill: var(--col-skin);
     }
-    #mask-shadows {
+    #mask-shadows,
+    #scarf {
         fill: var(--col-shadow);
     }
     #panel-background {
