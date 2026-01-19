@@ -1,29 +1,29 @@
-# 🎨 CodePen Pens — Front-End Demos and Experiments
+# CodePen Pens — Front-End Demos and Experiments
 
 A personal collection of front-end experiments, challenges, and learning projects.
 Each pen is built with pure HTML, CSS, and JavaScript — no frameworks, no build steps — to keep things simple, accessible, and transparent.
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 
-- [🎨 CodePen Pens — Front-End Demos and Experiments](#-codepen-pens--front-end-demos-and-experiments)
-  - [📖 Table of Contents](#-table-of-contents)
-  - [🤓 Overview](#-overview)
-  - [🚀 Quick Start](#-quick-start)
-  - [📜 Usage / Scripts](#-usage--scripts)
-  - [📁 Project Structure](#-project-structure)
-  - [🛠️ Tech Stack](#️-tech-stack)
-  - [📸 Live / Demo](#-live--demo)
-  - [⚙️ Configuration](#️-configuration)
-  - [🔄 Deployment](#-deployment)
-  - [📄 License](#-license)
-  - [♿ Accessibility Note](#-accessibility-note)
-  - [👤 Author](#-author)
+- [CodePen Pens — Front-End Demos and Experiments](#codepen-pens--front-end-demos-and-experiments)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Quick Start](#quick-start)
+  - [Usage / Scripts](#usage--scripts)
+  - [Project Structure](#project-structure)
+  - [Tech Stack](#tech-stack)
+  - [Live / Demo](#live--demo)
+  - [Configuration](#configuration)
+  - [Deployment](#deployment)
+  - [License](#license)
+  - [Accessibility Note](#accessibility-note)
+  - [Author](#author)
 
 ---
 
-## 🤓 Overview
+## Overview
 
 This project collects and organises my CodePen demos and experiments in one place.
 It serves both as an archive and as a personal reference for design, animation, and accessibility techniques I've explored over time.
@@ -32,7 +32,7 @@ Some pens are recent, while others are older examples of my early learning — a
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 Run a lightweight local server using Node.js:
 
@@ -46,7 +46,7 @@ This will correctly load `pens.json` and allow fetch requests without CORS error
 
 ---
 
-## 📜 Usage / Scripts
+## Usage / Scripts
 
 - **`tools/generate-pens-json.mjs`** — Scans the `src/pens` folder and builds `pens.json`
   Used by the index page to display pens dynamically.
@@ -55,7 +55,7 @@ This will correctly load `pens.json` and allow fetch requests without CORS error
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 .
@@ -84,7 +84,7 @@ This will correctly load `pens.json` and allow fetch requests without CORS error
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **HTML5 / CSS3 / JavaScript (ES Modules)** — core technologies
 - **Node.js** — used for tooling and local server
@@ -92,14 +92,14 @@ This will correctly load `pens.json` and allow fetch requests without CORS error
 
 ---
 
-## 📸 Live / Demo
+## Live / Demo
 
 Each project can be viewed directly on [CodePen](https://codepen.io/karlhorning)
 or locally through the index page, which provides filters and thumbnails for each demo.
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 - **Previews:** Stored in `src/assets/previews/`
 - **Pen data:** Generated into `src/pens.json`
@@ -108,7 +108,7 @@ or locally through the index page, which provides filters and thumbnails for eac
 
 ---
 
-## 🔄 Deployment
+## Deployment
 
 This project is deployed automatically to **GitHub Pages** via a workflow defined in
 `.github/workflows/deploy.yml`.
@@ -119,7 +119,7 @@ This project is deployed automatically to **GitHub Pages** via a workflow define
 
 ---
 
-## 📄 License
+## License
 
 Released under the [MIT License](./LICENSE).
 
@@ -127,7 +127,7 @@ All pens are provided **as-is** and may not reflect current best practices.
 
 ---
 
-## ♿ Accessibility Note
+## Accessibility Note
 
 Some older pens **do not meet accessibility standards** and are included as part of my learning history.
 
@@ -135,6 +135,6 @@ They're preserved to demonstrate development progress and to encourage transpare
 
 ---
 
-## 👤 Author
+## Author
 
 Made with ❤️ by [Karl Horning](https://github.com/Karl-Horning)
