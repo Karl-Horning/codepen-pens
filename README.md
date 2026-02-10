@@ -3,8 +3,6 @@
 A personal collection of front-end experiments, challenges, and learning projects.
 Each pen is built with pure HTML, CSS, and JavaScript — no frameworks, no build steps — to keep things simple, accessible, and transparent.
 
----
-
 ## Table of Contents
 
 - [CodePen Pens — Front-End Demos and Experiments](#codepen-pens--front-end-demos-and-experiments)
@@ -21,16 +19,12 @@ Each pen is built with pure HTML, CSS, and JavaScript — no frameworks, no buil
   - [Accessibility Note](#accessibility-note)
   - [Author](#author)
 
----
-
 ## Overview
 
 This project collects and organises my CodePen demos and experiments in one place.
 It serves both as an archive and as a personal reference for design, animation, and accessibility techniques I've explored over time.
 
 Some pens are recent, while others are older examples of my early learning — all are included to show progress and experimentation.
-
----
 
 ## Quick Start
 
@@ -44,16 +38,12 @@ npx serve src -l 5173
 Then open [http://localhost:5173](http://localhost:5173) in your browser.
 This will correctly load `pens.json` and allow fetch requests without CORS errors.
 
----
-
 ## Usage / Scripts
 
 - **`tools/generate-pens-json.mjs`** — Scans the `src/pens` folder and builds `pens.json`
   Used by the index page to display pens dynamically.
 - **`npx serve src -l 5173`** — Runs a local development server on port 5173.
 - **`node tools/generate-pens-json.mjs`** — Updates `pens.json` after adding or renaming pens.
-
----
 
 ## Project Structure
 
@@ -82,22 +72,16 @@ This will correctly load `pens.json` and allow fetch requests without CORS error
     └── generate-pens-json.mjs  # Script to build pens.json
 ```
 
----
-
 ## Tech Stack
 
 - **HTML5 / CSS3 / JavaScript (ES Modules)** — core technologies
 - **Node.js** — used for tooling and local server
 - **Accessible-first design** — semantic HTML, visible focus states, and logical tab order
 
----
-
 ## Live / Demo
 
 Each project can be viewed directly on [CodePen](https://codepen.io/karlhorning)
 or locally through the index page, which provides filters and thumbnails for each demo.
-
----
 
 ## Configuration
 
@@ -105,8 +89,6 @@ or locally through the index page, which provides filters and thumbnails for eac
 - **Pen data:** Generated into `src/pens.json`
   Run `node tools/generate-pens-json.mjs` to update after adding new pens.
 - **Base URL:** Adjust `BASE_URL` in `generate-pens-json.mjs` if deploying as a user site instead of a project site.
-
----
 
 ## Deployment
 
@@ -117,23 +99,17 @@ This project is deployed automatically to **GitHub Pages** via a workflow define
 - No manual steps are required — commits trigger deployment automatically.
 - Output URL: `https://www.karlhorning.dev/codepen-pens/`
 
----
-
 ## License
 
 Released under the [MIT License](./LICENSE).
 
 All pens are provided **as-is** and may not reflect current best practices.
 
----
-
 ## Accessibility Note
 
 Some older pens **do not meet accessibility standards** and are included as part of my learning history.
 
 They're preserved to demonstrate development progress and to encourage transparency in creative growth.
-
----
 
 ## Author
 
