@@ -1,0 +1,28 @@
+@property --base {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #cb2d6f;
+}
+
+:root {
+    --base: #cb2d6f;
+    --lighter: oklch(from var(--base) clamp(0, l + 0.22, 1) calc(c * 0.9) h);
+    --darker: oklch(from var(--base) clamp(0, l - 0.22, 1) calc(c * 0.92) h);
+    --complement: hsl(from var(--base) calc(h - 180) s l);
+}
+
+body {
+    background-color: var(--base);
+    display: block;
+    align-content: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    text-align: center;
+}
+
+button {
+    border-image: linear-gradient(to right, var(--lighter), var(--darker)) 1;
+    border-width: 3px;
+    padding: 5px 10px;
+}
