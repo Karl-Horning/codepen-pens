@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,7 +7,7 @@
             name="description"
             content="A Homer Simpson tribute page originally built for the freeCodeCamp 'Build a Tribute Page' challenge. Updated in 2018 to practice Bootstrap further."
         />
-        <meta name="keywords" content="HTML, CSS, SVG" />
+        <meta name="keywords" content="HTML, CSS" />
         <meta name="author" content="Karl Horning" />
         <title>freeCodeCamp: Tribute Page 2018</title>
         <link rel="stylesheet" href="css/libraries/bootstrap.min.css" />
@@ -16,21 +16,18 @@
             href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Oswald:200,300,400,700"
         />
         <link rel="stylesheet" href="css/master.css" />
-        <script
-            type="text/javascript"
-            src="js/libraries/jquery-3.3.1.min.js"
-        ></script>
-        <script type="text/javascript" src="js/script.js"></script>
-        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+        <script src="js/libraries/jquery-3.3.1.min.js" defer></script>
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js" defer></script>
     </head>
     <body>
+        <main>
         <div class="jumbotron jumbotron-fluid text-center scrollme">
             <div class="view overlay my-4">
                 <img
                     class="img-fluid"
                     id="main-image"
                     src="img/homer_simpson_pointing.webp"
-                    alt=""
+                    alt="Homer Simpson pointing his finger"
                 />
                 <h1>Homer Simpson</h1>
                 <h2>
@@ -42,7 +39,7 @@
             </div>
         </div>
 
-        <div class="">
+        <div>
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6 order-1 order-md-2">
@@ -62,7 +59,7 @@
                         <img
                             class="img-fluid body-img"
                             src="img/the_simpsons_family_donuts.webp"
-                            alt=""
+                            alt="The Simpsons family fighting over donuts"
                         />
                     </div>
                 </div>
@@ -87,7 +84,7 @@
                         <img
                             class="img-fluid body-img"
                             src="img/the_simpsons_family.webp"
-                            alt=""
+                            alt="The Simpsons family together: Homer, Marge, Bart, Lisa, and Maggie"
                         />
                     </div>
                 </div>
@@ -109,7 +106,7 @@
                     <img
                         class="img-fluid"
                         src="img/homer_and_marge.webp"
-                        alt=""
+                        alt="Homer and Marge Simpson together, smiling"
                     />
                 </div>
             </div>
@@ -137,7 +134,7 @@
                         <img
                             class="img-fluid"
                             src="img/the_simpsons_family_happy.webp"
-                            alt=""
+                            alt="The Simpsons family looking happy"
                         />
                     </div>
                 </div>
@@ -159,7 +156,7 @@
                     <img
                         class="img-fluid"
                         src="img/homer-pythagoras.webp"
-                        alt=""
+                        alt="Homer Simpson with glasses looking intelligent"
                     />
                 </div>
             </div>
@@ -170,7 +167,7 @@
                 <img
                     class="img-fluid"
                     src="img/homer-simpson-donut.webp"
-                    alt=""
+                    alt="Homer Simpson close-up, biting into a giant white frosted donut"
                 />
             </div>
         </div>
@@ -184,25 +181,34 @@
                         <ul class="list-group-flush">
                             <li>
                                 <a
-                                    href="http://simpsons.wikia.com/wiki/Homer_Simpson"
+                                    href="https://simpsons.fandom.com/wiki/Homer_Simpson"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     >Homer Simpson on the Simpsons Wiki</a
                                 >
                             </li>
                             <li>
                                 <a
                                     href="https://en.wikipedia.org/wiki/Homer_Simpson"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     >Homer Simpson on Wikipedia</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    href="http://simpsons.wikia.com/wiki/List_of_Homer%27s_jobs"
+                                    href="https://simpsons.fandom.com/wiki/List_of_Homer%27s_jobs"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     >A list of Homer's jobs on the Simpsons
                                     Wiki</a
                                 >
                             </li>
                             <li>
-                                <a href="http://www.simpsonsworld.com"
+                                <a
+                                    href="https://www.simpsonsworld.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     >The Simpsons website</a
                                 >
                             </li>
@@ -211,6 +217,7 @@
                 </div>
             </div>
         </div>
+        </main>
 
         <footer class="text-center">
             <small>
