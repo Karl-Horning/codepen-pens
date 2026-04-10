@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="This project was created as part of the 2017 freeCodeCamp curriculum. It uses standard HTML elements and Bootstrap styling."
+            content="A tribute page to Homer Simpson — quotes, jobs, and a brief biography. Built for the 2017 freeCodeCamp curriculum."
         />
-        <meta name="keywords" content="HTML, CSS, SVG" />
+        <meta name="keywords" content="HTML, CSS" />
         <meta name="author" content="Karl Horning" />
         <title>freeCodeCamp: Tribute Page 2017</title>
         <link
@@ -16,6 +16,7 @@
         />
     </head>
     <body>
+        <main>
         <div class="container">
             <div class="page-header text-center">
                 <div class="row">
@@ -28,21 +29,18 @@
                         >
                     </h2>
                 </div>
-                <!-- row -->
             </div>
-            <!-- page-header -->
 
             <div class="jumbotron">
                 <div class="row">
                     <img
                         class="img-responsive center-block"
                         src="./homer-woo-hoo-w768.webp"
+                        loading="eager"
                         alt='Homer Simpson, with his arms raised and lips pursed, saying "Woo Hoo!"'
                     />
                 </div>
-                <!-- row -->
             </div>
-            <!-- jumbotron -->
 
             <div class="content-main">
                 <div class="row">
@@ -304,9 +302,7 @@
                             </footer>
                         </blockquote>
                     </div>
-                    <!-- col-sm-12 -->
                 </div>
-                <!-- row -->
 
                 <div class="row">
                     <div class="col-sm-12">
@@ -497,17 +493,14 @@
                         <p>
                             Source: The Simpsons Wiki,
                             <a
-                                href="http://simpsons.wikia.com/wiki/List_of_Homer's_jobs"
-                                target="_blank"
+                                href="https://simpsons.wikia.com/wiki/List_of_Homer's_jobs"
+                                target="_blank" rel="noopener noreferrer"
                                 >'List of Homer's jobs'</a
                             >.
                         </p>
                     </div>
-                    <!-- col-sm-12 -->
                 </div>
-                <!-- row -->
             </div>
-            <!-- content-main -->
 
             <div class="content-secondary jumbotron text-center">
                 <div class="row">
@@ -515,31 +508,28 @@
                         <img
                             class="img-responsive center-block"
                             src="./homer-with-glasses-w320.png"
+                            loading="lazy"
                             alt="Homer Simpson wearing glasses"
                         />
                     </div>
-                    <!-- col-sm-12 -->
                     <div class="col-sm-12">
                         <h3>
                             More information about Homer Simpson is available on
                             <a
                                 href="https://en.wikipedia.org/wiki/Homer_Simpson"
-                                target="_blank"
+                                target="_blank" rel="noopener noreferrer"
                                 >Wikipedia</a
                             >
                             and
                             <a
-                                href="http://simpsons.wikia.com/wiki/Homer_Simpson"
-                                target="_blank"
+                                href="https://simpsons.wikia.com/wiki/Homer_Simpson"
+                                target="_blank" rel="noopener noreferrer"
                                 >The Simpsons Wiki</a
                             >.
                         </h3>
                     </div>
-                    <!-- col-sm-12 -->
                 </div>
-                <!-- row -->
             </div>
-            <!-- content-secondary -->
 
             <div class="footer text-center">
                 <div class="row">
@@ -548,17 +538,14 @@
                             Written and coded by
                             <a
                                 href="https://codepen.io/karlhorning"
-                                target="_blank"
+                                target="_blank" rel="noopener noreferrer"
                                 >Karl Horning</a
                             >.
                         </footer>
                     </div>
-                    <!-- col-sm-12 -->
                 </div>
-                <!-- row -->
             </div>
-            <!-- footer -->
         </div>
-        <!-- container -->
+        </main>
     </body>
 </html>
