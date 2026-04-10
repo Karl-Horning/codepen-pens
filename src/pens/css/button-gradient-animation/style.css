@@ -1,4 +1,4 @@
-/* Default colours  */
+/* Variables */
 :root {
     --body-bg: #0a0a0a;
     --gradient-from: #22c1c3;
@@ -12,7 +12,6 @@
     initial-value: 45deg;
 }
 
-/*  Resets the default margin and padding for the page  */
 html,
 body {
     background-color: var(--body-bg);
@@ -20,11 +19,10 @@ body {
     padding: 0;
 }
 
-/* Centres the button on the page */
 .container {
     align-items: center;
     display: flex;
-    height: 100vh;
+    min-height: 100svh;
     justify-content: center;
 }
 
@@ -45,12 +43,11 @@ body {
     );
     border-radius: 3px;
     padding: 2px;
-    transform: scale(1);
-    transition: background 0.5s ease, transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .button-border:hover {
-    animation: rotate-gradient 2s cubic-bezier(0, 0, 1, 1) infinite;
+    animation: rotate-gradient 2s linear infinite;
     transform: scale(1.1);
 }
 
@@ -58,15 +55,18 @@ body {
     transform: scale(1);
 }
 
-/*
-Use the value defined with @property.
-More about @property can be found at: https://developer.mozilla.org/en-US/docs/Web/CSS/@property 
-*/
+/* Animates --gradient-rotation via @property: https://developer.mozilla.org/en-US/docs/Web/CSS/@property */
 @keyframes rotate-gradient {
     0% {
         --gradient-rotation: 0deg;
     }
     100% {
         --gradient-rotation: 360deg;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .button-border:hover {
+        animation: none;
     }
 }
