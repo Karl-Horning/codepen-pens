@@ -1,22 +1,12 @@
 :root {
-    --blue: #007fc5;
     --blue-pants: #6593eb;
     --duff-red: #de0000;
-    --light-blue: #4763b5;
-    --simpson-orange: #ff4500;
     --simpson-yellow: #ffd800;
-    --t-shirt-orange: #ff6500;
-    --yellow: #fecb00;
 }
 
 html,
 body {
-    /* background-color: var(--simpson-yellow); */
     color: #383435;
-}
-
-header {
-    background-color: var(--blue-pants);
 }
 
 .jumbotron {
@@ -44,14 +34,12 @@ h1 {
     font-size: 8em;
     line-height: 1;
     padding: 20px 0 30px 0;
-    -webkit-text-stroke: 2px 2px #383435;
     text-shadow: -2px -2px 0 #383435, 2px -2px 0 #383435, -2px 2px 0 #383435,
         2px 2px 0 #383435;
 }
 
 h2 {
     background-color: var(--blue-pants);
-    color: var(--simpson-yellow);
     color: #fff;
     letter-spacing: 1px;
     margin-top: -45px;
@@ -96,11 +84,6 @@ ul {
         1px 1px 0 #383435;
 }
 
-.orange-background {
-    background-color: var(--simpson-orange);
-    color: #fff;
-}
-
 .red-background {
     background-color: var(--duff-red);
     color: #fff;
@@ -109,14 +92,9 @@ ul {
         1px 1px 0 #383435;
 }
 
-.yellow-background {
-    background-color: var(--simpson-yellow);
-    color: #fff;
-}
-
 footer {
     background-color: #000;
-    color: #383435;
+    color: #fff;
     padding: 20px;
 }
 
