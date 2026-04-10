@@ -1,26 +1,3 @@
-/* FONTS */
-body {
-    font: 14px/21px "Roboto", sans-serif;
-    color: #395a4f;
-}
-
-.contact-form {
-    margin: 50px 0;
-}
-
-.contact-form h2,
-.contact-form label {
-    font-family: "Open Sans", sans-serif;
-}
-.form-hint,
-.required-notification {
-    font-size: 11px;
-}
-.contact-form button {
-    font-size: 14px;
-}
-
-/* CHANGE BROWSER DEFAULT STYLING */
 body {
     align-items: center;
     background: #3f4640;
@@ -34,23 +11,37 @@ body {
     );
     background-size: cover;
     box-sizing: border-box;
+    color: #395a4f;
     display: grid;
+    font: 14px/21px "Roboto", sans-serif;
     justify-items: center;
     margin: 0;
-    min-height: 100vh;
+    min-height: 100svh;
 }
 
-*:focus {
-    outline: none;
+.contact-form {
+    margin: 50px 0;
 }
-:-moz-placeholder {
-    color: #999;
+
+.contact-form h2,
+.contact-form label {
+    font-family: "Open Sans", sans-serif;
 }
-::-webkit-input-placeholder {
+
+.form-hint,
+.required-notification {
+    font-size: 11px;
+}
+
+.contact-form button {
+    font-size: 14px;
+}
+
+::placeholder {
     color: #999;
 }
 
-/* LIST STYLES */
+/* Form list */
 .contact-form ul {
     list-style-position: outside;
     list-style-type: none;
@@ -70,7 +61,7 @@ body {
     padding: 20px 0;
 }
 
-/* FORM HEADER */
+/* Form header */
 .contact-form h2 {
     display: inline;
     font-weight: 400;
@@ -85,9 +76,8 @@ body {
     margin: 5px 0 0 0;
 }
 
-/* FORM INPUTS */
+/* Inputs */
 .contact-form label {
-    display: inline-block;
     float: left;
     margin-top: 3px;
     padding: 3px;
@@ -109,7 +99,7 @@ body {
     margin-left: 156px;
 }
 
-/* FORM STYLES */
+/* Form card */
 .contact-form {
     background: #add1c0;
     border-radius: 2px;
@@ -122,8 +112,7 @@ body {
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 2px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 2 4px 4px rgba(0, 0, 0, 0.2);
-    padding-right: 30px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
     padding: 15px;
 }
 
@@ -131,20 +120,21 @@ body {
 .contact-form textarea:focus {
     background: #fff;
     border: 1px solid #555;
-    box-shadow: 0 0 3px #aaa;
-    transition: border 0.25s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+    outline: none;
+    transition: border-color 0.25s, box-shadow 0.25s;
 }
 
 .contact-form input:focus:invalid,
 .contact-form textarea:focus:invalid {
     border-color: #b03535;
-    box-shadow: 0 0 5px #d45252;
+    box-shadow: 0 4px 10px rgba(180, 53, 53, 0.35);
 }
 
 .contact-form input:focus:valid,
 .contact-form textarea:focus:valid {
-    box-shadow: 0 0 5px #5cd053;
     border-color: #28921f;
+    box-shadow: 0 4px 10px rgba(40, 146, 31, 0.35);
 }
 
 input:required,
@@ -175,7 +165,7 @@ textarea:required {
     top: 1px;
 }
 
-/* SHOW AND HIDE FORM FIELD HINTS */
+/* Validation hints */
 .contact-form input:focus + .form-hint {
     display: inline;
 }
@@ -186,7 +176,7 @@ textarea:required {
     color: #28921f;
 }
 
-/* BUTTON STYLES */
+/* Submit button */
 .contact-form button {
     background-color: #638c7c;
     border: 1px solid #638c7c;
@@ -197,6 +187,16 @@ textarea:required {
     text-transform: uppercase;
     width: 405px;
     padding: 15px;
+}
+
+.contact-form button:focus {
+    outline: 3px solid #395a4f;
+    outline-offset: 3px;
+}
+
+/* Suppress outline for mouse clicks in browsers that support :focus-visible */
+.contact-form button:focus:not(:focus-visible) {
+    outline: none;
 }
 
 .contact-form button:hover {
@@ -211,7 +211,7 @@ textarea:required {
     transform: translateY(1px);
 }
 
-/* BREAKPOINTS */
+/* Responsive */
 @media screen and (max-width: 850px) {
     .contact-form ul {
         width: 440px;
