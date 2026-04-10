@@ -29,21 +29,20 @@ body {
     );
     background-size: cover;
     display: flex;
-    height: 100vh;
+    min-height: 100svh;
     justify-content: center;
     margin: 0;
 }
 
 .box {
-    background: #eee;
     background: radial-gradient(#fff, #ccc);
-    background-position: center;
-    background-repeat: no-repeat;
     border: 6px solid var(--black);
     border-radius: 50%;
+    height: min(700px, 90vmin);
     margin: auto;
     overflow: hidden;
     position: relative;
+    width: min(700px, 90vmin);
 }
 
 .head {
@@ -76,7 +75,6 @@ body {
     top: 51%;
     width: 3%;
     z-index: 4;
-    -webkit-clip-path: polygon(0 0, 75% 0, 100% 100%, 48% 100%);
     clip-path: polygon(0 0, 75% 0, 100% 100%, 48% 100%);
 }
 
@@ -88,7 +86,6 @@ body {
     top: 62.5%;
     width: 3.2%;
     z-index: 3;
-    -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 70%);
     clip-path: polygon(0 0, 50% 0, 50% 100%, 0 70%);
 }
 
@@ -101,7 +98,6 @@ body {
     top: 51%;
     width: 3%;
     z-index: 2;
-    -webkit-clip-path: polygon(25% 0%, 100% 0%, 52% 100%, 0% 100%);
     clip-path: polygon(25% 0%, 100% 0%, 52% 100%, 0% 100%);
 }
 
@@ -113,7 +109,6 @@ body {
     top: 62.5%;
     width: 3.2%;
     z-index: 1;
-    -webkit-clip-path: polygon(50% 0, 100% 0, 100% 70%, 50% 100%);
     clip-path: polygon(50% 0, 100% 0, 100% 70%, 50% 100%);
 }
 
@@ -135,7 +130,6 @@ body {
     position: absolute;
     width: 92%;
     z-index: 10;
-    -webkit-clip-path: polygon(0 0, 100% 0, 71% 100%, 29% 100%);
     clip-path: polygon(0 0, 100% 0, 71% 100%, 29% 100%);
 }
 
@@ -147,7 +141,6 @@ body {
     position: absolute;
     width: 92%;
     z-index: 9;
-    -webkit-clip-path: polygon(0 0, 0 40%, 29% 100%);
     clip-path: polygon(0 0, 0 40%, 29% 100%);
 }
 
@@ -159,7 +152,6 @@ body {
     position: absolute;
     width: 92%;
     z-index: 8;
-    -webkit-clip-path: polygon(100% 0, 100% 40%, 71% 100%);
     clip-path: polygon(100% 0, 100% 40%, 71% 100%);
 }
 
@@ -170,7 +162,6 @@ body {
     position: absolute;
     top: 12%;
     width: 10%;
-    -webkit-clip-path: polygon(35% 55%, 100% 100%, 0% 80%);
     clip-path: polygon(35% 55%, 100% 100%, 0% 80%);
 }
 
@@ -181,7 +172,6 @@ body {
     position: absolute;
     top: 12%;
     width: 10%;
-    -webkit-clip-path: polygon(65% 55%, 0% 100%, 95% 80%);
     clip-path: polygon(65% 55%, 0% 100%, 95% 80%);
 }
 
@@ -201,7 +191,6 @@ body {
     left: 10%;
     position: absolute;
     width: 30%;
-    -webkit-clip-path: polygon(90% 0, 100% 0%, 66% 100%, 66% 100%);
     clip-path: polygon(90% 0, 100% 0%, 66% 100%, 66% 100%);
 }
 
@@ -212,7 +201,6 @@ body {
     right: 10%;
     position: absolute;
     width: 30%;
-    -webkit-clip-path: polygon(0 0, 10% 0, 34% 100%, 34% 100%);
     clip-path: polygon(0 0, 10% 0, 34% 100%, 34% 100%);
 }
 
@@ -223,16 +211,6 @@ body {
     left: 42.5%;
     position: absolute;
     width: 15%;
-    -webkit-clip-path: polygon(
-        35% 60%,
-        65% 60%,
-        100% 30%,
-        100% 65%,
-        65% 95%,
-        35% 95%,
-        0 65%,
-        0 30%
-    );
     clip-path: polygon(
         35% 60%,
         65% 60%,
@@ -252,7 +230,6 @@ body {
     left: 37%;
     position: absolute;
     width: 15%;
-    -webkit-clip-path: polygon(25% 80%, 0% 100%, 100% 100%);
     clip-path: polygon(25% 80%, 0% 100%, 100% 100%);
 }
 
@@ -263,7 +240,6 @@ body {
     right: 37%;
     position: absolute;
     width: 15%;
-    -webkit-clip-path: polygon(75% 80%, 0% 100%, 100% 100%);
     clip-path: polygon(75% 80%, 0% 100%, 100% 100%);
 }
 
@@ -304,7 +280,6 @@ body {
     left: -72.1%;
     position: absolute;
     width: 100%;
-    -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
 
@@ -315,41 +290,6 @@ body {
     right: -72.1%;
     position: absolute;
     width: 100%;
-    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
 }
 
-@media (max-width: 575px) {
-    .box {
-        height: 300px;
-        width: 300px;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 767px) {
-    .box {
-        height: 400px;
-        width: 400px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .box {
-        height: 500px;
-        width: 500px;
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-    .box {
-        height: 600px;
-        width: 600px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .box {
-        height: 700px;
-        width: 700px;
-    }
-}
