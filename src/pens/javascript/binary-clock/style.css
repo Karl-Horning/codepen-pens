@@ -27,31 +27,33 @@ body {
 }
 
 /* Style for the binary clock digits */
-h2 {
+#clock p {
     color: var(--black);
     font-family: "Monofett", monospace;
     font-size: 7em;
     font-weight: lighter;
-    line-height: 0.1em;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
 }
 
 /* Media query for screens with a height less than 400px */
 @media screen and (max-height: 400px) {
-    h2 {
+    #clock p {
         font-size: 5em;
     }
 }
 
 /* Media query for screens with a height less than 250px */
 @media screen and (max-height: 250px) {
-    h2 {
+    #clock p {
         font-size: 3em;
     }
 }
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
-    h2 {
+    #clock p {
         font-size: 5em;
     }
 }

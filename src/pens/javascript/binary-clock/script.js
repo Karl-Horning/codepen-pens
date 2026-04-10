@@ -31,6 +31,10 @@ const getBinaryTime = (hours, minutes, seconds) => {
 
 /**
  * Updates the clock on the webpage with the binary representation of the current time.
+ *
+ * The container element uses role="img" with an aria-label that holds the
+ * human-readable time. Each binary row is aria-hidden so screen readers read
+ * the label once rather than announcing three rows of digits.
  */
 const clock = () => {
     // Get the clock element from the DOM
@@ -42,9 +46,19 @@ const clock = () => {
     const minutes = currentTime.getMinutes();
     const seconds = currentTime.getSeconds();
 
+    // Update the accessible label with the human-readable time
+    const pad = (n) => String(n).padStart(2, "0");
+    elClock.setAttribute(
+        "aria-label",
+        `Binary clock. Current time: ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
+    );
+
     // Get the binary representation of the current time
     const hms = getBinaryTime(hours, minutes, seconds);
 
-    // Update the clock element with the binary representation
-    elClock.innerHTML = hms.map((binary) => `<h2>${binary}</h2>`).join("");
+    // Render rows as <p> elements; aria-hidden because the container label
+    // already provides the accessible description
+    elClock.innerHTML = hms
+        .map((binary) => `<p aria-hidden="true">${binary}</p>`)
+        .join("");
 };
