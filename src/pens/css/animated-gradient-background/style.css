@@ -43,7 +43,6 @@ body {
     );
     background-size: 400% 400%;
     overflow: hidden;
-    will-change: background-position;
 }
 
 .hero {
