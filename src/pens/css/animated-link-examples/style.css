@@ -6,15 +6,19 @@
     --bg-color-underline: #000;
     --hover-bg-highlight: #f6bebe;
     --hover-bg-highlighted: #bee6f652;
-    --transition-default: all 0.4s cubic-bezier(0, 1, 0.3, 1);
-    --transition-hover: all 0.3s cubic-bezier(0, 1.5, 0.5, 1);
+    --transition-default: border-width 0.4s cubic-bezier(0, 1, 0.3, 1),
+        border-top-color 0.4s cubic-bezier(0, 1, 0.3, 1),
+        bottom 0.4s cubic-bezier(0, 1, 0.3, 1);
+    --transition-hover: border-width 0.3s cubic-bezier(0, 1.5, 0.5, 1),
+        border-top-color 0.3s cubic-bezier(0, 1.5, 0.5, 1),
+        bottom 0.3s cubic-bezier(0, 1.5, 0.5, 1);
     --border-width-small: 0.14em;
     --border-width-large: 1.3em;
 }
 
 /* Default styles */
 body {
-    font-family: "Roboto", serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -111,7 +115,7 @@ body {
 /* Underline Colour Change */
 .link-underline-change::before {
     border-top-color: var(--bg-color-underline);
-    transition: border-top 0.4s ease-in-out, all 0.4s ease-in-out;
+    transition: border-top-color 0.4s ease-in-out;
 }
 
 .link-underline-change:hover::before {
@@ -122,7 +126,7 @@ body {
 .link-highlight-wipe-background::before {
     border-top: var(--border-width-small) solid var(--bg-color-highlight);
     transition: bottom 0.3s ease-in-out;
-    z-index: -1; /* Border on top of background */
+    z-index: -1;
 }
 
 .link-highlight-wipe-background::after {
@@ -134,14 +138,21 @@ body {
     position: absolute;
     right: -0.05em;
     transition: bottom 0.3s ease-in-out, height 0.3s ease-in-out;
-    z-index: -2; /* Background under the border */
+    z-index: -2;
 }
 
 .link-highlight-wipe-background:hover::before {
-    bottom: 1.4em; /* Border moves up */
+    bottom: 1.4em;
 }
 
 .link-highlight-wipe-background:hover::after {
-    bottom: 0.14em; /* Background stays aligned with the border */
-    height: 1.4em; /* Background expands to fill the space */
+    bottom: 0.14em;
+    height: 1.4em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .link::before,
+    .link::after {
+        transition: none;
+    }
 }
