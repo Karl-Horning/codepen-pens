@@ -53,10 +53,6 @@ body {
         infinite;
 }
 
-/* If you want a second ripple for a fuller effect, duplicate the rear circle
-   in the HTML or add another element and use a staggered delay. */
-
-/* Keyframes */
 @keyframes pop-in {
     0% {
         transform: scale(0);
