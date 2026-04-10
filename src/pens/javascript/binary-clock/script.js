@@ -1,50 +1,57 @@
-/**
- * Event listener to start the clock on page load.
- * Updates the clock every second using the `setInterval` function.
- */
 document.addEventListener("DOMContentLoaded", () => {
     setInterval(clock, 1000);
 });
 
 /**
- * Converts a decimal number to binary and pads it with zeros to reach the specified length.
+ * Converts a decimal number to a zero-padded binary string.
  *
- * @param {number} number - The decimal number to convert to binary.
- * @param {number} length - The desired length of the binary representation.
- * @returns {string} - The binary representation of the decimal number.
+ * @param {number} number
+ * @param {number} length
+ * @returns {string}
  */
 const decimalToBinary = (number, length) => {
     return number.toString(2).padStart(length, "0");
 };
 
 /**
- * Gets the binary representation of the current time.
+ * Returns the binary representations of hours, minutes, and seconds.
  *
- * @param {number} hours - The current hour.
- * @param {number} minutes - The current minute.
- * @param {number} seconds - The current second.
- * @returns {string[]} - An array containing the binary representation of hours, minutes, and seconds.
+ * @param {number} hours
+ * @param {number} minutes
+ * @param {number} seconds
+ * @returns {string[]}
  */
 const getBinaryTime = (hours, minutes, seconds) => {
     return [hours, minutes, seconds].map((unit) => decimalToBinary(unit, 6));
 };
 
 /**
- * Updates the clock on the webpage with the binary representation of the current time.
+ * Updates the clock display.
+ *
+ * The container's aria-label provides the plain-language time for screen
+ * readers. Each row's aria-label spaces the binary digits so they are
+ * announced individually rather than as a number.
  */
 const clock = () => {
-    // Get the clock element from the DOM
     const elClock = document.getElementById("clock");
 
-    // Get the current time
     const currentTime = new Date();
     const hours = currentTime.getHours();
     const minutes = currentTime.getMinutes();
     const seconds = currentTime.getSeconds();
 
-    // Get the binary representation of the current time
-    const hms = getBinaryTime(hours, minutes, seconds);
+    const pad = (n) => String(n).padStart(2, "0");
+    elClock.setAttribute(
+        "aria-label",
+        `Binary clock. Current time: ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
+    );
 
-    // Update the clock element with the binary representation
-    elClock.innerHTML = hms.map((binary) => `<h2>${binary}</h2>`).join("");
+    const hms = getBinaryTime(hours, minutes, seconds);
+    const labels = ["Hours", "Minutes", "Seconds"];
+    elClock.innerHTML = hms
+        .map(
+            (binary, i) =>
+                `<p aria-label="${labels[i]}: ${binary.split("").join(" ")}">${binary}</p>`
+        )
+        .join("");
 };

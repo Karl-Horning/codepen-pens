@@ -3,7 +3,6 @@
     --black: #3f3831;
 }
 
-/* Remove the body padding */
 html,
 body {
     background-color: var(--yellow);
@@ -11,7 +10,6 @@ body {
     padding: 0;
 }
 
-/* Centre the content using flex */
 .container {
     display: flex;
     align-items: center;
@@ -19,39 +17,36 @@ body {
     min-height: 100vh;
 }
 
-/* Style the border around the digits */
 .flexbox {
     border: 50px solid var(--black);
     border-radius: 15%;
     padding: 10px 90px 80px;
 }
 
-/* Style for the binary clock digits */
-h2 {
+#clock p {
     color: var(--black);
     font-family: "Monofett", monospace;
     font-size: 7em;
     font-weight: lighter;
-    line-height: 0.1em;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
 }
 
-/* Media query for screens with a height less than 400px */
 @media screen and (max-height: 400px) {
-    h2 {
+    #clock p {
         font-size: 5em;
     }
 }
 
-/* Media query for screens with a height less than 250px */
 @media screen and (max-height: 250px) {
-    h2 {
+    #clock p {
         font-size: 3em;
     }
 }
 
-/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
-    h2 {
+    #clock p {
         font-size: 5em;
     }
 }
