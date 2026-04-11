@@ -10,10 +10,15 @@
         <meta name="keywords" content="HTML, CSS, freeCodeCamp" />
         <meta name="author" content="Karl Horning" />
         <title>freeCodeCamp: Build a Survey Form</title>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Roboto+Slab:wght@400&display=swap"
+        />
         <link rel="stylesheet" href="./normalize.css" />
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
+        <main>
         <div class="container">
             <form id="survey-form" action="">
                 <header class="row text-center border-bottom">
@@ -74,7 +79,6 @@
                             class="input"
                             id="number"
                             placeholder="For statistical purposes: we won't tell!"
-                            pattern="/^[0-9]*$/"
                             min="1"
                             max="125"
                         />
@@ -87,7 +91,7 @@
                     </div>
                     <div class="col">
                         <select name="dropdown" class="input" id="dropdown">
-                            <optgroup label="Select an option"></optgroup>
+                            <option value="" disabled selected>Select an option</option>
                             <option value="1">Student</option>
                             <option value="2">Employed Full Time</option>
                             <option value="3">Employed Part Time</option>
@@ -99,14 +103,12 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col">
-                        <label for="options"
-                            >Would you recommend freeCodeCamp to a friend who
-                            wanted to learn to code?
-                            <span>(required)</span></label
-                        >
-                    </div>
+                <fieldset class="row">
+                    <legend class="col"
+                        >Would you recommend freeCodeCamp to a friend who
+                        wanted to learn to code?
+                        <span>(required)</span></legend
+                    >
                     <div class="col">
                         <ul>
                             <li>
@@ -152,15 +154,13 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </fieldset>
 
-                <div class="row">
-                    <div class="col">
-                        <label for="checkbox">
-                            What should we improve to make freeCodeCamp more
-                            useful for you? (Select as many as you'd like)
-                        </label>
-                    </div>
+                <fieldset class="row">
+                    <legend class="col">
+                        What should we improve to make freeCodeCamp more
+                        useful for you? (Select as many as you'd like)
+                    </legend>
                     <div class="col">
                         <ul>
                             <li>
@@ -168,7 +168,6 @@
                                     <input
                                         type="checkbox"
                                         name="checkbox"
-                                        id=""
                                         value="1"
                                     />
                                     Front-end Projects
@@ -179,7 +178,6 @@
                                     <input
                                         type="checkbox"
                                         name="checkbox"
-                                        id=""
                                         value="2"
                                     />
                                     Back-end Projects
@@ -190,7 +188,6 @@
                                     <input
                                         type="checkbox"
                                         name="checkbox"
-                                        id=""
                                         value="3"
                                     />
                                     Data Visualization
@@ -201,7 +198,6 @@
                                     <input
                                         type="checkbox"
                                         name="checkbox"
-                                        id=""
                                         value="4"
                                     />
                                     Challenges
@@ -212,7 +208,6 @@
                                     <input
                                         type="checkbox"
                                         name="checkbox"
-                                        id=""
                                         value="5"
                                     />
                                     Open Source Community
@@ -223,7 +218,6 @@
                                     <input
                                         type="checkbox"
                                         name="checkbox"
-                                        id=""
                                         value="6"
                                     />
                                     Gitter help rooms
@@ -234,7 +228,6 @@
                                     <input
                                         type="checkbox"
                                         name="checkbox"
-                                        id=""
                                         value="7"
                                     />
                                     Videos
@@ -245,7 +238,6 @@
                                     <input
                                         type="checkbox"
                                         name="checkbox"
-                                        id=""
                                         value="8"
                                     />
                                     City Meetups
@@ -256,7 +248,6 @@
                                     <input
                                         type="checkbox"
                                         name="checkbox"
-                                        id=""
                                         value="9"
                                     />
                                     Wiki
@@ -267,7 +258,6 @@
                                     <input
                                         type="checkbox"
                                         name="checkbox"
-                                        id=""
                                         value="10"
                                     />
                                     Forum
@@ -278,7 +268,6 @@
                                     <input
                                         type="checkbox"
                                         name="checkbox"
-                                        id=""
                                         value="11"
                                     />
                                     Additional Courses
@@ -286,7 +275,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </fieldset>
 
                 <div class="row">
                     <div class="col">
@@ -312,9 +301,11 @@
                         value="Submit"
                         class="btn blue"
                         id="submit"
+                        tabindex="0"
                     />
                 </div>
             </form>
         </div>
+        </main>
     </body>
 </html>

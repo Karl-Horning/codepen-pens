@@ -1,24 +1,5 @@
-/* CSS Reset */
 :root {
     font: 20px/1.2 "Open Sans", sans-serif;
-} /* or html */
-
-body,
-body * {
-    margin: unset;
-    box-sizing: unset;
-    padding: unset;
-    font-size: unset;
-    color: unset;
-    text-decoration: unset;
-}
-
-figure * {
-    display: block;
-}
-
-/* ROOT COLOURS */
-:root {
     --black: #2d2a2b;
     --blue: #00a8f2;
     --blue-grey: #d3e1e7;
@@ -33,7 +14,17 @@ figure * {
     --white: #ffffff;
 }
 
-/* TEMPLATES */
+body,
+body * {
+    margin: unset;
+    box-sizing: unset;
+    padding: unset;
+    font-size: unset;
+    color: unset;
+    text-decoration: unset;
+}
+
+/* Templates */
 .container {
     box-sizing: border-box;
     margin: auto;
@@ -59,7 +50,20 @@ figure * {
     text-align: center;
 }
 
-/* FORM CLASSES */
+/* Form */
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    float: left;
+    margin-bottom: 0.5rem;
+    padding: 0;
+    width: 100%;
+}
+
 form {
     background: var(--blue-grey);
     border: 5px solid var(--dark-green);
@@ -76,11 +80,8 @@ select {
     background-position: 98.5% 50%;
     background-size: 30px;
     overflow: hidden;
-    right: 100px;
     text-overflow: ellipsis;
     white-space: nowrap;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
 }
 
@@ -89,11 +90,14 @@ select:focus,
 textarea:focus {
     border: 5px solid pink;
     outline: none;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+    border: none;
+    outline: 3px solid var(--blue);
+    outline-offset: 2px;
 }
 
 .input {
@@ -119,33 +123,24 @@ textarea:focus {
     padding: 0 30px;
     text-align: center;
     text-transform: uppercase;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .btn:hover {
     box-shadow: 0 5px 10px var(--light-shadow-black),
         0 6px 6px var(--lighter-shadow-black);
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
 }
 
-/* FONTS */
+/* Fonts */
 body {
-    font-family: "Roboto", serif;
+    font-family: "Roboto", sans-serif;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-    font-family: "Roboto Slab", sans-serif;
+    font-family: "Roboto Slab", serif;
 }
 
 h1 {
@@ -183,7 +178,7 @@ li {
     letter-spacing: 0.05rem;
 }
 
-/* COLOUR OVERRIDES */
+/* Colour overrides */
 ::selection {
     background: rgba(0, 0, 0, 0.75);
     color: var(--white);
@@ -194,10 +189,8 @@ body {
         var(--light-pink),
         var(--pink)
     );
-}
-body,
-body * {
     color: var(--black);
+    min-height: 100svh;
 }
 label > span {
     color: var(--red);
