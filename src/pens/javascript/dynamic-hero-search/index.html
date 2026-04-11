@@ -20,13 +20,13 @@
     </head>
     <body>
         <main class="container text-light">
-            <section id="title-container" class="row">
+            <div class="row">
                 <h1 class="display-4 text-center border-bottom mb-5 py-5">
                     Dynamic Hero Search
                 </h1>
-            </section>
+            </div>
 
-            <section id="search-container" class="row border-bottom">
+            <div class="row border-bottom">
                 <form id="search-group">
                     <label for="search-box" class="form-label visually-hidden"
                         >Search for a hero or publisher</label
@@ -35,17 +35,13 @@
                         <input
                             id="search-box"
                             class="form-control"
-                            aria-describedby="search-button"
-                            aria-label="Search"
                             name="search"
                             placeholder="Search for a hero or publisher"
-                            tabindex="1"
                             type="text"
                         />
                         <button
                             id="search-button"
                             class="btn btn-primary"
-                            tabindex="2"
                             type="submit"
                         >
                             Search
@@ -53,22 +49,21 @@
                         <button
                             id="clear-button"
                             class="btn btn-outline-primary"
-                            tabindex="3"
                             type="button"
                         >
                             Clear Search
                         </button>
                     </div>
                 </form>
-            </section>
+            </div>
 
-            <section class="row mt-3">
+            <div class="row mt-3">
                 <p class="text-secondary text-right">
                     <strong id="results-num">100</strong> heroes found
                 </p>
-            </section>
+            </div>
 
-            <section id="table-container" class="row mb-5">
+            <div id="table-container" class="row mb-5">
                 <table id="hero-table" class="table table-dark table-striped">
                     <thead>
                         <tr>
@@ -78,19 +73,15 @@
                     </thead>
                     <tbody id="hero-table-body"></tbody>
                 </table>
-            </section>
-
-            <footer class="border-top py-3">
-                <p id="copyright-info" class="text-center text-sm no-margin">
-                    &copy; 2023 Karl Horning
-                </p>
-            </footer>
+            </div>
         </main>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"
-        ></script>
+
+        <footer class="container border-top py-3">
+            <p id="copyright-info" class="text-center text-sm no-margin text-white">
+                &copy; 2023 Karl Horning
+            </p>
+        </footer>
+
         <script src="./script.js"></script>
     </body>
 </html>
