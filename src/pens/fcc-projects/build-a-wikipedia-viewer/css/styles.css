@@ -24,9 +24,6 @@ h3 a {
     text-decoration: none;
 }
 
-h3 a:hover {
-    color: var(--light-blue);
-}
 
 p {
     font-size: 1.1em;
@@ -51,12 +48,14 @@ form {
 }
 
 input[type="text"] {
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2),
+    box-shadow:
+        0 1px 2px 0 rgba(0, 0, 0, 0.2),
         0 1.5px 2px 0 rgba(0, 0, 0, 0.19);
     font-size: 1.2em;
     height: 40px;
     margin-bottom: 20px;
     padding: 25px 6px;
+    cursor: text;
 }
 
 input[type="submit"],
@@ -70,27 +69,18 @@ input[type="submit"],
     margin-top: 10px;
     margin-bottom: 30px;
     padding: 10px 10px;
-}
-
-input[type="submit"]:hover,
-#btn-random:hover {
-    background: var(--light-blue);
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2),
-        0 1.5px 2px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }
 
 textarea:focus,
-input[type="text"]:focus {
-    border-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-    outline: 0 none;
-}
-
+input[type="text"]:focus,
 textarea:hover,
 input[type="text"]:hover {
     border-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-    outline: 0 none;
+    box-shadow:
+        0 2px 4px 0 rgba(0, 0, 0, 0.2),
+        0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    outline: none;
 }
 
 .fa {
@@ -121,7 +111,9 @@ input[type="text"]:hover {
 
 .ui-widget.ui-widget-content {
     border-color: #888;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    box-shadow:
+        0 2px 4px 0 rgba(0, 0, 0, 0.2),
+        0 3px 10px 0 rgba(0, 0, 0, 0.19);
     outline: 0 none;
 }
 
@@ -141,8 +133,8 @@ a.ui-button:active,
 
 input[type="submit"]:hover,
 #btn-random:hover {
-    background: var(--light-blue);
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2),
+    box-shadow:
+        0 1px 2px 0 rgba(0, 0, 0, 0.2),
         0 1.5px 2px 0 rgba(0, 0, 0, 0.19);
-    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
 }
