@@ -214,23 +214,24 @@ function changePageBackgroundToRandomColor() {
         "radial-gradient(circle, #ea384d, #e53044, #df273a, #d91d31, #d31027)",
         "radial-gradient(circle, #928dab, #736e89, #555168, #393549, #1f1c2c)",
     ];
-    newColor =
+    const newColor =
         backgroundColors[getRandomNumberInRange(backgroundColors.length)];
     document.querySelector(".flex-container").style.background = newColor;
     document.body.style.background = newColor;
 }
 
 function tweet() {
-    const tweet = `https://twitter.com/intent/tweet?text=${
-        elQuote.innerText
-    } - ${elSource.innerText} ${encodeURIComponent("#quotes")}`;
-    window.open(tweet);
+    const text = `${elQuote.textContent} - ${elSource.textContent} #quotes`;
+    window.open(
+        "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text),
+        "_blank"
+    );
 }
 
 function getRandomQuote() {
     const randomNumber = getRandomNumberInRange(quotes.length);
-    elQuote.innerHTML = quotes[randomNumber]["quote"];
-    elSource.innerHTML = `${quotes[randomNumber]["speaker"]}, <em>${quotes[randomNumber]["title"]}</em> (${quotes[randomNumber]["year"]})`;
+    elQuote.innerHTML = quotes[randomNumber].quote;
+    elSource.innerHTML = `${quotes[randomNumber].speaker}, <em>${quotes[randomNumber].title}</em> (${quotes[randomNumber].year})`;
 }
 
 function changeBackgroundAndQuote() {
@@ -238,23 +239,12 @@ function changeBackgroundAndQuote() {
     getRandomQuote();
 }
 
-function checkIfSpacebar(e) {
-    if (e.keyCode == 32) {
-        changeBackgroundAndQuote();
-    }
-}
-
-function checkIfTkey(e) {
-    if (e.keyCode == 84) {
-        tweet();
-    }
-}
+document.addEventListener("keyup", function (e) {
+    if (e.key === " ") changeBackgroundAndQuote();
+    if (e.key === "t") tweet();
+});
 
 elTweetBtn.addEventListener("click", tweet);
 elNewQuoteBtn.addEventListener("click", changeBackgroundAndQuote);
 
-document.addEventListener("keyup", checkIfSpacebar);
-document.addEventListener("keyup", checkIfTkey);
-document.addEventListener("DOMContentLoaded", function (event) {
-    changeBackgroundAndQuote();
-});
+changeBackgroundAndQuote();
