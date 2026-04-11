@@ -1,8 +1,5 @@
-var typeOfMedia = ["film", "book", "TV show", "play", "quote"];
-
 // Quote, Speaker, Title, Year
-
-var quotes = [
+const quotes = [
     [
         "Verily I say unto you, Inasmuch as ye have done it unto one of the least of these my brethren, ye have done it unto me.",
         "Jesus Christ",
@@ -34,7 +31,7 @@ var quotes = [
         1838,
     ],
     [
-        "It’s a pleasant world we live in, sir, a very pleasant world. There are bad people in it, Mr. Richard, but if there were no bad people, there would be no good lawyers.",
+        "It's a pleasant world we live in, sir, a very pleasant world. There are bad people in it, Mr. Richard, but if there were no bad people, there would be no good lawyers.",
         "Sampson Brass",
         "The Old Curiosity Shop",
         1841,
@@ -71,7 +68,7 @@ var quotes = [
         1859,
     ],
     [
-        "Go on, get out! Last words are for fools who haven’t said enough!",
+        "Go on, get out! Last words are for fools who haven't said enough!",
         "Karl Marx",
         "",
         1883,
@@ -171,7 +168,7 @@ var quotes = [
     ],
 ];
 
-var colours = [
+const colours = [
     "98878f",
     "8c938a",
     "626e60",
@@ -183,44 +180,38 @@ var colours = [
     "af473c",
 ];
 
+function randomBackgroundColour() {
+    const randomNumber = Math.floor(Math.random() * colours.length);
+    document.body.style.backgroundColor = "#" + colours[randomNumber];
+}
+
 function randomQuote() {
-    var randomNumber = Math.floor(Math.random() * quotes.length);
+    const randomNumber = Math.floor(Math.random() * quotes.length);
 
     document.getElementById("quote").innerHTML = quotes[randomNumber][0];
-
     document.getElementById("speaker").innerHTML = quotes[randomNumber][1];
-
     document.getElementById("title").innerHTML = quotes[randomNumber][2];
-
     document.getElementById("year").innerHTML = quotes[randomNumber][3];
 
     randomBackgroundColour();
 }
 
 function tweet() {
-    var quote = document.getElementById("quote").innerHTML;
-    var speaker = document.getElementById("speaker").innerHTML;
-    var title = document.getElementById("title").innerHTML;
+    const quote = document.getElementById("quote").innerHTML;
+    const title = document.getElementById("title").innerHTML;
+    const speaker = document.getElementById("speaker").innerHTML;
 
-    var tweet = "";
+    const text = title
+        ? quote + " - " + title + " #quotes"
+        : quote + " - " + speaker + " #quotes";
 
-    if (title) {
-        tweet =
-            "https://twitter.com/intent/tweet?text=" +
-            encodeURIComponent(quote + " - " + title + " #quotes");
-    } else {
-        tweet =
-            "https://twitter.com/intent/tweet?text=" +
-            encodeURIComponent(quote + " - " + speaker + " #quotes");
-    }
-
-    window.open(tweet);
+    window.open(
+        "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text),
+        "_blank"
+    );
 }
 
-$(document).ready(randomQuote());
+document.getElementById("btn-tweet").addEventListener("click", tweet);
+document.getElementById("btn-new-quote").addEventListener("click", randomQuote);
 
-function randomBackgroundColour() {
-    var randomNumber = Math.floor(Math.random() * colours.length);
-
-    document.body.style.backgroundColor = "#" + colours[randomNumber];
-}
+randomQuote();
