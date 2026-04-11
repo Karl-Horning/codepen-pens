@@ -1,22 +1,32 @@
-// searchbar
+document.getElementById("current-year").textContent = new Date().getFullYear();
+
+// Search
 $(document).ready(function () {
+    $("#btn-random").click(function () {
+        window.open(
+            "https://en.wikipedia.org/wiki/Special:Random",
+            "_blank",
+            "resizable=yes"
+        );
+    });
+
     $("#btn-search").click(function () {
-        var $searchBackground = $(".search-background");
-        var $footer = $(".footer");
-        var $wiki = $(".wiki");
-        var $wikiArticles = $("#wikiArticles");
-        var query = $("#q").val();
+        const $searchBackground = $(".search-background");
+        const $footer = $(".footer");
+        const $wiki = $(".wiki");
+        const $wikiArticles = $("#wikiArticles");
+        let query = $("#q").val();
 
         if (query == "") query = "nothing";
-        var wikiApiUrl =
+        const wikiApiUrl =
             "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
             query +
             "&format=json&callback=?";
 
-        // Remove previous query
+        // Remove previous results
         $wikiArticles.text("");
 
-        // close the autocomplete so it's not in the users way if they wrote their own query
+        // Close autocomplete so it's not in the user's way
         $("#q").autocomplete("close");
 
         $wiki.css("min-height", "80vh");
@@ -29,7 +39,7 @@ $(document).ready(function () {
         $footer.css("margin-top", "20px");
         $footer.css("padding", "20px 0");
 
-        var wikiRequestTimeout = setTimeout(function () {
+        const wikiRequestTimeout = setTimeout(function () {
             $wikiArticles.text(
                 "Sorry, the Wikipedia articles cannot be loaded as your request timed out."
             );
@@ -41,21 +51,21 @@ $(document).ready(function () {
             type: "GET",
         })
             .done(function (data) {
-                wikiArticlesLength = data[1].length;
+                const wikiArticlesLength = data[1].length;
 
                 if (wikiArticlesLength == 0) {
                     $wikiArticles.append(
                         "Sorry, <b>" + query + "</b> returned no results."
                     );
                 } else {
-                    for (var i = 0; i < wikiArticlesLength; i++) {
-                        var articleTitle = data[1][i];
-                        var articleSnippet = data[2][i];
-                        var articleUrl = data[3][i];
+                    for (let i = 0; i < wikiArticlesLength; i++) {
+                        const articleTitle = data[1][i];
+                        const articleSnippet = data[2][i];
+                        const articleUrl = data[3][i];
                         $(
                             '<li><h3><a href="' +
                                 articleUrl +
-                                '" target="blank">' +
+                                '" target="_blank" rel="noopener noreferrer">' +
                                 articleTitle +
                                 '</a></h3><p class="url">' +
                                 articleUrl +
@@ -67,28 +77,27 @@ $(document).ready(function () {
                     $(
                         '<li><h3><a href="https://en.wikipedia.org/w/index.php?title=Special:Search&profile=default&fulltext=1&search=' +
                             query +
-                            '" target="blank">See all search results for <b>' +
+                            '" target="_blank" rel="noopener noreferrer">See all search results for <b>' +
                             query +
                             "</b> on Wikipedia...</a></h3></li>"
                     ).appendTo($wikiArticles);
                 }
                 clearTimeout(wikiRequestTimeout);
             })
-            .fail(function (errorMsg) {
+            .fail(function () {
                 $wikiArticles.text(
                     "Sorry, the Wikipedia articles cannot be loaded as the request failed."
                 );
-                console.log(errorMsg);
             });
     });
     return false;
 });
 
-// autocomplete
+// Autocomplete
 $("#q").autocomplete({
     source: function (request, response) {
         $.ajax({
-            url: "http://en.wikipedia.org/w/api.php",
+            url: "https://en.wikipedia.org/w/api.php",
             dataType: "jsonp",
             data: {
                 action: "opensearch",

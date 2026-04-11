@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="This project is a Wikipedia Viewer created as part of the freeCodeCamp challenge, 'Build a Wikipedia Viewer'. It enables users to search for Wikipedia articles and view search results through the interface."
+            content="A Wikipedia viewer built for the freeCodeCamp challenge. Search for articles or open a random one, with jQuery UI autocomplete."
         />
         <meta name="keywords" content="HTML, CSS, JavaScript, jQuery" />
         <meta name="author" content="Karl Horning" />
@@ -26,85 +26,81 @@
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body>
-        <div class="search-background">
-            <div class="container">
+        <main>
+            <div class="search-background">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div role="img" aria-label="freeCodeCamp logo">
+                                <i class="fa fa-free-code-camp"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form onsubmit="return false;">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+
+                            <div class="col-md-6">
+                                <input
+                                    id="q"
+                                    class="form-control"
+                                    type="text"
+                                    placeholder="Search Wikipedia for..."
+                                    maxlength="1000"
+                                    autocomplete="off"
+                                    autofocus
+                                    required
+                                />
+                            </div>
+
+                            <div class="col-md-3"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3"></div>
+
+                            <div class="col-md-3">
+                                <input
+                                    id="btn-search"
+                                    class="btn-block"
+                                    type="submit"
+                                    value="Search Wikipedia"
+                                />
+                            </div>
+
+                            <div class="col-md-3">
+                                <input
+                                    id="btn-random"
+                                    class="btn-block"
+                                    type="button"
+                                    value="Random Article"
+                                />
+                            </div>
+
+                            <div class="col-md-3"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="wiki container">
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <a
-                            href="javascript:window.location.href=window.location.href"
-                            ><i class="fa fa-free-code-camp"></i
-                        ></a>
+                    <div class="col-md-12">
+                        <ul id="wikiArticles"></ul>
                     </div>
                 </div>
-
-                <form onsubmit="return false">
-                    <div class="row">
-                        <div class="col-md-3"></div>
-
-                        <div class="col-md-6">
-                            <input
-                                id="q"
-                                class="form-control"
-                                type="text"
-                                placeholder="Search Wikipedia for..."
-                                maxlength="1000"
-                                value=""
-                                autocomplete="off"
-                                autofocus="on"
-                                tabindex="1"
-                                required
-                            />
-                        </div>
-
-                        <div class="col-md-3"></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-3"></div>
-
-                        <div class="col-md-3">
-                            <input
-                                id="btn-search"
-                                class="btn-block"
-                                type="submit"
-                                value="Search Wikipedia"
-                                tabindex="2"
-                            />
-                        </div>
-
-                        <div class="col-md-3">
-                            <input
-                                id="btn-random"
-                                class="btn-block"
-                                type="button"
-                                value="Random Article"
-                                tabindex="3"
-                                onclick="window.open('https://en.wikipedia.org/wiki/Special:Random','blank','resizable=yes')"
-                            />
-                        </div>
-
-                        <div class="col-md-3"></div>
-                    </div>
-                </form>
             </div>
-        </div>
-
-        <div class="wiki container">
-            <div class="row">
-                <div class="col-md-12">
-                    <ul id="wikiArticles"></ul>
-                </div>
-            </div>
-        </div>
+        </main>
 
         <footer class="footer">
             <div class="container text-center">
                 <small>
-                    &copy; 2019 -
-                    <script type="text/javascript">
-                        document.write(new Date().getFullYear());
-                    </script>
-                    <a href="https://codepen.io/karlhorning" target="_blank"
+                    &copy; 2019 - <span id="current-year"></span>
+                    <a
+                        href="https://codepen.io/karlhorning"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         >Karl Horning</a
                     >, All Rights Reserved
                 </small>
@@ -121,6 +117,6 @@
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"
         ></script>
-        <script type="text/javascript" src="./js/script.js"></script>
+        <script src="./js/script.js"></script>
     </body>
 </html>
