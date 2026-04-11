@@ -1,10 +1,6 @@
 (() => {
-    /**
-     * Superheroes data array.
-     * @type {Array<{name: string, publisher: string}>}
-     */
     const superheroes = [
-        // DC Comics Heroes
+        // DC Comics
         { name: "Superman", publisher: "DC Comics" },
         { name: "Batman", publisher: "DC Comics" },
         { name: "Wonder Woman", publisher: "DC Comics" },
@@ -86,7 +82,7 @@
         { name: "Bizarro", publisher: "DC Comics" },
         { name: "Joker", publisher: "DC Comics" },
 
-        // Marvel Heroes
+        // Marvel
         { name: "Spider-Man (Peter Parker)", publisher: "Marvel" },
         { name: "Iron Man", publisher: "Marvel" },
         { name: "Captain America", publisher: "Marvel" },
@@ -169,7 +165,8 @@
         { name: "Magneto", publisher: "Marvel" },
     ];
 
-    let resultsLen = superheroes.length;
+    superheroes.sort((a, b) => a.name.localeCompare(b.name));
+
     const searchBox = document.getElementById("search-box");
     const resultsNum = document.getElementById("results-num");
     const clearButton = document.getElementById("clear-button");
@@ -177,29 +174,16 @@
     const copyrightInfo = document.getElementById("copyright-info");
     const heroTableBody = document.getElementById("hero-table-body");
 
-    /**
-     * Updates the displayed number of search results.
-     * @param {number} resultsLen - The number of search results.
-     */
-    const updateResults = (resultsLen) => {
-        resultsNum.innerText = resultsLen;
-    };
-
-    /**
-     * Clears the search box and updates the hero table.
-     */
-    const clearSearchBox = () => {
-        searchBox.value = "";
-        heroTableBody.innerHTML = "";
-        createSortedSuperheroList();
+    const updateResults = (count) => {
+        resultsNum.innerText = count;
     };
 
     /**
      * Creates a table row for a superhero.
-     * @param {Object} superhero - Superhero object.
-     * @param {string} superhero.name - Superhero name.
-     * @param {string} superhero.publisher - Superhero publisher.
-     * @returns {HTMLTableRowElement} - Table row element.
+     * @param {Object} superhero
+     * @param {string} superhero.name
+     * @param {string} superhero.publisher
+     * @returns {HTMLTableRowElement}
      */
     const createTableRow = (superhero) => {
         const tableRow = document.createElement("tr");
@@ -213,95 +197,56 @@
     };
 
     /**
-     * Creates a list of superheroes in the hero table.
-     * @param {Array} superheroes - Array of superhero objects.
+     * Renders a list of superheroes into the table body.
+     * @param {Array<{name: string, publisher: string}>} list
      */
-    const createSuperheroList = (superheroes) => {
-        if (superheroes.length === 0) {
-            superheroes = [
-                {
-                    name: "No hero found",
-                    publisher: "No publisher found",
-                },
-            ];
+    const createSuperheroList = (list) => {
+        if (list.length === 0) {
+            list = [{ name: "No hero found", publisher: "No publisher found" }];
             updateResults(0);
         } else {
-            updateResults(superheroes.length);
+            updateResults(list.length);
         }
 
-        superheroes.forEach((superhero) => {
-            const tableRow = createTableRow(superhero);
-            heroTableBody.appendChild(tableRow);
+        list.forEach((superhero) => {
+            heroTableBody.appendChild(createTableRow(superhero));
         });
     };
 
-    /**
-     * Creates an alphabetically sorted list of superheroes and updates the hero table.
-     */
-    const createSortedSuperheroList = () =>
-        createSuperheroList(
-            superheroes.sort((a, b) => a.name.localeCompare(b.name))
-        );
+    const createSortedSuperheroList = () => createSuperheroList(superheroes);
 
-    /**
-     * Filters the superhero list based on the search input.
-     */
     const filterSearch = () => {
-        const outputList = superheroes.filter((superhero) => {
-            return (
-                superhero.name
-                    .toLowerCase()
-                    .includes(searchBox.value.toLowerCase()) ||
-                superhero.publisher
-                    .toLowerCase()
-                    .includes(searchBox.value.toLowerCase())
-            );
-        });
+        const query = searchBox.value.toLowerCase();
+        const outputList = superheroes.filter(
+            (superhero) =>
+                superhero.name.toLowerCase().includes(query) ||
+                superhero.publisher.toLowerCase().includes(query)
+        );
         heroTableBody.innerHTML = "";
         createSuperheroList(outputList);
     };
 
-    /**
-     * Sets the copyright information based on the current year.
-     */
-    const getCopyrightInfo = () => {
-        const currentDate = new Date();
-        const currentYear = currentDate.getFullYear();
+    const clearSearchBox = () => {
+        searchBox.value = "";
+        heroTableBody.innerHTML = "";
+        createSortedSuperheroList();
+        searchBox.focus();
+    };
 
+    const setCopyrightYear = () => {
+        const currentYear = new Date().getFullYear();
         if (currentYear > 2023) {
             copyrightInfo.innerHTML = `&copy; 2023 - ${currentYear} Karl Horning`;
         }
     };
 
-    // Event listeners
-
-    /**
-     * Clears the search box and updates the hero table on button click.
-     */
-    clearButton.addEventListener("click", () => {
-        clearSearchBox();
-        searchBox.focus();
-    });
-
-    /**
-     * Filters the superhero list and updates the hero table on search input.
-     */
+    clearButton.addEventListener("click", clearSearchBox);
     searchBox.addEventListener("keyup", filterSearch);
+    searchGroup.addEventListener("submit", (e) => e.preventDefault());
 
-    /**
-     * Prevents the default form submission and handles search on submit.
-     */
-    searchGroup.addEventListener("submit", (e) => {
-        e.preventDefault();
-    });
-
-    /**
-     * Initializes the page by creating a sorted superhero list and setting copyright info.
-     */
     window.addEventListener("load", () => {
         searchBox.focus();
         createSortedSuperheroList();
-        getCopyrightInfo();
-        updateResults(resultsLen);
+        setCopyrightYear();
     });
 })();

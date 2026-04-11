@@ -9,7 +9,6 @@ main {
 }
 
 .text-sm {
-    font-size: 14px; /* Fallback */
     font-size: 0.7rem;
 }
 
@@ -20,5 +19,5 @@ main {
 #search-box:focus,
 #search-button:focus,
 #clear-button:focus {
-    outline: 2px solid #3498db; /* Change color to your preference */
+    outline: 2px solid #3498db;
 }
