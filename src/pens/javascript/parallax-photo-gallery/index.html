@@ -7,7 +7,7 @@
 
         <meta
             name="description"
-            content="A responsive parallax photo gallery that combines smooth, GPU-accelerated scrolling with elegant image captions. Built with HTML, CSS, and JavaScript, this project demonstrates efficient visual motion and accessibility considerations."
+            content="A parallax photo gallery built with HTML, CSS, and JavaScript. Scroll to see each full-viewport image move at a different speed."
         />
         <meta
             name="keywords"
@@ -23,7 +23,7 @@
         <meta property="og:title" content="Parallax Photo Gallery" />
         <meta
             property="og:description"
-            content="A responsive parallax photo gallery built with HTML, CSS, and JavaScript, showcasing smooth scrolling and accessible design."
+            content="A parallax photo gallery built with HTML, CSS, and JavaScript. Scroll to see each full-viewport image move at a different speed."
         />
         <meta
             property="og:image"
@@ -38,90 +38,98 @@
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body>
-        <section
-            class="parallax"
-            data-image="./img/huge-backgrounds-02.webp"
-            data-speed="0.3"
-        >
-            <div class="caption">
-                <span class="title">Evergreen Reflections</span>
-                <div class="meta">
-                    <span>Photo: Jane Doe</span>
-                    <span>&copy; 2018</span>
+        <main>
+            <section
+                class="parallax"
+                aria-label="Evergreen Reflections"
+                data-image="./img/huge-backgrounds-02.webp"
+                data-speed="0.3"
+            >
+                <div class="caption">
+                    <span class="title">Evergreen Reflections</span>
+                    <div class="meta">
+                        <span>Photo: Jane Doe</span>
+                        <span>&copy; 2018</span>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section
-            class="parallax"
-            data-image="./img/huge-backgrounds-26.webp"
-            data-speed="0.4"
-        >
-            <div class="caption">
-                <span class="title">Desert Road</span>
-                <div class="meta">
-                    <span>Photo: Jane Doe</span>
-                    <span>&copy; 2018</span>
+            <section
+                class="parallax"
+                aria-label="Desert Road"
+                data-image="./img/huge-backgrounds-26.webp"
+                data-speed="0.4"
+            >
+                <div class="caption">
+                    <span class="title">Desert Road</span>
+                    <div class="meta">
+                        <span>Photo: Jane Doe</span>
+                        <span>&copy; 2018</span>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section
-            class="parallax"
-            data-image="./img/huge-backgrounds-41.webp"
-            data-speed="0.25"
-        >
-            <div class="caption">
-                <span class="title">Above the clouds</span>
-                <div class="meta">
-                    <span>Photo: Jane Doe</span>
-                    <span>&copy; 2018</span>
+            <section
+                class="parallax"
+                aria-label="Above the Clouds"
+                data-image="./img/huge-backgrounds-41.webp"
+                data-speed="0.25"
+            >
+                <div class="caption">
+                    <span class="title">Above the Clouds</span>
+                    <div class="meta">
+                        <span>Photo: Jane Doe</span>
+                        <span>&copy; 2018</span>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section
-            class="parallax"
-            data-image="./img/huge-backgrounds-04.webp"
-            data-speed="0.28"
-        >
-            <div class="caption">
-                <span class="title">A lone figure on the beach</span>
-                <div class="meta">
-                    <span>Photo: Jane Doe</span>
-                    <span>&copy; 2018</span>
+            <section
+                class="parallax"
+                aria-label="A Lone Figure on the Beach"
+                data-image="./img/huge-backgrounds-04.webp"
+                data-speed="0.28"
+            >
+                <div class="caption">
+                    <span class="title">A Lone Figure on the Beach</span>
+                    <div class="meta">
+                        <span>Photo: Jane Doe</span>
+                        <span>&copy; 2018</span>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section
-            class="parallax"
-            data-image="./img/huge-backgrounds-24.webp"
-            data-speed="0.5"
-        >
-            <div class="caption">
-                <span class="title">The abandoned pier</span>
-                <div class="meta">
-                    <span>Photo: Jane Doe</span>
-                    <span>&copy; 2018</span>
+            <section
+                class="parallax"
+                aria-label="The Abandoned Pier"
+                data-image="./img/huge-backgrounds-24.webp"
+                data-speed="0.5"
+            >
+                <div class="caption">
+                    <span class="title">The Abandoned Pier</span>
+                    <div class="meta">
+                        <span>Photo: Jane Doe</span>
+                        <span>&copy; 2018</span>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section
-            class="parallax"
-            data-image="./img/huge-backgrounds-49.webp"
-            data-speed="0.3"
-        >
-            <div class="caption">
-                <span class="title">The beach tracks</span>
-                <div class="meta">
-                    <span>Photo: Jane Doe</span>
-                    <span>&copy; 2018</span>
+            <section
+                class="parallax"
+                aria-label="The Beach Tracks"
+                data-image="./img/huge-backgrounds-49.webp"
+                data-speed="0.3"
+            >
+                <div class="caption">
+                    <span class="title">The Beach Tracks</span>
+                    <div class="meta">
+                        <span>Photo: Jane Doe</span>
+                        <span>&copy; 2018</span>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
-        <script src="./js/script.js" defer></script>
+        <script src="./js/script.js"></script>
     </body>
 </html>
