@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="A JavaScript event listener captures key presses, displaying the key and keycode in a responsive, text-shadowed display."
+            content="Press any key to inspect its KeyboardEvent properties — key, code, and modifier states — displayed as a live terminal-style object."
         />
         <meta name="keywords" content="HTML, CSS, JavaScript" />
         <meta name="author" content="Karl Horning" />
@@ -13,8 +13,11 @@
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body>
-        <main class="ui container">
-            <h1 class="keycode"></h1>
+        <main class="container">
+            <div class="terminal" role="status" aria-live="polite" aria-label="Keyboard event output">
+                <p class="terminal-prompt">// Press any key</p>
+                <pre class="terminal-output" id="event-output"></pre>
+            </div>
         </main>
         <script src="./js/script.js"></script>
     </body>

@@ -1,20 +1,39 @@
-/**
- * Function to handle key events and display key code.
- * @param {KeyboardEvent} e - The event object representing a keyboard event.
- */
-const checkKeycode = (e) => {
-    // Select the element with the class "keycode" to display the key code
-    const cKeyCode = document.querySelector(".keycode");
+const output = document.getElementById("event-output");
+const prompt = document.querySelector(".terminal-prompt");
 
-    // Use the 'key' property for modern browsers and 'keyCode' as a fallback
-    let key = e.key || String.fromCharCode(e.keyCode);
+// Wraps text in a coloured <span> for syntax highlighting
+const span = (cls, text) => `<span class="${cls}">${text}</span>`;
 
-    // Replace space key representation
-    key = key === " " ? "Space" : key;
+const renderEvent = (e) => {
+    const key = e.key === " " ? "Space" : e.key;
 
-    // Display the key and key code in the selected element
-    cKeyCode.textContent = `${key}: ${e.keyCode}`;
+    // Green for active modifiers, greyed out for inactive
+    const bool = (val) =>
+        val
+            ? span("token-boolean-true", "true")
+            : span("token-boolean-false", "false");
+
+    // padEnd(8) keeps all values column-aligned regardless of key name length
+    const row = (k, v) =>
+        `  ${span("token-key", k.padEnd(8))}${span("token-string", `"${v}"`)}`;
+
+    prompt.textContent = "// KeyboardEvent";
+
+    output.innerHTML =
+        span("token-keyword", "const") +
+        " event = " +
+        span("token-brace", "{") +
+        "\n" +
+        row("key:", key) +
+        "\n" +
+        row("code:", e.code) +
+        "\n" +
+        `  ${span("token-key", "shift:  ")}${bool(e.shiftKey)}\n` +
+        `  ${span("token-key", "ctrl:   ")}${bool(e.ctrlKey)}\n` +
+        `  ${span("token-key", "alt:    ")}${bool(e.altKey)}\n` +
+        `  ${span("token-key", "meta:   ")}${bool(e.metaKey)}\n` +
+        span("token-brace", "}") +
+        span("token-keyword", ";");
 };
 
-// Use the 'keydown' event for better handling of non-character keys
-document.addEventListener("keydown", checkKeycode);
+document.addEventListener("keydown", renderEvent);
