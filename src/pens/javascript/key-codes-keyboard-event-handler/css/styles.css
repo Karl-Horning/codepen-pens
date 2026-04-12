@@ -1,88 +1,94 @@
-/* Define the custom font Alfa Slab One using @font-face */
-@font-face {
-    font-family: "Alfa Slab One";
-    src: local("Alfa Slab One"),
-        url("../fonts/alfa-slab-one-latin-400-normal.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap");
 
-/* Apply box-sizing, margin, and padding to all elements */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Set height to 100% for html and body elements */
-html,
 body {
-    height: 100%;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: "Fira Code", "Cascadia Code", "Consolas", monospace;
+    min-height: 100svh;
 }
 
-/* Style for the body element */
-body {
-    /* Create a scrolling background animation */
-    animation: scrollBackground 10s ease-in-out infinite;
-    /* Set a linear gradient background */
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    /* Set text color to white, height to 100vh, and width to 100% */
-    color: #fff;
-    height: 100vh;
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100svh;
+    padding: 2rem;
+}
+
+.terminal {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    max-width: 480px;
+    padding: 2rem;
     width: 100%;
 }
 
-/* Style for a container element */
-.container {
-    /* Set height to 100%, center text, and use flexbox for centering */
-    height: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.terminal::before {
+    content: "● ● ●";
+    color: #30363d;
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    margin-bottom: 1.5rem;
 }
 
-/* Style for an element with the class "keycode" */
-.keycode {
-    /* Set text color to white, use custom font, set font size, letter spacing, and text shadow */
-    color: #fff;
-    font-family: "Alfa Slab One", sans-serif;
-    font-size: 8rem;
-    letter-spacing: 2px;
-    text-shadow: -2px -2px 0 #0d1214, 2px -2px 0 #0d1214, -2px 2px 0 #0d1214,
-        2px 2px 0 #0d1214;
-    text-transform: uppercase;
+.terminal-prompt {
+    color: #6e7681;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
 }
 
-/* Define keyframes for the background scrolling animation */
-@keyframes scrollBackground {
-    0% {
-        background-position: 0 50%;
+.terminal-output {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    white-space: pre;
+}
+
+.token-keyword {
+    color: #ff7b72;
+}
+.token-brace {
+    color: #c9d1d9;
+}
+.token-key {
+    color: #79c0ff;
+}
+.token-string {
+    color: #a5d6ff;
+}
+.token-boolean-true {
+    color: #56d364;
+}
+.token-boolean-false {
+    color: #6e7681;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .terminal {
+        animation: fadein 0.3s ease;
     }
 
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0 50%;
+    @keyframes fadein {
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
 
-/* Media Queries */
-/* Apply styles for screens with a maximum width of 768px */
-@media screen and (max-width: 768px) {
-    .keycode {
-        /* Adjust font size for smaller screens */
-        font-size: 4rem;
-    }
-}
-
-/* Apply styles for screens with a width between 769px and 1200px */
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-    .keycode {
-        /* Adjust font size for medium-sized screens */
-        font-size: 6rem;
+@media (max-width: 520px) {
+    .terminal-output {
+        font-size: 0.8rem;
     }
 }
