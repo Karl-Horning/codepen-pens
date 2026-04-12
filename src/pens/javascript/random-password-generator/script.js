@@ -1,39 +1,46 @@
-const password = document.querySelector(".password");
+const passwordDisplay = document.querySelector(".password");
 
 function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+    const array = new Uint32Array(1);
+    crypto.getRandomValues(array);
+    // Divide by 2^32 to get a float in [0, 1), avoiding modulo bias
+    return Math.floor((array[0] / 0x100000000) * max);
 }
 
+// Generates a 15-character password in the format: XXX-XXX-XXX-XXX
 function getPassword() {
-    var password = "";
-    var chrs = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
-    var randomChr;
-    var randomNum;
+    const chrs =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+    let password = "";
 
-    for (var i = 1; i < 16; i++) {
-        if (i % 4 === 0) {
-            password += "-";
-        } else {
-            randomNum = getRandomInt(chrs.length);
-            randomChr = chrs[randomNum];
-            password += randomChr;
-        }
+    for (let i = 1; i < 16; i++) {
+        password += i % 4 === 0 ? "-" : chrs[getRandomInt(chrs.length)];
     }
+
     return password;
 }
 
 function writePassword() {
-    let newPassword = getPassword();
-    password.textContent = newPassword;
-    console.log(newPassword);
+    passwordDisplay.textContent = getPassword();
 }
 
-function checkIfSpacebar(e) {
-    if (e.keyCode == 32) {
-        writePassword();
-    }
-}
+const copyBtn = document.getElementById("copy-btn");
 
-document.addEventListener("keyup", checkIfSpacebar);
+copyBtn.addEventListener("click", () => {
+    const text = passwordDisplay.textContent;
+    if (!text) return;
+
+    navigator.clipboard.writeText(text).then(() => {
+        copyBtn.textContent = "Copied!";
+        setTimeout(() => {
+            copyBtn.textContent = "Copy";
+        }, 2000);
+    });
+});
+
+document.addEventListener("keyup", (e) => {
+    if (e.key === " ") writePassword();
+});
+
 document.addEventListener("DOMContentLoaded", writePassword);
-document.getElementById("btn").onclick = writePassword;
+document.getElementById("btn").addEventListener("click", writePassword);
