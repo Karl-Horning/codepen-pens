@@ -1,4 +1,5 @@
-/* Remove space around SVG  */
+/* Base */
+
 html,
 body {
     background-color: #535f8d;
@@ -6,19 +7,32 @@ body {
     padding: 0;
 }
 
-/* Make content fill the space */
 #svg-container {
     height: 100vh;
     overflow: hidden;
     width: 100vw;
 }
 
+/* SVG presentation defaults */
+
+#svg-container svg {
+    clip-rule: evenodd;
+    fill-rule: evenodd;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 1.5;
+}
+
+/* UFO */
+
 #UFO {
     animation: bobbing 2s infinite ease-in-out;
     transform-origin: center;
+    will-change: transform;
 }
 
 /* Star animations */
+
 #small-stars-group-1 {
     animation: sparkle 0.5s alternate infinite;
 }
@@ -71,23 +85,43 @@ body {
     animation: sparkle 0.7s alternate infinite;
 }
 
-/* Make the stars shine! */
 @keyframes sparkle {
     from {
         opacity: 1;
     }
-
     to {
         opacity: 0;
     }
 }
 
-/* Make the UFO move */
 @keyframes bobbing {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0);
-      }
-      50% {
+    }
+    50% {
         transform: translateY(-20px);
-      }
-  }
+    }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    #UFO,
+    #small-stars-group-1,
+    #small-stars-group-2,
+    #small-stars-group-3,
+    #small-stars-group-4,
+    #small-stars-group-5,
+    #medium-stars-group-1,
+    #medium-stars-group-2,
+    #medium-stars-group-3,
+    #medium-stars-group-4,
+    #large-stars-group-1,
+    #large-stars-group-2,
+    #large-stars-group-3,
+    #solid-stars {
+        animation: none;
+        will-change: auto;
+    }
+}
