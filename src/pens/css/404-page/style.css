@@ -1,0 +1,166 @@
+/* Theme variables */
+:root {
+    --bg: rgb(255, 255, 255);
+    --stripe: rgba(67, 72, 102, 0.12);
+    --c1: rgb(67, 72, 102);
+    --c2: rgb(213, 94, 74);
+    --c3: rgb(221, 189, 142);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: rgb(12, 14, 24);
+        --stripe: rgba(148, 171, 163, 0.12);
+        --c1: rgb(32, 36, 54);
+        --c2: rgb(180, 72, 60);
+        --c3: rgb(180, 150, 110);
+    }
+}
+
+/* Explicit themes override media query */
+[data-theme="light"] {
+    --bg: rgb(255, 255, 255);
+    --stripe: rgba(67, 72, 102, 0.12);
+    --c1: rgb(67, 72, 102);
+    --c2: rgb(213, 94, 74);
+    --c3: rgb(221, 189, 142);
+}
+
+[data-theme="dark"] {
+    --bg: rgb(10, 12, 22);
+    --stripe: rgba(148, 171, 163, 0.12);
+    --c1: rgb(24, 28, 44);
+    --c2: rgb(164, 60, 52);
+    --c3: rgb(170, 138, 94);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background */
+
+body {
+    animation: drift 8s linear infinite;
+    background-color: var(--bg);
+    background-image: repeating-linear-gradient(
+        -45deg,
+        var(--stripe) 0,
+        var(--stripe) 1px,
+        transparent 0,
+        transparent 50%
+    );
+    background-size: 20px 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh;
+}
+
+/* Page layout */
+
+main {
+    display: grid;
+    min-height: 100vh;
+    padding: 1.5rem;
+    place-items: center;
+}
+
+/* Panel */
+
+.panel {
+    animation: panel-in 0.5s 0.3s ease-out both;
+    background: var(--c1);
+    border: 5px solid var(--c2);
+    max-width: 460px;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.panel__heading {
+    color: var(--c3);
+    font-size: clamp(5rem, 20vw, 9rem);
+    font-weight: 900;
+    line-height: 1;
+    margin: 0 0 0.1em;
+    text-shadow: 4px 4px 0 var(--c2);
+}
+
+.panel__subtitle {
+    color: var(--c3);
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.75em;
+    text-transform: uppercase;
+}
+
+.panel__body {
+    color: var(--c3);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 2rem;
+}
+
+.panel__link {
+    background: var(--c3);
+    border: 3px solid var(--c2);
+    color: var(--c1);
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.75em 2.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.panel__link:hover {
+    box-shadow: 4px 4px 0 var(--c2);
+    transform: translate(-2px, -2px);
+}
+
+.panel__link:focus-visible {
+    box-shadow: 0 0 0 7px var(--c2);
+    outline: 3px solid var(--c3);
+    outline-offset: 4px;
+}
+
+/* Animations */
+
+@keyframes drift {
+    to {
+        background-position: 20px 20px;
+    }
+}
+
+@keyframes panel-in {
+    from {
+        opacity: 0;
+        transform: translateY(1.5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    body,
+    .panel {
+        animation: none;
+    }
+
+    .panel__link {
+        transition: none;
+    }
+
+    .panel__link:hover {
+        box-shadow: none;
+        transform: none;
+    }
+}
