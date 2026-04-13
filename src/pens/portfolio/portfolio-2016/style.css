@@ -23,6 +23,16 @@ eae3ea
 
 */
 
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 body {
     position: relative;
 }
@@ -43,7 +53,6 @@ p {
 .navbar {
     background-color: #f2f2f2;
     border: none;
-    /*box-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
     font-family: "Economica", sans-serif;
     opacity: 0.9;
     padding: 20px 0;
@@ -52,20 +61,20 @@ p {
 .navbar-brand {
     font-family: "Dancing Script", cursive;
     font-size: 2em;
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 .navbar .navbar-brand {
     color: #3c3c3c;
     font-weight: bold;
     letter-spacing: 0.5px;
-    text-shadow: 0px 0px 2px rgba(265, 265, 265, 0.9);
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.9);
 }
 
 .navbar .navbar-nav > li > a {
     color: #3c3c3c;
     font-size: 1.2em;
-    font-weight: medium;
+    font-weight: 500;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
@@ -79,7 +88,7 @@ p {
 .navbar .navbar-nav > li > a,
 .navbar-brand:hover,
 .navbar .navbar-nav > li > a:hover {
-    transition: all 0.5s ease 0s;
+    transition: color 0.5s ease;
 }
 /* end of navbar */
 
@@ -88,18 +97,16 @@ p {
     background-color: #985e6d;
     background: url(https://c2.staticflickr.com/9/8519/29692122161_3197f06724_k.jpg)
         no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     color: #fff;
     font-family: "Economica", sans-serif;
-    padding: 310px 50px 250px 50px;
+    padding: 310px 50px 250px;
 }
 
+.hero h1,
 .hero h2 {
     font-size: 5em;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.9);
 }
 
 .container .welcome-text {
@@ -122,7 +129,7 @@ p {
 /* end of hero */
 
 .page-division {
-    padding: 50px 0 120px 0;
+    padding: 50px 0 120px;
 }
 
 .page-division h2 {
@@ -163,7 +170,7 @@ form {
 .form-control:focus {
     border: 1px solid #d26e5e;
     box-shadow: 0 0 10px #d26e5e;
-    outline: none !important;
+    outline: none;
 }
 
 .btn {
@@ -192,7 +199,7 @@ i.fa.fa-twitter {
     height: 1.9em;
     line-height: 1.9em;
     margin: 5px;
-    transition: all 0.5s ease 0s;
+    transition: background-color 0.5s ease;
     width: 1.9em;
 }
 
@@ -227,12 +234,24 @@ i.fa.fa-twitter:hover {
 #social {
     background: url(https://c4.staticflickr.com/9/8889/29692244411_cdc69e80ff_k.jpg)
         no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     color: #fff;
     padding: 150px 0;
+}
+
+@media (max-width: 767px) {
+    .hero {
+        padding: 120px 30px 100px;
+    }
+
+    .hero h1,
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .container .welcome-text {
+        font-size: 3em;
+    }
 }
 
 footer {
