@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -17,15 +17,7 @@
         />
         <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Dancing+Script"
-        />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Economica"
-        />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Open+Sans"
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Economica&family=Open+Sans&display=swap"
         />
         <link rel="stylesheet" href="./style.css" />
     </head>
@@ -39,9 +31,9 @@
                         type="button"
                         class="navbar-toggle collapsed"
                         data-toggle="collapse"
-                        data-target=".navbar"
+                        data-target="#navbar-collapse"
                         aria-expanded="false"
-                        aria-controls="navbar"
+                        aria-controls="navbar-collapse"
                     >
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -53,12 +45,8 @@
                 <!-- navbar-header -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div
-                    class="navbar-collapse collapse"
-                    id="navbar"
-                    aria-expanded="false"
-                >
-                    <ul class="nav navbar-nav navbar-right" role="tablist">
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
                         <li><a href="#about">About</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -75,7 +63,7 @@
         <div class="hero jumbotron" id="hero">
             <div class="container text-center">
                 <hr />
-                <h2 class="welcome-text">Hello & welcome to my site</h2>
+                <h1 class="welcome-text">Hello &amp; welcome to my site</h1>
                 <h2 class="intro-text">
                     I am Karl Horning, a business English teacher and coder
                     based in Portugal
@@ -147,8 +135,9 @@
                             Here are some of the projects that I have completed
                             since joining
                             <a
-                                href="https://www.freecodecamp.com/"
+                                href="https://www.freecodecamp.org/"
                                 target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 freeCodeCamp</a
                             >.
@@ -162,7 +151,7 @@
                         <img
                             class="img-responsive center-block"
                             src="https://c2.staticflickr.com/9/8072/29162943513_069a88629e_b.jpg"
-                            alt="Placeholder image"
+                            alt=""
                         />
                     </div>
                     <!-- col-sm-6 -->
@@ -170,7 +159,7 @@
                         <img
                             class="img-responsive center-block"
                             src="https://c2.staticflickr.com/9/8072/29162943513_069a88629e_b.jpg"
-                            alt="Placeholder image"
+                            alt=""
                         />
                     </div>
                     <!-- col-sm-6 -->
@@ -178,7 +167,7 @@
                         <img
                             class="img-responsive center-block"
                             src="https://c2.staticflickr.com/9/8072/29162943513_069a88629e_b.jpg"
-                            alt="Placeholder image"
+                            alt=""
                         />
                     </div>
                     <!-- col-sm-6 -->
@@ -186,7 +175,7 @@
                         <img
                             class="img-responsive center-block"
                             src="https://c2.staticflickr.com/9/8072/29162943513_069a88629e_b.jpg"
-                            alt="Placeholder image"
+                            alt=""
                         />
                     </div>
                     <!-- col-sm-6 -->
@@ -194,7 +183,7 @@
                         <img
                             class="img-responsive center-block"
                             src="https://c2.staticflickr.com/9/8072/29162943513_069a88629e_b.jpg"
-                            alt="Placeholder image"
+                            alt=""
                         />
                     </div>
                     <!-- col-sm-6 -->
@@ -202,7 +191,7 @@
                         <img
                             class="img-responsive center-block"
                             src="https://c2.staticflickr.com/9/8072/29162943513_069a88629e_b.jpg"
-                            alt="Placeholder image"
+                            alt=""
                         />
                     </div>
                     <!-- col-sm-6 -->
@@ -313,36 +302,58 @@
                         <ul class="social-links">
                             <li>
                                 <a
-                                    href="https://www.linkedin.com/in/karlhorning"
+                                    href="https://www.linkedin.com/in/karl-horning/"
                                     target="_blank"
-                                    ><i class="fa fa-linkedin"></i
+                                    rel="noopener noreferrer"
+                                    aria-label="Karl Horning on LinkedIn"
+                                    ><i
+                                        class="fa fa-linkedin"
+                                        aria-hidden="true"
+                                    ></i
                                 ></a>
                             </li>
                             <li>
                                 <a
                                     href="https://twitter.com/karlhorning"
                                     target="_blank"
-                                    ><i class="fa fa-twitter"></i
+                                    rel="noopener noreferrer"
+                                    aria-label="Karl Horning on Twitter"
+                                    ><i
+                                        class="fa fa-twitter"
+                                        aria-hidden="true"
+                                    ></i
                                 ></a>
                             </li>
                             <li>
                                 <a
                                     href="https://codepen.io/karlhorning"
                                     target="_blank"
-                                    ><i class="fa fa-codepen"></i
+                                    rel="noopener noreferrer"
+                                    aria-label="Karl Horning on CodePen"
+                                    ><i
+                                        class="fa fa-codepen"
+                                        aria-hidden="true"
+                                    ></i
                                 ></a>
                             </li>
                             <li>
                                 <a
                                     href="https://www.freecodecamp.org/karl-horning"
                                     target="_blank"
-                                    ><i class="fa fa-fire"></i
+                                    rel="noopener noreferrer"
+                                    aria-label="Karl Horning on freeCodeCamp"
+                                    ><i
+                                        class="fa fa-fire"
+                                        aria-hidden="true"
+                                    ></i
                                 ></a>
                             </li>
                             <li>
                                 <a
                                     href="https://facebook.com/karlhorning"
                                     target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Karl Horning on Facebook"
                                     ><i
                                         class="fa fa-facebook"
                                         aria-hidden="true"
@@ -365,7 +376,10 @@
             <div class="container text-center">
                 <small
                     >&copy; 2016
-                    <a href="https://codepen.io/karlhorning" target="_blank"
+                    <a
+                        href="https://codepen.io/karlhorning"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         >Karl Horning</a
                     >, All Rights Reserved</small
                 >
@@ -373,5 +387,7 @@
             <!-- container -->
         </footer>
         <!-- end of footer -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>
