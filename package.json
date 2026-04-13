@@ -1,0 +1,15 @@
+{
+    "name": "codepen-pens",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build:json": "node tools/generate-pens-json.mjs",
+        "dev": "npx serve src -l 5173"
+    },
+    "engines": {
+        "node": ">=18"
+    },
+    "devDependencies": {
+        "serve": "^14.2.6"
+    }
+}
