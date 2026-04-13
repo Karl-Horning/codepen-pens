@@ -1,30 +1,12 @@
 /*
- * Animated SVG dots – CSS (cascade layers)
- *
- * Overview
- * - Uses CSS cascade layers to separate theme, base layout, and components.
- * - Animates <circle> cx/cy via CSS keyframes; works in modern browsers.
- * - Global speed control with --speed (larger = slower).
- * - Respects prefers-reduced-motion.
- * - Blob animation inspired by and heavily modified from:
- *   https://codepen.io/leimapapa/pen/XWEJbVp (by leimapapa).
- *
- * How to customise
- * - Change --speed (e.g. 2 = ~2× slower).
- * - Tweak theme colours in :root.
- * - Add/adjust .dN pairs to vary dot radius, durations, and delays.
- *
- * Structure
- * - @layer theme: tokens and colours.
- * - @layer base: page layout and SVG layer sizing/order.
- * - @layer components: filter, dot animation, and instance vars.
+ * Animated SVG dots — CSS cascade layers.
+ * Blob animation inspired by and heavily modified from:
+ * https://codepen.io/leimapapa/pen/XWEJbVp (leimapapa)
  */
 
 @layer base, theme, components, utilities;
 
-/* =====================
-   Theme (tokens/colours)
-   ===================== */
+/* Theme */
 @layer theme {
     :root {
         /* Animation speed scale (1 = default, 3 = 3× slower) */
@@ -66,9 +48,7 @@
     }
 }
 
-/* =============================
-   Base (layout and SVG scaffolding)
-   ============================= */
+/* Base */
 @layer base {
     /* Centre stage and match the 1101×812 viewBox */
     body {
@@ -107,9 +87,7 @@
     }
 }
 
-/* =============================
-   Components (effects and animation)
-   ============================= */
+/* Components */
 @layer components {
     /* Gooey merge effect for moving circles */
     .circles {
@@ -128,17 +106,10 @@
                 var(--delay-y, 0s) infinite;
     }
 
-    /* Optional: mirror X path for the second dot in a pair */
     .circles .dot.mirrorX {
         animation-name: moveXRev, moveY;
     }
 
-    /*
-   * Instance variables
-   * - Each pair (.d1/.d2, .d3/.d4, …) shares r/dx/dy/delay values.
-   * - Apply .mirrorX to the second element if you want mirrored X motion.
-   * - Scoped with `.circles` to avoid leaking .dN class vars globally.
-   */
     .circles .d1,
     .circles .d2 {
         --r: 15.9;
@@ -277,11 +248,7 @@
     }
 }
 
-/* =============================
-   Keyframes (global)
-   - Animate SVG cx/cy. Supported in Chromium/Firefox; modern Safari also supports
-     CSS geometry properties on <circle>/<ellipse>.
-   ============================= */
+/* Keyframes */
 @keyframes moveX {
     0%,
     100% {
@@ -310,10 +277,7 @@
     }
 }
 
-/* =============================
-   Accessibility
-   - Honour reduced motion preference by disabling animations.
-   ============================= */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     .circles .dot {
         animation: none;
