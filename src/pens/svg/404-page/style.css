@@ -1,52 +1,37 @@
-/* === Theme variables ===================================
-   Define colours once, theme via [data-theme] on <html> or a wrapper.
-   c1..c4 are cycled in the keyframes.
-========================================================== */
+/* Theme variables */
 :root {
-    /* Default (light) */
+    --bg: rgb(255, 255, 255);
+    --stripe: rgba(67, 72, 102, 0.12);
     --c1: rgb(67, 72, 102);
     --c2: rgb(213, 94, 74);
     --c3: rgb(221, 189, 142);
-    --c4: rgb(148, 171, 163);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
+        --bg: rgb(12, 14, 24);
+        --stripe: rgba(148, 171, 163, 0.12);
         --c1: rgb(32, 36, 54);
         --c2: rgb(180, 72, 60);
         --c3: rgb(180, 150, 110);
-        --c4: rgb(110, 135, 128);
     }
 }
 
-/* Explicit themes override (light/dark/seasonal) */
+/* Explicit themes override media query */
 [data-theme="light"] {
+    --bg: rgb(255, 255, 255);
+    --stripe: rgba(67, 72, 102, 0.12);
     --c1: rgb(67, 72, 102);
     --c2: rgb(213, 94, 74);
     --c3: rgb(221, 189, 142);
-    --c4: rgb(148, 171, 163);
 }
 
 [data-theme="dark"] {
+    --bg: rgb(10, 12, 22);
+    --stripe: rgba(148, 171, 163, 0.12);
     --c1: rgb(24, 28, 44);
     --c2: rgb(164, 60, 52);
     --c3: rgb(170, 138, 94);
-    --c4: rgb(92, 116, 110);
-}
-
-/* Example seasonal palettes */
-[data-theme="spring"] {
-    --c1: rgb(90, 110, 150);
-    --c2: rgb(240, 120, 120);
-    --c3: rgb(240, 210, 170);
-    --c4: rgb(160, 200, 185);
-}
-
-[data-theme="autumn"] {
-    --c1: rgb(60, 55, 45);
-    --c2: rgb(182, 89, 41);
-    --c3: rgb(214, 175, 110);
-    --c4: rgb(139, 107, 74);
 }
 
 * {
@@ -55,142 +40,127 @@
     padding: 0;
 }
 
-#text path {
-    animation: grow 2.1s infinite alternate;
-    transform-origin: center;
+/* Background */
+
+body {
+    animation: drift 8s linear infinite;
+    background-color: var(--bg);
+    background-image: repeating-linear-gradient(
+        -45deg,
+        var(--stripe) 0,
+        var(--stripe) 1px,
+        transparent 0,
+        transparent 50%
+    );
+    background-size: 20px 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh;
 }
 
-#outline-1 path {
-    animation: cycle-colors-1 8s infinite linear, grow 2s infinite alternate;
-    transform-origin: center;
+/* Page layout */
+
+main {
+    display: grid;
+    min-height: 100vh;
+    padding: 1.5rem;
+    place-items: center;
 }
 
-#outline-2 path {
-    animation: cycle-colors-2 8s infinite linear, grow 2.2s infinite alternate;
-    transform-origin: center;
+/* Panel */
+
+.panel {
+    animation: panel-in 0.5s 0.3s ease-out both;
+    background: var(--c1);
+    border: 5px solid var(--c2);
+    max-width: 460px;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    width: 100%;
 }
 
-#outline-3 {
-    animation: cycle-colors-3 8s infinite linear, grow 1.5s infinite alternate;
-    transform-origin: center;
+.panel__heading {
+    color: var(--c3);
+    font-size: clamp(5rem, 20vw, 9rem);
+    font-weight: 900;
+    line-height: 1;
+    margin: 0 0 0.1em;
+    text-shadow: 4px 4px 0 var(--c2);
 }
 
-#outline-4 {
-    animation: cycle-colors-4 8s infinite linear, grow 1.8s infinite alternate;
-    transform-origin: center;
+.panel__subtitle {
+    color: var(--c3);
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.75em;
+    text-transform: uppercase;
 }
 
-@keyframes grow {
+.panel__body {
+    color: var(--c3);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 2rem;
+}
+
+.panel__link {
+    background: var(--c3);
+    border: 3px solid var(--c2);
+    color: var(--c1);
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.75em 2.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.panel__link:hover {
+    box-shadow: 4px 4px 0 var(--c2);
+    transform: translate(-2px, -2px);
+}
+
+.panel__link:focus-visible {
+    box-shadow: 0 0 0 7px var(--c2);
+    outline: 3px solid var(--c3);
+    outline-offset: 4px;
+}
+
+/* Animations */
+
+@keyframes drift {
+    to {
+        background-position: 20px 20px;
+    }
+}
+
+@keyframes panel-in {
     from {
-        transform: scale(1);
+        opacity: 0;
+        transform: translateY(1.5rem);
     }
     to {
-        transform: scale(1.1);
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@keyframes skew {
-    from {
-        transform: skew(30deg);
-    }
-    to {
-        transform: skew(-10deg);
-    }
-}
+/* Reduced motion */
 
-@keyframes cycle-colors-1 {
-    0% {
-        fill: var(--c1);
+@media (prefers-reduced-motion: reduce) {
+    body,
+    .panel {
+        animation: none;
     }
-    25% {
-        fill: var(--c2);
-    }
-    50% {
-        fill: var(--c3);
-    }
-    75% {
-        fill: var(--c4);
-    }
-    100% {
-        fill: var(--c1);
-    }
-}
 
-@keyframes cycle-colors-2 {
-    0% {
-        fill: var(--c2);
+    .panel__link {
+        transition: none;
     }
-    25% {
-        fill: var(--c3);
-    }
-    50% {
-        fill: var(--c4);
-    }
-    75% {
-        fill: var(--c1);
-    }
-    100% {
-        fill: var(--c2);
-    }
-}
 
-@keyframes cycle-colors-3 {
-    0% {
-        fill: var(--c3);
-    }
-    25% {
-        fill: var(--c4);
-    }
-    50% {
-        fill: var(--c1);
-    }
-    75% {
-        fill: var(--c2);
-    }
-    100% {
-        fill: var(--c3);
-    }
-}
-
-@keyframes cycle-colors-4 {
-    0% {
-        fill: var(--c4);
-    }
-    25% {
-        fill: var(--c1);
-    }
-    50% {
-        fill: var(--c2);
-    }
-    75% {
-        fill: var(--c3);
-    }
-    100% {
-        fill: var(--c4);
-    }
-}
-
-/* === Desktop-only gentle parallax on hover ===============================
-   Applies small, layered translations when hovering the SVG container.
-   No JS; effect is subtle to avoid motion sickness.
-============================================================================ */
-@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-    .svg-image {
-        perspective: 1000px;
-    }
-    .svg-image:hover #outline-1 path {
-        transform: translate3d(-2px, -2px, 0) scale(1.02);
-    }
-    .svg-image:hover #outline-2 path {
-        transform: translate3d(2px, -1px, 0) scale(1.02);
-    }
-    .svg-image:hover #outline-3 {
-        transform: translate3d(-1px, 2px, 0) scale(1.015);
-    }
-    .svg-image:hover #outline-4 {
-        transform: translate3d(1px, 1px, 0) scale(1.01);
-    }
-    .svg-image:hover #text path {
-        transform: translate3d(0, 0, 0) scale(1.06) rotate(-0.2deg);
+    .panel__link:hover {
+        box-shadow: none;
+        transform: none;
     }
 }
