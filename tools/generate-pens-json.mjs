@@ -5,28 +5,19 @@ import path from "node:path";
  *
  * Scans all folders under `src/pens/**` and collects metadata for each pen:
  *
- * - Title (from `<title>` tag or folder name)
- * - Description (from `<meta name="description">` or
- *   `<meta property="og:description">`)
- * - Category (derived from folder path)
- * - Preview image:
- *   - Prefer `src/assets/previews/<pen-folder>.*`
- *   - Fallback to `img/preview.*` inside the pen
- * - Public URL suitable for GitHub Pages
+ * - Title: from `<title>` tag, or the folder name as a fallback
+ * - Description: from `<meta name="description">`
+ * - Category: the parent folder of the pen under `src/pens/`
+ * - Path: repo-relative path from `src/`
+ * - URL: path prefixed with `/codepen-pens/`
+ * - Preview: `img/preview.webp` inside the pen folder, or null
  *
  * Writes `src/pens.json` for use by the index page.
  *
  * @example
- * node tools/generate-pens-json.mjs
+ * npm run build:json
  */
 
-/**
- * Configuration
- *
- * Adjust `BASE_URL` if this repo is your GitHub user site rather than a
- * project site. All paths are kept relative so local and Pages builds
- * behave the same.
- */
 const ROOT = process.cwd();
 const SRC_DIR = path.join(ROOT, "src");
 const PENS_ROOT = path.join(SRC_DIR, "pens");
@@ -46,14 +37,14 @@ const readTextIfExists = async (p) =>
 /** Normalises whitespace to single spaces. */
 const normaliseWS = (s) => s.replace(/\s+/g, " ").trim();
 
-/** Extracts the document title from `<title>` tags. */
+/** Extracts the document title from a `<title>` tag. */
 const extractTitle = (html) => {
     if (!html) return null;
     const m = html.match(/<title[^>]*>([^<]+)<\/title>/i);
     return m ? normaliseWS(m[1]) : null;
 };
 
-/** Extracts a short description from `<meta>` tags. */
+/** Extracts the description from a `<meta name="description">` tag. */
 const extractMetaDescription = (html) => {
     if (!html) return null;
 
@@ -75,69 +66,28 @@ const extractMetaDescription = (html) => {
         return m ? normaliseWS(m[2]) : null;
     };
 
-    // Try standard meta description first, then Open Graph
-    return (
-        getMetaContent("name", "description") ||
-        getMetaContent("property", "og:description")
-    );
+    return getMetaContent("name", "description");
 };
 
-/** Finds a preview image for a pen.
- *
- * Looks for `src/assets/previews/<pen-folder>.*` first, then falls back to
- * `img/preview.*` inside the pen folder.
+/** Returns the path of `img/preview.webp` relative to `src/` if it exists,
+ *  otherwise null.
  *
  * @param {string} penDir Absolute path to the pen folder.
- * @returns {Promise<string|null>} Relative path from `src/`, or null.
+ * @returns {Promise<string|null>}
  */
 const findPreview = async (penDir) => {
-    const penSlug = path.basename(penDir);
-    const globalPreviewDir = path.join(SRC_DIR, "assets", "previews");
-
-    // Check the centralised previews folder
-    const globalCandidates = [
-        `${penSlug}.png`,
-        `${penSlug}.jpg`,
-        `${penSlug}.jpeg`,
-        `${penSlug}.gif`,
-        `${penSlug}.webp`,
-    ];
-
-    for (const file of globalCandidates) {
-        const full = path.join(globalPreviewDir, file);
-        if (await exists(full)) {
-            // Return path relative to src/
-            return `assets/previews/${file}`.replace(/\\/g, "/");
-        }
-    }
-
-    // Fallback: local img/preview.*
-    const localCandidates = [
-        "img/preview.png",
-        "img/preview.jpg",
-        "img/preview.jpeg",
-        "img/preview.gif",
-        "img/preview.webp",
-    ];
-
-    for (const rel of localCandidates) {
-        const full = path.join(penDir, rel);
-        if (await exists(full)) {
-            // Return path relative to src/
-            return toRelFromSrc(full);
-        }
-    }
-
-    return null;
+    const full = path.join(penDir, "img", "preview.webp");
+    if (!(await exists(full))) return null;
+    return path.relative(SRC_DIR, full).replace(/\\/g, "/");
 };
 
-/** Converts a relative path to a GitHub Pages–friendly URL. */
+/** Converts a src/-relative path to a GitHub Pages URL. */
 const toUrlPath = (relPath) =>
     (BASE_URL + relPath.replace(/\\/g, "/")).replace(/\/{2,}/g, "/");
 
-/** Returns a path relative to `src/`. */
+/** Returns a path relative to `src/`, using forward slashes. */
 const toRelFromSrc = (absolute) =>
-    absolute.replace(SRC_DIR + path.sep, "").replace(/\\/g, "/");
+    path.relative(SRC_DIR, absolute).replace(/\\/g, "/");
 
 /** Recursively finds all pens (folders containing `index.html`). */
 const findPens = async (startDir) => {
@@ -167,23 +117,14 @@ const findPens = async (startDir) => {
     return results;
 };
 
-/** Extracts a slug from the final folder name. */
-const slugFromDir = (dir) => path.basename(dir).toLowerCase();
-
 /** Deduces category from `src/pens/<category>/<pen>`. */
 const categoryFromPath = (absDir) => {
-    const rel = toRelFromSrc(absDir);
-    const parts = rel.split("/");
+    const parts = toRelFromSrc(absDir).split("/");
+    // parts: ["pens", "<category>", "<pen>"]
     return parts.length >= 3 ? parts[1].toLowerCase() : "misc";
 };
 
-/** Main entry point.
- *
- * - Validates presence of `src/pens`
- * - Gathers metadata for each pen
- * - Sorts alphabetically by category then title
- * - Writes `src/pens.json`
- */
+/** Main entry point. */
 const main = async () => {
     if (!(await exists(PENS_ROOT))) {
         console.error(`No pens folder found at: ${PENS_ROOT}`);
@@ -194,53 +135,30 @@ const main = async () => {
     const pens = [];
 
     for (const dir of penDirs) {
-        const indexPath = path.join(dir, "index.html");
-        const html = await readTextIfExists(indexPath);
+        const html = await readTextIfExists(path.join(dir, "index.html"));
 
+        const relFromSrc = toRelFromSrc(dir);
         const title =
-            extractTitle(html) || slugFromDir(dir).replace(/[-_]+/g, " ");
-        const description = extractMetaDescription(html) || "";
+            extractTitle(html) ||
+            path.basename(dir).replace(/[-_]+/g, " ");
+        const description = extractMetaDescription(html) ?? "";
         const category = categoryFromPath(dir);
-
-        // Relative path from src/ (works in Pages and local dev)
-        const relFromSrc = toRelFromSrc(
-            dir.endsWith(path.sep) ? dir : dir + path.sep
-        );
-        // URL that GitHub Pages will serve
         const url = toUrlPath(relFromSrc);
-
-        // Resolve preview path:
-        // - If it starts with "assets/", it is already relative to src/
-        // - Otherwise, it is a local preview under the pen folder
         const previewRel = await findPreview(dir);
-        const previewPath = previewRel
-            ? previewRel.startsWith("assets/")
-                ? previewRel
-                : path.posix.join(relFromSrc, previewRel)
+        const preview = previewRel
+            ? path.posix.join(relFromSrc, "img/preview.webp")
             : null;
 
-        pens.push({
-            title,
-            category,
-            path: relFromSrc,
-            url,
-            preview: previewPath,
-            description,
-        });
+        pens.push({ title, category, path: relFromSrc, url, preview, description });
     }
 
-    // Sort by category, then title
     pens.sort(
         (a, b) =>
             a.category.localeCompare(b.category) ||
             a.title.localeCompare(b.title)
     );
 
-    await fs.writeFile(
-        OUTPUT_JSON,
-        JSON.stringify(pens, null, 2) + "\n",
-        "utf8"
-    );
+    await fs.writeFile(OUTPUT_JSON, JSON.stringify(pens, null, 2) + "\n", "utf8");
     console.log(`Wrote ${pens.length} pens → ${OUTPUT_JSON}`);
 };
 
