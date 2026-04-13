@@ -1,12 +1,4 @@
-<!--
-  File: index.html
-  Purpose: SVG Rorschach with blob animation (CodePen demo)
-  A11y: effect-layer is role="img" with title/desc; others decorative
-  Motion: honours prefers-reduced-motion in CSS
-  Attribution: blob animation inspired & heavily modified from
-               https://codepen.io/leimapapa/pen/XWEJbVp (leimapapa)
--->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -18,9 +10,7 @@
             content="A responsive Rorschach-style SVG animation using a gooey filter and CSS keyframes. Accessible (reduced motion), lightweight, and built for CodePen."
         />
         <meta name="author" content="Karl Horning" />
-        <meta name="creator" content="Karl Horning" />
         <meta name="theme-color" content="#c44a57" />
-        <meta name="robots" content="index,follow" />
 
         <!-- Open Graph -->
         <meta
@@ -49,7 +39,6 @@
         />
 
         <!-- Fonts & CSS -->
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="stylesheet" href="style.css" />
 
         <!-- Structured data -->
@@ -69,13 +58,11 @@
 
     <body>
         <div class="stage">
-            <!-- Decorative backdrop -->
             <svg
                 id="background-layer"
                 width="100%"
                 height="100%"
                 viewBox="0 0 1101 812"
-                version="1.1"
             >
                 <g transform="matrix(1,0,0,1,10.416667,-142.280669)">
                     <g
@@ -94,7 +81,6 @@
                 </g>
             </svg>
 
-            <!-- Primary graphic for assistive tech -->
             <svg
                 id="effect-layer"
                 class="effect"
@@ -103,7 +89,6 @@
                 aria-hidden="true"
             >
                 <defs>
-                    <!-- Goo: blur → colour-matrix → composite; stdDeviation ≈ softness -->
                     <filter id="goo">
                         <feGaussianBlur
                             in="SourceGraphic"
@@ -124,7 +109,6 @@
                     </filter>
                 </defs>
 
-                <!-- Dots: paired classes share timings; second uses .mirrorX to invert X path -->
                 <g class="circles">
                     <circle class="dot d1" />
                     <circle class="dot d2 mirrorX" />
@@ -179,7 +163,6 @@
                 </g>
             </svg>
 
-            <!-- Decorative cutout overlay -->
             <svg
                 id="cutout-layer"
                 width="100%"
