@@ -16,7 +16,7 @@
  */
 const snowfall = {
     animationId: null,
-    backgroundColor: "hsl(0, 0%, 100%)", // Customize snow colour
+    backgroundColor: "hsl(0, 0%, 100%)", // Customise snow colour
     canvas: null,
     canvasContext: null,
     canvasHeight: 0,
@@ -29,7 +29,7 @@ const snowfall = {
 };
 
 /**
- * Initializes the canvas and starts the animation.
+ * Initialises the canvas and starts the animation.
  */
 const initializeCanvas = () => {
     snowfall.canvas = document.createElement("canvas");
@@ -38,38 +38,30 @@ const initializeCanvas = () => {
     resizeCanvas();
 
     for (let i = 0; i < snowfall.numOfFlakes; i++) {
-        const flake = new Snowflake();
-        flake.y = -Math.random() * snowfall.canvasHeight; // Use minus to start above the canvas when page loads or plus to start mid animation
-        snowfall.flakes.push(flake);
+        snowfall.flakes.push(
+            new Snowflake(-Math.random() * snowfall.canvasHeight)
+        );
     }
 
-    startAnimation();
-};
-
-/**
- * Resizes the canvas based on the window's dimensions.
- */
-function resizeCanvas() {
-    snowfall.canvasWidth = snowfall.canvas.width = window.innerWidth;
-    snowfall.canvasHeight = snowfall.canvas.height = window.innerHeight;
-}
-
-/**
- * Starts the snowfall animation.
- */
-const startAnimation = () => {
     snowfall.animationId = requestAnimationFrame(drawSnowfall);
 };
 
 /**
- * Stops the snowfall animation.
+ * Resizes the canvas to fill the viewport and clamps flake positions to the
+ * new width so they remain visible after a resize.
  */
-const stopAnimation = () => {
-    cancelAnimationFrame(snowfall.animationId);
-};
+function resizeCanvas() {
+    snowfall.canvasWidth = snowfall.canvas.width = window.innerWidth;
+    snowfall.canvasHeight = snowfall.canvas.height = window.innerHeight;
+    snowfall.flakes.forEach((flake) => {
+        if (flake._x > snowfall.canvasWidth) {
+            flake._x = Math.random() * snowfall.canvasWidth;
+        }
+    });
+}
 
 /**
- * Draws the snowfall on the canvas.
+ * Draws one frame of snowfall and queues the next.
  */
 const drawSnowfall = () => {
     const flakesLength = snowfall.flakes.length;
@@ -92,8 +84,13 @@ const drawSnowfall = () => {
  * Represents a snowflake.
  */
 class Snowflake {
-    constructor() {
+    /**
+     * @param {number} [initialY=-5] - Starting y position; pass a negative
+     *     value to stagger flakes above the viewport on first load.
+     */
+    constructor(initialY = -5) {
         this.reset();
+        this.y = initialY;
     }
 
     reset() {
@@ -135,12 +132,14 @@ class Snowflake {
 }
 
 // Event listeners
-/**
- * Initializes the canvas and starts the animation when the window is loaded.
- */
-window.addEventListener("load", initializeCanvas);
+window.addEventListener("DOMContentLoaded", () => {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        initializeCanvas();
+    }
+});
 
-/**
- * Resizes the canvas when the window is resized.
- */
-window.addEventListener("resize", resizeCanvas);
+let resizeTimer;
+window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resizeCanvas, 100);
+});

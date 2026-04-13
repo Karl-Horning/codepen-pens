@@ -1,28 +1,65 @@
 /* Uses the 'Hello Christmas' font from https://www.dafont.com/hello-christmas.font */
 body {
+    align-items: center;
     animation: christmasLights 10s infinite alternate;
+    display: flex;
+    justify-content: center;
     margin: 0;
+    min-height: 100vh;
     overflow: hidden;
 }
 
 .svg-container {
-    height: 50vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 50vh;
 }
 
 svg {
-    z-index: 0; /* Set text below canvas */
+    clip-rule: evenodd;
+    fill-rule: evenodd;
+    height: auto;
+    max-height: 80vh;
+    max-width: 90vw;
+    overflow: visible;
+    stroke-linejoin: round;
+    stroke-miterlimit: 2;
+    width: auto;
 }
 
 canvas {
+    /* Stacks above the SVG via DOM order; SVG has no explicit position. */
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 1; /* Place canvas above text */
+    z-index: 1;
+}
+
+/* SVG fills */
+
+#snowman path {
+    fill: white;
+}
+
+#hat1 {
+    fill: rgb(88, 79, 95);
+    fill-rule: nonzero;
+}
+
+#bauble1,
+#bauble_inside {
+    fill: rgb(0, 95, 158);
+}
+
+#bauble1 {
+    fill-rule: nonzero;
+}
+
+#stars1 {
+    fill: rgb(247, 148, 29);
 }
 
 @keyframes christmasLights {
@@ -30,6 +67,15 @@ canvas {
         background-color: rgb(220, 38, 38);
     }
     100% {
+        background-color: rgb(22, 163, 74);
+    }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    body {
+        animation: none;
         background-color: rgb(22, 163, 74);
     }
 }
