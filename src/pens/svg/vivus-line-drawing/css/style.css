@@ -1,9 +1,74 @@
-html,
+/* Base */
+
 body {
+    align-items: center;
     background-color: #e5572f;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    padding: 2rem;
 }
 
-svg {
+/* SVG presentation defaults */
+
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#helloWorld {
+    clip-rule: evenodd;
+    fill-rule: evenodd;
     max-height: 80vh;
+    stroke-linejoin: round;
+    stroke-miterlimit: 2;
+    width: 100%;
 }
 
+/* SVG initial states */
+
+#helloBg,
+#worldBg {
+    fill: none;
+}
+
+#helloOutline,
+#worldOutline {
+    fill: none;
+    stroke: rgb(45, 40, 40);
+    stroke-width: 8.6px;
+}
+
+/* Button */
+
+#animateBtn {
+    background-color: #2d2828;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.6rem 1.5rem;
+    transition: background-color 0.2s ease;
+}
+
+#animateBtn:hover {
+    background-color: #4a4040;
+}
+
+#animateBtn:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    #animateBtn {
+        transition: none;
+    }
+}
