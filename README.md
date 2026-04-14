@@ -1,7 +1,7 @@
 # CodePen Pens — Front-end demos and experiments
 
 A personal collection of front-end experiments, challenges, and learning projects.
-Each pen uses plain HTML, CSS, and JavaScript — no frameworks, no build tools.
+Each pen uses plain HTML, CSS, and JavaScript.
 
 Some pens are recent. Others are older examples from early in my learning, kept to show progress and experimentation.
 
