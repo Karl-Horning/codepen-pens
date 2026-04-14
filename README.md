@@ -1,116 +1,65 @@
-# CodePen Pens — Front-End Demos and Experiments
+# CodePen Pens — Front-end demos and experiments
 
 A personal collection of front-end experiments, challenges, and learning projects.
-Each pen is built with pure HTML, CSS, and JavaScript — no frameworks, no build steps — to keep things simple, accessible, and transparent.
+Each pen uses plain HTML, CSS, and JavaScript — no frameworks, no build tools.
 
-## Table of Contents
+Some pens are recent. Others are older examples from early in my learning, kept to show progress and experimentation.
 
-- [CodePen Pens — Front-End Demos and Experiments](#codepen-pens--front-end-demos-and-experiments)
-  - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
-  - [Quick Start](#quick-start)
-  - [Usage / Scripts](#usage--scripts)
-  - [Project Structure](#project-structure)
-  - [Tech Stack](#tech-stack)
-  - [Live / Demo](#live--demo)
-  - [Configuration](#configuration)
-  - [Deployment](#deployment)
-  - [License](#license)
-  - [Accessibility Note](#accessibility-note)
-  - [Author](#author)
+## Scripts
 
-## Overview
+| Command              | Description                            |
+| -------------------- | -------------------------------------- |
+| `npm run dev`        | Start local server on port 5173        |
+| `npm run build:json` | Regenerate JSON data (`src/pens.json`) |
 
-This project collects and organises my CodePen demos and experiments in one place.
-It serves both as an archive and as a personal reference for design, animation, and accessibility techniques I've explored over time.
+To deploy as a GitHub user site rather than a project site, update `BASE_URL` in `tools/generate-pens-json.mjs`.
 
-Some pens are recent, while others are older examples of my early learning — all are included to show progress and experimentation.
-
-## Quick Start
-
-Run a lightweight local server using Node.js:
-
-```bash
-# Serve the site from the src directory
-npx serve src -l 5173
-```
-
-Then open [http://localhost:5173](http://localhost:5173) in your browser.
-This will correctly load `pens.json` and allow fetch requests without CORS errors.
-
-## Usage / Scripts
-
-- **`tools/generate-pens-json.mjs`** — Scans the `src/pens` folder and builds `pens.json`
-  Used by the index page to display pens dynamically.
-- **`npx serve src -l 5173`** — Runs a local development server on port 5173.
-- **`node tools/generate-pens-json.mjs`** — Updates `pens.json` after adding or renaming pens.
-
-## Project Structure
+## Project structure
 
 ```text
 .
-├── LICENSE                  # MIT license file
-├── README.md                # This document
+├── LICENSE
+├── README.md
+├── package.json
 ├── src/
-│   ├── assets/              # Static assets (fonts, previews, design files)
-│   │   ├── designs/         # Screenshots, concept art, etc.
-│   │   ├── fonts/           # Local or custom fonts
-│   │   └── previews/        # Preview images for pens
+│   ├── assets/              # Static assets (fonts, design files)
+│   │   ├── designs/         # Source design files
+│   │   └── fonts/           # Local fonts
 │   ├── css/
-│   │   └── style.css        # Main stylesheet for index page
+│   │   └── style.css        # Index page stylesheet
 │   ├── js/
-│   │   └── script.js        # JS for rendering pens list
-│   ├── pens/                # Individual CodePen projects
+│   │   └── script.js        # Index page script
+│   ├── pens/                # Individual projects
 │   │   ├── css/             # CSS-only demos
-│   │   ├── fcc-projects/    # FreeCodeCamp projects
-│   │   ├── javascript/      # JS-based demos
-│   │   ├── portfolio/       # Portfolio-related designs
+│   │   ├── fcc-projects/    # freeCodeCamp projects
+│   │   ├── javascript/      # JavaScript demos
+│   │   ├── portfolio/       # Portfolio designs
 │   │   └── svg/             # SVG experiments and animations
-│   ├── pens.json            # Auto-generated index of all pens
-│   └── index.html           # Main project index page
+│   ├── pens.json            # Auto-generated pen index
+│   └── index.html           # Index page
 └── tools/
-    └── generate-pens-json.mjs  # Script to build pens.json
+    └── generate-pens-json.mjs
 ```
 
-## Tech Stack
+## Tech stack
 
-- **HTML5 / CSS3 / JavaScript (ES Modules)** — core technologies
-- **Node.js** — used for tooling and local server
-- **Accessible-first design** — semantic HTML, visible focus states, and logical tab order
+- **HTML / CSS / JavaScript (ES Modules)** — core technologies
+- **Node.js** — tooling and local dev server
 
-## Live / Demo
+## Live demo
 
-Each project can be viewed directly on [CodePen](https://codepen.io/karlhorning)
-or locally through the index page, which provides filters and thumbnails for each demo.
+Each project can be viewed on [CodePen](https://codepen.io/karlhorning) or locally through the index page, which includes filtering and previews.
 
-## Configuration
-
-- **Previews:** Stored in `src/assets/previews/`
-- **Pen data:** Generated into `src/pens.json`
-  Run `node tools/generate-pens-json.mjs` to update after adding new pens.
-- **Base URL:** Adjust `BASE_URL` in `generate-pens-json.mjs` if deploying as a user site instead of a project site.
+The live version is available at [karlhorning.dev/codepen-pens/](https://www.karlhorning.dev/codepen-pens/).
 
 ## Deployment
 
-This project is deployed automatically to **GitHub Pages** via a workflow defined in
-`.github/workflows/deploy.yml`.
+Deployed automatically to GitHub Pages via `.github/workflows/deploy.yml` on every push to `main`. The workflow uploads the contents of `src/`.
 
-- The workflow uploads the contents of `src/` to GitHub Pages on every push to `main`.
-- No manual steps are required — commits trigger deployment automatically.
-- Output URL: `https://www.karlhorning.dev/codepen-pens/`
+## Accessibility note
+
+Some older pens don't meet current accessibility standards. They're kept to show progress over time.
 
 ## License
 
-Released under the [MIT License](./LICENSE).
-
-All pens are provided **as-is** and may not reflect current best practices.
-
-## Accessibility Note
-
-Some older pens **do not meet accessibility standards** and are included as part of my learning history.
-
-They're preserved to demonstrate development progress and to encourage transparency in creative growth.
-
-## Author
-
-Made with ❤️ by [Karl Horning](https://github.com/Karl-Horning)
+Released under the [MIT License](./LICENSE) by [Karl Horning](https://github.com/Karl-Horning).
