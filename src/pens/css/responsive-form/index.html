@@ -1,75 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="A responsive contact form with pure CSS validation feedback — no JavaScript." />
+        <meta
+            name="description"
+            content="A lightweight, responsive contact form built with HTML5 and CSS. Features include native browser validation hints, required field indicators, and focus states for better accessibility. No JavaScript is required for the layout or basic validation."
+        />
         <meta name="keywords" content="HTML, CSS, Responsive" />
         <meta name="author" content="Karl Horning" />
-        <title>CSS Responsive Form</title>
+        <title>Pure CSS Responsive Contact Form | No-JS Validation</title>
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
         <main>
-        <form class="contact-form" action="" method="POST">
-            <ul>
-                <li>
-                    <h2>Contact Us</h2>
-                    <span class="required-notification"
-                        >* Denotes Required Field</span
-                    >
-                </li>
-                <li>
-                    <label for="name">Name*</label>
-                    <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="John Doe"
-                        required
-                    />
-                </li>
-                <li>
-                    <label for="email">Email*</label>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="john_doe@example.com"
-                        required
-                    />
-                    <span class="form-hint"
-                        >Proper format: name@something.com</span
-                    >
-                </li>
-                <li>
-                    <label for="website">Website*</label>
-                    <input
-                        type="url"
-                        name="website"
-                        id="website"
-                        placeholder="https://www.johndoe.com"
-                        required
-                        pattern="(http|https)://.+"
-                    />
-                    <span class="form-hint"
-                        >Proper format: https://www.someaddress.com</span
-                    >
-                </li>
-                <li>
-                    <label for="message">Message*</label>
-                    <textarea
-                        name="message"
-                        id="message"
-                        rows="6"
-                        required
-                    ></textarea>
-                </li>
-                <li>
-                    <button class="submit" type="submit" tabindex="0">Submit Form</button>
-                </li>
-            </ul>
-        </form>
+            <form class="contact-form" action="" method="POST">
+                <ul>
+                    <li>
+                        <h2>Contact Us</h2>
+                        <span class="required-notification"
+                            >* Denotes Required Field</span
+                        >
+                    </li>
+                    <li>
+                        <label for="name">Name*</label>
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="John Doe"
+                            required
+                        />
+                    </li>
+                    <li>
+                        <label for="email">Email*</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="john_doe@example.com"
+                            required
+                        />
+                        <span class="form-hint"
+                            >Proper format: name@something.com</span
+                        >
+                    </li>
+                    <li>
+                        <label for="website">Website*</label>
+                        <input
+                            type="url"
+                            name="website"
+                            id="website"
+                            placeholder="https://www.johndoe.com"
+                            required
+                            pattern="(http|https)://.+"
+                        />
+                        <span class="form-hint"
+                            >Proper format: https://www.someaddress.com</span
+                        >
+                    </li>
+                    <li>
+                        <label for="message">Message*</label>
+                        <textarea
+                            name="message"
+                            id="message"
+                            rows="6"
+                            required
+                        ></textarea>
+                    </li>
+                    <li>
+                        <button class="submit" type="submit" tabindex="0">
+                            Submit Form
+                        </button>
+                    </li>
+                </ul>
+            </form>
         </main>
     </body>
 </html>

@@ -1,15 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="My original 2016 freeCodeCamp random quote machine — picks a random quote from a hardcoded list and changes the background colour with each new one."
+            content="My original 2016 implementation of the freeCodeCamp Random Quote Machine. It features a custom array of quotes and a function that synchronizes background colour shifts with new content generation. A study in early DOM manipulation and state changes."
         />
         <meta name="keywords" content="HTML, CSS, freeCodeCamp" />
         <meta name="author" content="Karl Horning" />
-        <title>freeCodeCamp: Random Quote Machine 2016</title>
+        <title>
+            Random Quote Generator v1 | JavaScript & Dynamic Background
+            Transitions
+        </title>
         <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
@@ -26,33 +29,33 @@
     </head>
     <body>
         <main>
-        <div class="container quote">
-            <div class="row text-left">
-                <blockquote id="quote"></blockquote>
-            </div>
+            <div class="container quote">
+                <div class="row text-left">
+                    <blockquote id="quote"></blockquote>
+                </div>
 
-            <div class="row text-right">
-                <p class="reference">
-                    <span id="speaker"></span>,
-                    <cite>
-                        <span id="title"></span>
-                    </cite>
-                    (<span id="year"></span>)
-                </p>
-            </div>
+                <div class="row text-right">
+                    <p class="reference">
+                        <span id="speaker"></span>,
+                        <cite>
+                            <span id="title"></span>
+                        </cite>
+                        (<span id="year"></span>)
+                    </p>
+                </div>
 
-            <div class="row">
-                <div class="col-sm-12 text-right">
-                    <button id="btn-tweet" class="btn">
-                        <i class="fa fa-twitter"></i> Tweet
-                    </button>
+                <div class="row">
+                    <div class="col-sm-12 text-right">
+                        <button id="btn-tweet" class="btn">
+                            <i class="fa fa-twitter"></i> Tweet
+                        </button>
 
-                    <button id="btn-new-quote" class="btn">
-                        <i class="fa fa-random"></i> New Quote
-                    </button>
+                        <button id="btn-new-quote" class="btn">
+                            <i class="fa fa-random"></i> New Quote
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
         </main>
 
         <footer>
