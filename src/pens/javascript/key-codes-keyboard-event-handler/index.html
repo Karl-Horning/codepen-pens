@@ -1,20 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="Press any key to inspect its KeyboardEvent properties — key, code, and modifier states — displayed as a live terminal-style object."
+            content="A real-time diagnostic tool for keyboard events. It captures and displays the 'key', 'code', and modifier states (Shift, Ctrl, Alt, Meta) from the event object. Useful for debugging keyboard shortcuts and verifying cross-browser event consistency."
         />
         <meta name="keywords" content="HTML, CSS, JavaScript" />
         <meta name="author" content="Karl Horning" />
-        <title>JavaScript Key Codes Keyboard Event Handler</title>
+        <title>
+            JavaScript Key Event Inspector | Modern Keyboard Event Debugger
+        </title>
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body>
         <main class="container">
-            <div class="terminal" role="status" aria-live="polite" aria-label="Keyboard event output">
+            <div
+                class="terminal"
+                role="status"
+                aria-live="polite"
+                aria-label="Keyboard event output"
+            >
                 <p class="terminal-prompt">// Press any key</p>
                 <pre class="terminal-output" id="event-output"></pre>
             </div>

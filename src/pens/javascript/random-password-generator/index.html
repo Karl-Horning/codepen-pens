@@ -1,15 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="A password generator that produces dash-separated alphanumeric passwords. Press the button or hit Space to generate, then copy to clipboard."
+            content="A client-side password generator using the Web Crypto API for secure, unbiased random integer generation. Outputs a formatted 15-character string (XXX-XXX-XXX-XXX) for better readability. Includes clipboard integration and keyboard shortcuts (Spacebar) for rapid generation."
         />
         <meta name="keywords" content="HTML, CSS, JavaScript" />
         <meta name="author" content="Karl Horning" />
-        <title>Random Password Generator</title>
+        <title>
+            Secure Password Generator | Web Crypto API & Clean Formatting
+        </title>
         <link
             href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
             rel="stylesheet"
@@ -20,12 +22,21 @@
         <main class="container">
             <div class="flex-box">
                 <div class="password-and-button">
-                    <div class="password" role="status" aria-live="polite"></div>
+                    <div
+                        class="password"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
                     <div class="button-group">
                         <button id="btn" class="btn" type="button" tabindex="0">
                             Generate Password
                         </button>
-                        <button id="copy-btn" class="btn btn--outline" type="button" tabindex="0">
+                        <button
+                            id="copy-btn"
+                            class="btn btn--outline"
+                            type="button"
+                            tabindex="0"
+                        >
                             Copy
                         </button>
                     </div>
